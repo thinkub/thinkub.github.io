@@ -13,6 +13,10 @@
     
 
     
+        <meta name="description" content="아주 간단한 프로젝트 진행요청이 왔다.간단히 spring-boot로 프로젝트를 생성해서 진행을 했다결과물을 전달하려고 하는데 war파일로 달라는거다
+pom.xml 설정packaging 설정보통 spring-boot 로 프로젝트를 만들면 
+1&amp;lt;packaging&amp;gt"/>
+    
 
     <!--Author-->
     
@@ -21,10 +25,14 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="개인 저장소"/>
+        <meta property="og:title" content="Spring-boot War 배포"/>
     
 
     <!--Open Graph Description-->
+    
+        <meta property="og:description" content="아주 간단한 프로젝트 진행요청이 왔다.간단히 spring-boot로 프로젝트를 생성해서 진행을 했다결과물을 전달하려고 하는데 war파일로 달라는거다
+pom.xml 설정packaging 설정보통 spring-boot 로 프로젝트를 만들면 
+1&amp;lt;packaging&amp;gt"/>
     
 
     <!--Open Graph Site Name-->
@@ -32,7 +40,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="website"/>
+        <meta property="og:type" content="article"/>
     
 
     <!--Page Cover-->
@@ -47,7 +55,7 @@
 
     <!-- Title -->
     
-    <title>Archives: 2019 - 개인 저장소</title>
+    <title>Spring-boot War 배포 - 개인 저장소</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -151,62 +159,68 @@
 </nav>
 
     <!-- Main Content -->
-    
+    <!-- Page Header -->
+<!-- Set your background image for this header in your post front-matter: cover -->
 
-<!-- Page Header -->
-<!-- Set your background image for this header in the theme's configuration: index_cover -->
 <header class="intro-header" style="background-image: url('')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>2019</h1>
+                <div class="post-heading">
+                    <h1>Spring-boot War 배포</h1>
+                    
+                    <span class="meta">
+                        <!-- Date and Author -->
+                        
+                        
+                            2019-11-22
+                        
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Tags and categories -->
+           
+
+            <!-- Gallery -->
             
-                <div class="post-preview">
-    <a href="/2019/11/22/Spring-boot War 배포/">
-        <h1 class="post-title archive">
-            Spring-boot War 배포
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-22
-    </p>
-</div>
+
+            <!-- Post Main Content -->
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <p>아주 간단한 프로젝트 진행요청이 왔다.<br>간단히 spring-boot로 프로젝트를 생성해서 진행을 했다<br>결과물을 전달하려고 하는데 war파일로 달라는거다</p>
+<h1 id="pom-xml-설정"><a href="#pom-xml-설정" class="headerlink" title="pom.xml 설정"></a>pom.xml 설정</h1><h3 id="packaging-설정"><a href="#packaging-설정" class="headerlink" title="packaging 설정"></a>packaging 설정</h3><p>보통 spring-boot 로 프로젝트를 만들면 </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>로 되어있거나 해당 설정 부분이 없는 경우도 있다 <br><br>이 부분을 아래와 같이 수정해준다.</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">packaging</span>&gt;</span>war<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="톰켓-배포용-라이브러리-dependency-추가"><a href="#톰켓-배포용-라이브러리-dependency-추가" class="headerlink" title="톰켓 배포용 라이브러리 dependency 추가"></a>톰켓 배포용 라이브러리 dependency 추가</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-tomcat<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="SpringBootServletInitialLizer-작성"><a href="#SpringBootServletInitialLizer-작성" class="headerlink" title="SpringBootServletInitialLizer 작성"></a>SpringBootServletInitialLizer 작성</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServletInitiallizer</span> <span class="keyword">extends</span> <span class="title">SpringBootServletInitializer</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> SpringApplicationBuilder <span class="title">configure</span><span class="params">(SpringApplicationBuilder applicationBuilder)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> applicationBuilder.sources(DocHelperApplication<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">    &#125;</span></span><br><span class="line"><span class="class">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>끗</p>
+
+
+                
+            </div>
+
+            <!-- Comments -->
             
-                <div class="post-preview">
-    <a href="/2019/11/21/github 블로그만들기 (Feat.hexo)/">
-        <h1 class="post-title archive">
-            github 블로그만들기 (Feat. hexo)
-        </h1>
-    </a>
-    <p class="post-meta archive">
-        <!-- Date and Author -->
-        
-        2019-11-21
-    </p>
-</div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    
+
+
+                </div>
             
-            <div class="archive-before-pagination"></div>
-            <ul class="pager">
-    
-    
-</ul>
         </div>
     </div>
-</div>
-
+</article>
 
     <!-- Footer -->
     <hr />
