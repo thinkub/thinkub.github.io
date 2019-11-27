@@ -1,2 +1,87 @@
 <!DOCTYPE html><html lang="kr" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>GitLab설치 (AWS) · 개인 저장소</title><meta name="description" content=""><meta name="og:title" content="GitLab설치 (AWS)"><meta name="og:type" content="website"><meta name="og:url" content="http://yoursite.com/2019/11/26/GitLab설치 (AWS)/"><meta name="og:image" content="http://image.toast.com/aaaaahq/hola_cover.JPG"><meta name="og:description" content=""><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><meta name="fb:app_id" content="1258629384258634"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="개인 저장소"><meta name="generator" content="Hexo 4.0.0"><link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
-</head><body class="post"><div id="fb-root"></div><div class="wrap"><header><nav class="navi-post"><a class="navi-post-back" href="javascript:history.back()" target="_blank" rel="noopener"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="navi-post-home" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></nav></header><main class="post"><div class="post"><article class="post-block"><h1 class="post-title">GitLab설치 (AWS)</h1><div class="post-info"><div class="post-info-profile"><a href="https://github.com/thinkub" target="_blank"><img src="/image/profile.jpg"></a></div><div class="post-info-details"><div class="post-categories"></div><div class="post-date">Nov 26, 2019</div></div></div><div class="post-share"><div class="fb-like" data-href="http://yoursite.com/2019/11/26/GitLab설치 (AWS)/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">                 </div><div class="fb-share-button" data-href="http://yoursite.com/2019/11/26/GitLab설치 (AWS)/" data-layout="button" data-size="small" data-mobile-iframe="true"></div><div class="fb-follow" data-href="https://www.facebook.com/holaxprogramming/" data-layout="button_count" data-size="small" data-show-faces="true"></div></div><div class="post-content"></div></article></div></main><footer><div class="paginator"><a class="prev" href="/2019/11/25/mongo%20DB%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0%20(Feat.%20Docker)/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div><ins class="adsbygoogle adsense-bottom" style="display:block" data-ad-client="ca-pub-6188640546219653" data-ad-slot="6129396565" data-ad-format="auto"></ins><div class="fb-comments-area"><div class="fb-comments" data-href="http://yoursite.com/2019/11/26/GitLab설치 (AWS)/" data-width="700" data-numposts="5"></div></div><div class="copyright"><p>© 2019 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>
+</head><body class="post"><div id="fb-root"></div><div class="wrap"><header><nav class="navi-post"><a class="navi-post-back" href="javascript:history.back()" target="_blank" rel="noopener"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="navi-post-home" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></nav></header><main class="post"><div class="post"><article class="post-block"><h1 class="post-title">GitLab설치 (AWS)</h1><div class="post-info"><div class="post-info-profile"><a href="https://github.com/thinkub" target="_blank"><img src="/image/profile.jpg"></a></div><div class="post-info-details"><div class="post-categories"></div><div class="post-date">Nov 26, 2019</div></div></div><div class="post-share"><div class="fb-like" data-href="http://yoursite.com/2019/11/26/GitLab설치 (AWS)/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">                 </div><div class="fb-share-button" data-href="http://yoursite.com/2019/11/26/GitLab설치 (AWS)/" data-layout="button" data-size="small" data-mobile-iframe="true"></div><div class="fb-follow" data-href="https://www.facebook.com/holaxprogramming/" data-layout="button_count" data-size="small" data-show-faces="true"></div></div><div class="post-content"><h1 id="사설"><a href="#사설" class="headerlink" title="사설"></a>사설</h1><p>최근 이직을 했는데.<br>이전 회사는 웹서비스를 하는 회사였고, 이직한 회사는 AI 하는 회사였다<br>물론 내가 담당한 업무는 웹개발이라서 업무가 달라지진 않았지만 환경이 달랐다</p>
+<p>이전 회사는 모기업의 영향을 받아 Issue관리는 자체개발 솔루션을 사용했고<br>SCM은 git enterprise를 사용하는 등 나름 괜찮은 환경이었다.</p>
+<p>이직한 회사는 svn을 사용하고 Issue관리는 그냥 메일로 하고,<br>IntelliJ 도 개인라이선스를 구매하는 등. 좀 열악한 편이었다.</p>
+<p>그 중 제일 불편한게 Issue관리!!<br>메일로 주고 받다 보니 이런 저런 메일이 오면서 History추적이 어려웠다.</p>
+<h1 id="Gitlab"><a href="#Gitlab" class="headerlink" title="Gitlab"></a>Gitlab</h1><p>예전 N사와 API 연동 작업을 한적이 있는데.<br>이때 Gitlab을 이용해서 Issue관리를 했었다.<br>상당히 괜찮았던 기억이 있어서 Gitlab을 설치해보기로 했다.</p>
+<h3 id="어디에-설치하지"><a href="#어디에-설치하지" class="headerlink" title="어디에 설치하지?!"></a>어디에 설치하지?!</h3><p>아직 회사에다가 내가 Gitlab을 설치하고 싶으니 서버를 주세요.<br>라고 말하기가 어려운 상태다 (아직 이직 1달이 되지 않았다 ㅠ)<br>aws가 1년간 무료이니 거기에 설치해 봐야겠다.</p>
+<h1 id="AWS-EC2"><a href="#AWS-EC2" class="headerlink" title="AWS EC2"></a>AWS EC2</h1><ol>
+<li><p>aws 사이트에 접속해서 로그인 후 EC2로 이동<br><img src="/img/2019/11/20191126_01.png" alt="image01"></p>
+</li>
+<li><p>인스턴스 시작해서 서버를 선택한다. (Ubuntu Server 18.04 LTS(HVM))</p>
+<ul>
+<li>Gitlab은 우분투에 설치하는걸 추천한다 (물론 centOS도 가능하다)<br><img src="/img/2019/11/20191126_02.png" width="100%" ></img></li>
+</ul>
+</li>
+<li><p>t2 micro를 선택할 예정이다 </p>
+<ul>
+<li>나는 sample용으로 설치를 하는 단계라 해당 옵션을 선택함</li>
+<li>실 운영을 하기 위해선 다른 타입을 선택하는걸 추천한다.<br><img src="/img/2019/11/20191126_03.png" width="100%" ></img></li>
+</ul>
+</li>
+<li><p>인스턴스 구성</p>
+<ul>
+<li>Default 셋팅으로 패스<br><img src="/img/2019/11/20191126_04.png" width="100%" ></img></li>
+</ul>
+</li>
+<li><p>스토리지 추가</p>
+<ul>
+<li>Default 셋팅으로 패스 (실 운영을 하려면 스토리지 용량을 조절해야 한다.)<br><img src="/img/2019/11/20191126_05.png" width="100%" ></img></li>
+</ul>
+</li>
+<li><p>태그 추가</p>
+<ul>
+<li>Default 셋팅으로 패스</li>
+</ul>
+</li>
+<li><p>보안 그룹 구성</p>
+<ul>
+<li>기본 설정은 22번 port만 오픈으로 되어있음</li>
+<li>Gitlab 서버포트 설정을 위해 추가 (8081 포트로 추가 했다.)<br><img src="/img/2019/11/20191126_07.png" width="100%" ></img></li>
+</ul>
+</li>
+<li><p>시작하기</p>
+<ul>
+<li>시작하기 버튼을 누른다<br><img src="/img/2019/11/20191126_06.png" width="100%" ></img></li>
+<li>키페어 설정 (기존 키 페어 선택함, 새로 만들어도 됨)<br><img src="/img/2019/11/20191126_08.png" width="100%" ></img></li>
+</ul>
+</li>
+<li><p>시작상태</p>
+<ul>
+<li>인스턴스 시작이 되면… 과금이 된다 물론 1년 무료라 상관없다.</li>
+<li>단 사용하지 않는 상태에서는 인스턴스를 내려놔야한다 (아님 1년 지나서 돈나감)<br><img src="/img/2019/11/20191126_09.png" width="100%" ></img></li>
+</ul>
+</li>
+<li><p>인스턴스 보기</p>
+<ul>
+<li>Name 설정을 해주면 관리할때 도움이 된다.</li>
+<li>gitlab으로 네이밍을 함.<br><img src="/img/2019/11/20191126_10.png" width="100%" ></img></li>
+</ul>
+</li>
+<li><p>인스턴스에 접속</p>
+<ul>
+<li>해당 인스턴스에 마우스 우클릭 후 연결을 누르면 연결 가이드가 나온다</li>
+<li>가이드 문서대로 하면 아래와 같이 접속에 성공한다<br><img src="/img/2019/11/20191126_11.png" width="100%" ></img></li>
+<li>참고로 나는 PuTTY를 이용해서 접속할 예정이라 약간의 작업이 필요하다 <a href="docs.aws.amazon.com/ko_kr/AWSEC2/lastest/UserGuide/putty.html">가이드</a></li>
+<li>가이드 문서대로 하면 아래와 같이 접속에 성공한다<br><img src="/img/2019/11/20191126_12.png" width="100%" ></img></li>
+</ul>
+</li>
+</ol>
+<h1 id="Gitlab-설치"><a href="#Gitlab-설치" class="headerlink" title="Gitlab 설치"></a>Gitlab 설치</h1><ol>
+<li><p>Ubuntu Update</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure></li>
+<li><p>기초 소프트웨어 설치</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install -y curl openssh-server ca-certificates postfix</span><br></pre></td></tr></table></figure></li>
+<li><p>Gitlab 설치</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>EXTERNAL_URL 설정</p>
+<ul>
+<li>위 보안설정시 INBOUND설정을 해두었던 8081Port 를 사용한다<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo EXTERNAL_URL=<span class="string">"ec2-3-136-84-188.us-east-2.compute.amazonaws.com:8081"</span> apt-get install gitlab-ee</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>설치 완료</p>
+</li>
+</ol>
+</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2019/11/25/mongo%20DB%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0%20(Feat.%20Docker)/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="next" href="/2019/11/26/sonaqube/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><ins class="adsbygoogle adsense-bottom" style="display:block" data-ad-client="ca-pub-6188640546219653" data-ad-slot="6129396565" data-ad-format="auto"></ins><div class="fb-comments-area"><div class="fb-comments" data-href="http://yoursite.com/2019/11/26/GitLab설치 (AWS)/" data-width="700" data-numposts="5"></div></div><div class="copyright"><p>© 2019 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>
