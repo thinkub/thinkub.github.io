@@ -9,9 +9,9 @@
 
 <p>그래서 선택한건 구글 클라우드.<br>구글 클라우드의 경우 무료 크레딧($300)을 준 다음.<br>해당 크레딧을 사용하는 한도에서는 어떤 스펙의 장비를 써도 된다.</p>
 <h1 id="GCP-Compute-Engine"><a href="#GCP-Compute-Engine" class="headerlink" title="GCP Compute Engine"></a>GCP Compute Engine</h1><ol>
-<li><p>google cloud platform 사이트에 로그인 후 Compute Engine선택<br><img src="/img/2019/11/20191126_01.png" alt="image01"></p>
+<li><p>google cloud platform 사이트에 로그인 후 Compute Engine선택<br><img src="/img/2019/11/26/20191126_01.png" alt="image01"></p>
 </li>
-<li><p>VM 인스턴스 만들기<br><img src="/img/2019/11/20191126_02.png" alt="image02"></p>
+<li><p>VM 인스턴스 만들기<br><img src="/img/2019/11/26/20191126_02.png" alt="image02"></p>
 </li>
 <li><p>옵션 선택 (옵션 선택에 따른 비용이 달라진다 오른쪽에 표시)</p>
 <ul>
@@ -20,20 +20,20 @@
 <li>영역 : 그냥 Defalut로</li>
 <li>시리즈 : N1 선택 이것도 선택에 따라 비용이 달라진다.<br>(N2의 경우 최소사양이 CPU 2, 8GB메모리라 N1을 선택했다.)</li>
 <li>머신유형 : 최소사양으로 해보았다. CPU 2개, 7.5GB</li>
-<li>그외 : 기본을 사용하고 HTTP, HTTPS 트래픽 허용<br><img src="/img/2019/11/20191126_03.png" alt="image03"></li>
+<li>그외 : 기본을 사용하고 HTTP, HTTPS 트래픽 허용<br><img src="/img/2019/11/26/20191126_03.png" alt="image03"></li>
 </ul>
 </li>
 <li><p>만들기를 누르기전 OS이미지를 선택하자</p>
 <ul>
 <li>옵션 중 부팅디스크의 변경 선택</li>
 <li>Ubuntu 16.04 LTS를 선택한다.</li>
-<li>SSD 영구디스크를 선택하고 크기는 40GB정도로 잡는다.<br><img src="/img/2019/11/20191126_04.png" alt="image04"></li>
+<li>SSD 영구디스크를 선택하고 크기는 40GB정도로 잡는다.<br><img src="/img/2019/11/26/20191126_04.png" alt="image04"></li>
 </ul>
 </li>
 </ol>
-<h1 id="Gitlab-설치"><a href="#Gitlab-설치" class="headerlink" title="Gitlab 설치"></a>Gitlab 설치</h1><p>방금 생성한 Instance에 Gitlab을 설치해보자<br><img src="/img/2019/11/20191126_05.png" alt="image05"></p>
+<h1 id="Gitlab-설치"><a href="#Gitlab-설치" class="headerlink" title="Gitlab 설치"></a>Gitlab 설치</h1><p>방금 생성한 Instance에 Gitlab을 설치해보자<br><img src="/img/2019/11/26/20191126_05.png" alt="image05"></p>
 <ol>
-<li>ssh버튼을 누르면 콘솔창이 열린다.<br><img src="/img/2019/11/20191126_06.png" alt="image06"></li>
+<li>ssh버튼을 누르면 콘솔창이 열린다.<br><img src="/img/2019/11/26/20191126_06.png" alt="image06"></li>
 </ol>
 <ol start="2">
 <li><p>필요한 Dependency를 설치 및 Update</p>
@@ -48,7 +48,7 @@
 <li><p>Gitlab CE설치</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gitlab-ce</span><br></pre></td></tr></table></figure>
 <ul>
-<li>설치가 완료되면 아래와 같은 로고가 보인다.<br><img src="/img/2019/11/20191126_07.png" alt="image07"></li>
+<li>설치가 완료되면 아래와 같은 로고가 보인다.<br><img src="/img/2019/11/26/20191126_07.png" alt="image07"></li>
 </ul>
 </li>
 </ol>
@@ -63,7 +63,7 @@
 <p>설정 완료후 설정 적용 및 재시작을 해야 한다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo gitlab-ctl reconfigure</span><br><span class="line">sudo gitlab-ctl restart</span><br></pre></td></tr></table></figure>
 
-<h1 id="접속테스트"><a href="#접속테스트" class="headerlink" title="접속테스트"></a>접속테스트</h1><p><img src="/img/2019/11/20191126_08.png" alt="image08"></p>
+<h1 id="접속테스트"><a href="#접속테스트" class="headerlink" title="접속테스트"></a>접속테스트</h1><p><img src="/img/2019/11/26/20191126_08.png" alt="image08"></p>
 <h1 id="참고-Site"><a href="#참고-Site" class="headerlink" title="참고 Site"></a>참고 Site</h1><blockquote>
 <p>docs.gitlab.com/ce/install/google_cloud_platform<br>docs.gitlab.com/ce/README.html</p>
 </blockquote>
