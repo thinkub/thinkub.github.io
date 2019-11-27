@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/11/27/SonarQube%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%9C%20%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0%20%ED%95%B4%EB%B3%B4%EA%B8%B0/</loc>
+    
+    <lastmod>2019-11-27T03:38:18.478Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/11/26/GitLab%EC%84%A4%EC%B9%98%20(GCP)/</loc>
     
     <lastmod>2019-11-27T02:50:40.602Z</lastmod>
