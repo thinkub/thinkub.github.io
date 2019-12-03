@@ -4,7 +4,7 @@
 <p>이직한 회사는 svn을 사용하고 Issue관리는 그냥 메일로 하고,<br>IntelliJ 도 개인라이선스를 구매하는 등. 좀 열악한 편이었다.</p>
 <p>그 중 제일 불편한게 Issue관리!!<br>메일로 주고 받다 보니 이런 저런 메일이 오면서 History추적이 어려웠다.</p>
 <h1 id="Gitlab"><a href="#Gitlab" class="headerlink" title="Gitlab"></a>Gitlab</h1><p>예전 N사와 API 연동 작업을 한적이 있는데.<br>이때 Gitlab을 이용해서 Issue관리를 했었다.<br>상당히 괜찮았던 기억이 있어서 Gitlab을 설치해보기로 했다.</p>
-<h3 id="어디에-설치하지"><a href="#어디에-설치하지" class="headerlink" title="어디에 설치하지?!"></a>어디에 설치하지?!</h3><p>아직 회사에다가 내가 Gitlab을 설치하고 싶으니 서버를 주세요.<br>라고 말하기가 어려운 상태다 (아직 이직 1달이 되지 않았다 ㅠ)<br>aws가 1년간 무료이니 거기에 설치해 보려했으나….<br>aws프리티어 인스턴스를 만들다 보면 지원되는 CPU와 메모리가 1core 에 1GB이다.<br>gitlab의 경우 최소 2core CPU와 4GB의 RAM을 권장한다.<br>혹시나 하는 마음에 aws에 설치해 봤으나 아래와 같은 문구를 만나게 될 것이다.</p>
+<h3 id="어디에-설치하지"><a href="#어디에-설치하지" class="headerlink" title="어디에 설치하지?!"></a>어디에 설치하지?!</h3><p>아직 회사에다가 내가 Gitlab을 설치하고 싶으니 서버를 주세요.<br>라고 말하기가 어려운 상태다 (아직 이직 1달이 되지 않았다 ㅠ)<br>aws가 1년간 무료이니 거기에 설치해 보려했으나….<br>aws프리티어 인스턴스를 만들다 보면 지원되는 CPU와 메모리가 1core 에 1GB이다.<br>gitlab의 경우 최소 2core CPU와 4GB의 RAM을 권장한다.<br>혹시나 하는 마음에 aws에 설치해 봤으나 아래와 같은 문구를 만나게 되었다.</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cannot allocate memory - fork(2)</span><br></pre></td></tr></table></figure>
 
 <p>그래서 선택한건 구글 클라우드.<br>구글 클라우드의 경우 무료 크레딧($300)을 준 다음.<br>해당 크레딧을 사용하는 한도에서는 어떤 스펙의 장비를 써도 된다.</p>
