@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2019/12/11/Kafka/</loc>
+    
+    <lastmod>2019-12-11T01:21:18.720Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2019/12/10/oracle%20%3E%20mysql%20migration(load%20data)/</loc>
     
     <lastmod>2019-12-11T00:55:32.074Z</lastmod>
