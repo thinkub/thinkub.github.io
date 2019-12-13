@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-12-11T03:32:14.065Z</updated>
+  <updated>2019-12-13T04:10:56.660Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,21 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Feign Client 사용시 form encoder 설정</title>
+    <link href="http://yoursite.com/2019/12/13/Feign%20Client%20%EC%82%AC%EC%9A%A9%EC%8B%9C%20form%20encoder%20%EC%84%A4%EC%A0%95/"/>
+    <id>http://yoursite.com/2019/12/13/Feign%20Client%20%EC%82%AC%EC%9A%A9%EC%8B%9C%20form%20encoder%20%EC%84%A4%EC%A0%95/</id>
+    <published>2019-12-13T01:15:23.638Z</published>
+    <updated>2019-12-13T04:10:56.660Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>JUnit5</title>
