@@ -2,6 +2,69 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%208.%20Image%20%EC%A0%80%EC%9E%A5%EC%86%8C/</loc>
+    
+    <lastmod>2020-02-25T07:11:54.622Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%207.%20Docker%20Compose/</loc>
+    
+    <lastmod>2020-02-25T06:55:36.397Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%206.%20Dockerfile/</loc>
+    
+    <lastmod>2020-02-25T06:53:36.526Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%205.%20Image%20%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
+    
+    <lastmod>2020-02-25T06:37:08.130Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%204.%20Docker%20Example/</loc>
+    
+    <lastmod>2020-02-25T06:28:12.522Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%203.%20Docker%20Command/</loc>
+    
+    <lastmod>2020-02-25T06:27:57.787Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%202.%20Docker%20Install/</loc>
+    
+    <lastmod>2020-02-25T06:26:50.704Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%201.%20Docker%EC%9D%98%20%EA%B0%9C%EB%85%90/</loc>
+    
+    <lastmod>2020-02-25T05:14:01.567Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2019/11/28/GitLab%EC%84%A4%EC%B9%98%20(Docker)/</loc>
+    
+    <lastmod>2020-01-31T07:11:46.031Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/01/03/Docker(2)/</loc>
     
     <lastmod>2020-01-03T05:56:05.467Z</lastmod>
@@ -54,13 +117,6 @@
     <loc>http://yoursite.com/2019/11/26/GitLab%EC%84%A4%EC%B9%98%20(GCP)/</loc>
     
     <lastmod>2019-12-13T05:42:43.004Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2019/11/28/GitLab%EC%84%A4%EC%B9%98%20(Docker)/</loc>
-    
-    <lastmod>2019-12-13T05:42:40.202Z</lastmod>
     
   </url>
   

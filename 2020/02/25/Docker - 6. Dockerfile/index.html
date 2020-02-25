@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="kr" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>Docker - 6. Dockerfile · 개인 저장소</title><meta name="description" content=""><meta name="og:title" content="Docker - 6. Dockerfile"><meta name="og:type" content="website"><meta name="og:url" content="http://yoursite.com/2020/02/25/Docker - 6. Dockerfile/"><meta name="og:image" content="http://image.toast.com/aaaaahq/hola_cover.JPG"><meta name="og:description" content=""><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><meta name="fb:app_id" content="1258629384258634"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="개인 저장소"><meta name="generator" content="Hexo 4.0.0"><link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
+</head><body class="post"><div id="fb-root"></div><div class="wrap"><header><nav class="navi-post"><a class="navi-post-back" href="javascript:history.back()" target="_blank" rel="noopener"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="navi-post-home" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></nav></header><main class="post"><div class="post"><article class="post-block"><h1 class="post-title">Docker - 6. Dockerfile</h1><div class="post-info"><div class="post-info-profile"><a href="https://github.com/thinkub" target="_blank"><img src="/image/profile.jpg"></a></div><div class="post-info-details"><div class="post-categories"></div><div class="post-date">Feb 25, 2020</div></div></div><div class="post-share"><div class="fb-like" data-href="http://yoursite.com/2020/02/25/Docker - 6. Dockerfile/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">                 </div><div class="fb-share-button" data-href="http://yoursite.com/2020/02/25/Docker - 6. Dockerfile/" data-layout="button" data-size="small" data-mobile-iframe="true"></div><div class="fb-follow" data-href="https://www.facebook.com/holaxprogramming/" data-layout="button_count" data-size="small" data-show-faces="true"></div></div><div class="post-content"><h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><hr>
+<ol>
+<li>Docker <ol>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%201.%20Docker의%20개념" target="_blank" rel="noopener">Docker 개념</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/" target="_blank" rel="noopener">Docker Install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/" target="_blank" rel="noopener">Docker Command</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/" target="_blank" rel="noopener">Docker Example</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/" target="_blank" rel="noopener">Image 만들기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/" target="_blank" rel="noopener">Dockerfile</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/" target="_blank" rel="noopener">Docker Compose</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/" target="_blank" rel="noopener">Image 저장소</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>Container Orchestration <ol>
+<li>Container Orchestration 이란</li>
+<li>kubernetes(k8s)</li>
+<li>kubernetes install</li>
+<li>kubernetes ui</li>
+<li>kubernetes를 이용해 배포해보기</li>
+<li>kubectl CLI</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>Provisioning <ol>
+<li>Provisioning이란</li>
+<li>Ansible</li>
+<li>Ansible을 이용해 kubernetes cluster 생성하기</li>
+</ol>
+</li>
+</ol>
+<h1 id="Dockerfile-기본명령어"><a href="#Dockerfile-기본명령어" class="headerlink" title="Dockerfile 기본명령어"></a>Dockerfile 기본명령어</h1><blockquote>
+<p>Dockerfile은 Docker Image를 생성하기위해 DSL언어로 구성된 파일입니다.</p>
+</blockquote>
+<p>Dockerfile 관련 reference 문서는 <a href="https://docs.docker.com/engine/reference/builder/" target="_blank" rel="noopener">이곳</a> 을 참고하시면 됩니다.</p>
+<h3 id="From"><a href="#From" class="headerlink" title="From"></a>From</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FROM &lt;image&gt;:&lt;tag&gt;</span><br><span class="line">FROM centos:centos7.7.1908</span><br></pre></td></tr></table></figure>
+<p>Base Image를 지정합니다. <code>필수값</code>으로 어떤 Image도 Base Image가 될 수 있습니다.<br>tag는 될 수 있으면 기본값(lastest) 보다 구체적인 버전을 지정하는것이 좋습니다.</p>
+<h3 id="MAINTAINER"><a href="#MAINTAINER" class="headerlink" title="MAINTAINER"></a>MAINTAINER</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MAINTAINER &lt;name&gt;</span><br><span class="line">MAINTAINER mhlee@saltlux.com</span><br></pre></td></tr></table></figure>
+<p>파일 관리자의 이름 또는 Email정보를 적습니다. </p>
+<h3 id="COPY"><a href="#COPY" class="headerlink" title="COPY"></a>COPY</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">COPY &lt;src&gt;... &lt;dest&gt;</span><br><span class="line">COPY . /usr/src/app</span><br></pre></td></tr></table></figure>
+<p>파일이나 디렉토리를 이미지로 복사합니다.<br>일반적으로 소스를 복사하는 데 사용합니다.<br><code>target</code> 디렉토리가 없다면 자동으로 생성합니다.</p>
+<h3 id="ADD"><a href="#ADD" class="headerlink" title="ADD"></a>ADD</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ADD &lt;src&gt;... &lt;dest&gt;</span><br><span class="line">ADD . /usr/src/app</span><br></pre></td></tr></table></figure>
+<p>COPY명령어와 매우 유사하나 몇가지 추가 기능이 있습니다.<br>src에 파일 대신 URL을 입력할 수 있고 src에 압축 파일을 입력하는 경우 자동으로 압축을 해제하면서 복사됩니다.</p>
+<h3 id="RUN"><a href="#RUN" class="headerlink" title="RUN"></a>RUN</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">RUN &lt;command&gt;</span><br><span class="line">RUN [&quot;executable&quot;, &quot;param1&quot;, &quot;param2&quot;]</span><br><span class="line">RUN bundle install</span><br></pre></td></tr></table></figure>
+<p>가장 많이 사용하는 구문입니다. 명령어를 그대로 실행합니다.<br>내부적으로 /bin/sh -c 뒤에 명령어를 실행하는 방식입니다.</p>
+<h3 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">CMD [&quot;executable&quot;,&quot;param1&quot;,&quot;param2&quot;]</span><br><span class="line">CMD command param1 param2</span><br><span class="line">CMD bundle exec ruby app.rb</span><br></pre></td></tr></table></figure>
+<p>도커 컨테이너가 실행되었을 때 실행되는 명령어를 정의합니다.<br>빌드할 때는 실행되지 않으며 여러 개의 CMD가 존재할 경우 가장 마지막 CMD만 실행됩니다.<br>한꺼번에 여러 개의 프로그램을 실행하고 싶은 경우에는 run.sh파일을 작성하여 데몬으로 실행하거나 supervisord나 forego와 같은 여러 개의 프로그램을 실행하는 프로그램을 사용합니다.</p>
+<h3 id="WORKDIR"><a href="#WORKDIR" class="headerlink" title="WORKDIR"></a>WORKDIR</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">WORKDIR /path/to/workdir</span><br></pre></td></tr></table></figure>
+<p>RUN, CMD, ADD, COPY등이 이루어질 기본 디렉토리를 설정합니다.<br>각 명령어의 현재 디렉토리는 한 줄 한 줄마다 초기화되기 때문에 RUN cd /path를 하더라도 다음 명령어에선 다시 위치가 초기화 됩니다.<br>같은 디렉토리에서 계속 작업하기 위해서 WORKDIR을 사용합니다.</p>
+<h3 id="EXPOSE"><a href="#EXPOSE" class="headerlink" title="EXPOSE"></a>EXPOSE</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">EXPOSE &lt;port&gt; [&lt;port&gt;...]</span><br><span class="line">EXPOSE 4567</span><br></pre></td></tr></table></figure>
+<p>도커 컨테이너가 실행되었을 때 요청을 기다리고 있는(Listen) 포트를 지정합니다. 여러개의 포트를 지정할 수 있습니다.</p>
+<h3 id="VOLUME"><a href="#VOLUME" class="headerlink" title="VOLUME"></a>VOLUME</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">VOLUME [&quot;/data&quot;]</span><br></pre></td></tr></table></figure>
+<p>컨테이너 외부에 파일시스템을 마운트 할 때 사용합니다. 반드시 지정하지 않아도 마운트 할 수 있지만, 기본적으로 지정하는 것이 좋습니다.</p>
+<h3 id="ENV"><a href="#ENV" class="headerlink" title="ENV"></a>ENV</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ENV &lt;key&gt; &lt;value&gt;</span><br><span class="line">ENV &lt;key&gt;=&lt;value&gt; ...</span><br><span class="line">ENV DB_URL mysql</span><br></pre></td></tr></table></figure>
+<p>컨테이너에서 사용할 환경변수를 지정합니다. 컨테이너를 실행할 때 -e옵션을 사용하면 기존 값을 오버라이딩 하게 됩니다.</p>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><blockquote>
+<p><a href="https://www.docker.com" target="_blank" rel="noopener">https://www.docker.com</a><br><a href="http://pyrasis.com/book/DockerForTheReallyImpatient" target="_blank" rel="noopener">http://pyrasis.com/book/DockerForTheReallyImpatient</a><br><a href="https://www.44bits.io/ko/post/almost-perfect-development-environment-with-docker-and-docker-compose" target="_blank" rel="noopener">https://www.44bits.io/ko/post/almost-perfect-development-environment-with-docker-and-docker-compose</a><br><a href="https://tech.osci.kr/docker/2018/09/10/45749387/" target="_blank" rel="noopener">https://tech.osci.kr/docker/2018/09/10/45749387/</a><br><a href="https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html" target="_blank" rel="noopener">https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html</a></p>
+</blockquote>
+</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2020/02/25/Docker%20-%205.%20Image%20%EB%A7%8C%EB%93%A4%EA%B8%B0/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="next" href="/2020/02/25/Docker%20-%207.%20Docker%20Compose/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><ins class="adsbygoogle adsense-bottom" style="display:block" data-ad-client="ca-pub-6188640546219653" data-ad-slot="6129396565" data-ad-format="auto"></ins><div class="fb-comments-area"><div class="fb-comments" data-href="http://yoursite.com/2020/02/25/Docker - 6. Dockerfile/" data-width="700" data-numposts="5"></div></div><div class="copyright"><p>© 2019 - 2020 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>

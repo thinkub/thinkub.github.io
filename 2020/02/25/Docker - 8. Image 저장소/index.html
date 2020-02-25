@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="kr" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>Docker - 8. Image 저장소 · 개인 저장소</title><meta name="description" content=""><meta name="og:title" content="Docker - 8. Image 저장소"><meta name="og:type" content="website"><meta name="og:url" content="http://yoursite.com/2020/02/25/Docker - 8. Image 저장소/"><meta name="og:image" content="http://image.toast.com/aaaaahq/hola_cover.JPG"><meta name="og:description" content=""><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><meta name="fb:app_id" content="1258629384258634"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="개인 저장소"><meta name="generator" content="Hexo 4.0.0"><link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
+</head><body class="post"><div id="fb-root"></div><div class="wrap"><header><nav class="navi-post"><a class="navi-post-back" href="javascript:history.back()" target="_blank" rel="noopener"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="navi-post-home" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></nav></header><main class="post"><div class="post"><article class="post-block"><h1 class="post-title">Docker - 8. Image 저장소</h1><div class="post-info"><div class="post-info-profile"><a href="https://github.com/thinkub" target="_blank"><img src="/image/profile.jpg"></a></div><div class="post-info-details"><div class="post-categories"></div><div class="post-date">Feb 25, 2020</div></div></div><div class="post-share"><div class="fb-like" data-href="http://yoursite.com/2020/02/25/Docker - 8. Image 저장소/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">                 </div><div class="fb-share-button" data-href="http://yoursite.com/2020/02/25/Docker - 8. Image 저장소/" data-layout="button" data-size="small" data-mobile-iframe="true"></div><div class="fb-follow" data-href="https://www.facebook.com/holaxprogramming/" data-layout="button_count" data-size="small" data-show-faces="true"></div></div><div class="post-content"><h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><hr>
+<ol>
+<li>Docker <ol>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%201.%20Docker의%20개념/" target="_blank" rel="noopener">Docker 개념</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%202.%20Docker%20Install/" target="_blank" rel="noopener">Docker Install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%203.%20Docker%20Command/" target="_blank" rel="noopener">Docker Command</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%204.%20Docker%20Example/" target="_blank" rel="noopener">Docker Example</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%205.%20Image%20만들기/" target="_blank" rel="noopener">Image 만들기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%206.%20Dockerfile/" target="_blank" rel="noopener">Dockerfile</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%207.%20Docker%20Compose/" target="_blank" rel="noopener">Docker Compose</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%208.%20Image%20저장소/" target="_blank" rel="noopener">Image 저장소</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>Container Orchestration <ol>
+<li>Container Orchestration 이란</li>
+<li>kubernetes(k8s)</li>
+<li>kubernetes install</li>
+<li>kubernetes ui</li>
+<li>kubernetes를 이용해 배포해보기</li>
+<li>kubectl CLI</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>Provisioning <ol>
+<li>Provisioning이란</li>
+<li>Ansible</li>
+<li>Ansible을 이용해 kubernetes cluster 생성하기</li>
+</ol>
+</li>
+</ol>
+<h1 id="목표"><a href="#목표" class="headerlink" title="목표"></a>목표</h1><p>지금까지 Docker에 대한 개념과 Container 구동방법 그리고 Image를 만드는 방법등을 살펴봤습니다.<br>이번엔 생성한 Image를 저장하고 저장된 Image를 원격에서 Pull받아서 사용할 수 있는 저장소에 대해 알아보겠습니다.</p>
+<ol>
+<li>Docker Hub</li>
+<li>GitLab Container Registry</li>
+<li>Docker Registry</li>
+</ol>
+<p><strong>여기서는 Docker Hub 와 GitLab Container Registry 에 대해 알아보겠습니다.</strong><br><strong>참고로 저희는 GitLab Container Registry 사용하는 방향으로 셋팅중 입니다.</strong></p>
+<h1 id="1-Docker-Hub"><a href="#1-Docker-Hub" class="headerlink" title="1. Docker Hub"></a>1. Docker Hub</h1><p>Docker Hub는 컨테이너 이미지를위한 세계 최대의 라이브러리 및 커뮤니티입니다.<br>Docker에서 공식으로 지원하는 Repositry로 공개 Image저장소 이기도 합니다.<br>물론 약간(?) 의 비용을 지불하면 private Repository를 사용 할 수 있습니다.<br>Docker Hub에서 private Repository를 만들어 보겠습니다.</p>
+<h3 id="1-1-Repository-생성"><a href="#1-1-Repository-생성" class="headerlink" title="1.1 Repository 생성"></a>1.1 Repository 생성</h3><ul>
+<li>Repository 명칭을 적습니다. (broker-api로 하겠습니다.)</li>
+<li>Repository 는 Private으로 생성하겠습니다.</li>
+<li>Autobuild 가 지원이 됩니다. (GitHub, Bitbucket)<ul>
+<li>GitHub과 Bitbucket를 사용하기 않기 때문에 다루지 않겠습니다.</li>
+</ul>
+</li>
+</ul>
+<p><img src="/img/2020/02/25/48.png" alt="image48"></p>
+<p><strong>정상적으로 Repository 가 생성된 것을 확인 할 수 있습니다.</strong></p>
+<p><img src="/img/2020/02/25/49.png" alt="image49"></p>
+<h3 id="1-2-Image-Push"><a href="#1-2-Image-Push" class="headerlink" title="1.2 Image Push"></a>1.2 Image Push</h3><ul>
+<li><p>생성된 Docker Hub Repository 에 Image Push를 해보겠습니다.</p>
+<ul>
+<li>docker login 명령어로 docker hub 계정로그인을 진행합니다.</li>
+<li>docker pull 명령어로 생성된 이미지를 docker hub에 pull 합니다.<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo docker login</span><br><span class="line">sudo docker push thinkub/broker-api:0.0.1</span><br></pre></td></tr></table></figure>
+<img src="/img/2020/02/25/50.png" alt="image50"></li>
+</ul>
+</li>
+<li><p>정상적으로 pull이 되었는지 확인해봅니다.</p>
+</li>
+</ul>
+<p><img src="/img/2020/02/25/51.png" alt="image51"></p>
+<h3 id="1-3-Image-pull"><a href="#1-3-Image-pull" class="headerlink" title="1.3 Image pull"></a>1.3 Image pull</h3><ul>
+<li>Docker Hub Repository에 있는 Image를 pull 받아보겠습니다.</li>
+<li><code>생성한 Repository 는 private Repository이기 때문에 docker login 이후에 pull을 받을 수 있습니다.</code></li>
+</ul>
+<p><img src="/img/2020/02/25/52.png" alt="image52"></p>
+<h1 id="2-GitLab-Container-Registry"><a href="#2-GitLab-Container-Registry" class="headerlink" title="2. GitLab Container Registry"></a>2. GitLab Container Registry</h1><p>GitLab에서도 <strong>Container Registry</strong>라는 Docker Image 저장소를 제공하고 있습니다.<br>GitLab 설치시 Default 설정이 되지 않으므로 활성화를 해야 합니다.<br>관련 문서는 <a href="https://docs.gitlab.com/ce/administration/packages/container_registry.html" target="_blank" rel="noopener">이곳</a> 을 참고해주세요.</p>
+<p><code>컨테이너 레지스트리는 기본적으로 HTTPS에서 작동합니다. HTTPS 설정을 선행한 후 진행해주세요</code><br><code>해당 문서는 gitlab이 이미 설치된 상태에서의 작업입니다.</code></p>
+<h3 id="2-1-Registry-Container-활성화"><a href="#2-1-Registry-Container-활성화" class="headerlink" title="2.1 Registry Container 활성화"></a>2.1 Registry Container 활성화</h3><ul>
+<li><p>/etc/gitlab/gitlab.rb 설정파일을 수정합니다.</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># registry 에서 사용하는 주소로 gitlab주소에서 8929 Port를 사용하도록 설정</span></span><br><span class="line"><span class="comment"># port는 필요에의해서 변경 할 수 있음.</span></span><br><span class="line">registry_external_url <span class="string">'https://....:8929'</span></span><br><span class="line"></span><br><span class="line">gitlab_rails[<span class="string">'registry_enabled'</span>] = <span class="literal">true</span></span><br><span class="line">gitlab_rails[<span class="string">'registry_path'</span>] = <span class="string">"/var/opt/gitlab/gitlab-rails/shared/registry"</span></span><br><span class="line"></span><br><span class="line">registry[<span class="string">'enable'</span>] = <span class="literal">true</span></span><br><span class="line">registry[<span class="string">'registry_http_addr'</span>] = <span class="string">"localhost:5001"</span></span><br><span class="line"></span><br><span class="line">registry_nginx[<span class="string">'ssl_certificate'</span>] = <span class="string">"/etc/gitlab/ssl/Wildcard.ziny.us.crt"</span></span><br><span class="line">registry_nginx[<span class="string">'ssl_certificate_key'</span>] = <span class="string">"/etc/gitlab/ssl/Wildcard.ziny.us.key"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>gitlab 재설정</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gitlab-ctl reconfigure</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Container Registry 접속 확인</p>
+</li>
+</ul>
+<p><img src="/img/2020/02/25/53.png" alt="image53"></p>
+<h3 id="2-2-Container-Registry-접근"><a href="#2-2-Container-Registry-접근" class="headerlink" title="2.2 Container Registry 접근"></a>2.2 Container Registry 접근</h3><p>활성화 된 Registry 에 접근해 보겠습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker login [url]:[port]</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/25/54.png" alt="image54"><br><code>certificate signed by unknown authority</code> 라는 오류가 발생합니다.</p>
+<p><strong>Docker hostname을 port와 같이 사용하는경우 어떤 인증서를 사용해야할지 추측하지 않습니다.</strong><br><strong>이를 위해서 <code>/etc/docker/certs.d/{hostname:port}/</code> 폴더를 생성한 후 해당 폴더에 인증서를 저장해두어야 합니다.</strong></p>
+<h4 id="gitlab인증서를-복사합니다"><a href="#gitlab인증서를-복사합니다" class="headerlink" title="gitlab인증서를 복사합니다."></a>gitlab인증서를 복사합니다.</h4><p><img src="/img/2020/02/25/55.png" alt="image55"></p>
+<h4 id="gitlab-container-registry-login-해봅니다"><a href="#gitlab-container-registry-login-해봅니다" class="headerlink" title="gitlab container registry login 해봅니다."></a>gitlab container registry login 해봅니다.</h4><p><img src="/img/2020/02/25/56.png" alt="image56"></p>
+<h3 id="2-3-Container-Registry-에-Image-push-해보기"><a href="#2-3-Container-Registry-에-Image-push-해보기" class="headerlink" title="2.3 Container Registry 에 Image push 해보기"></a>2.3 Container Registry 에 Image push 해보기</h3><ul>
+<li>기존에 생성된 broker-api 를 push 해볼 예정입니다.</li>
+<li>container registry project 에 맞게 tag 작업을 합니다. (tag 규칙은 아래와 같습니다)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[HOST_NAME]/[PROJECT_NAME]:[TAG] 또는</span><br><span class="line">[HOST_NAME]/[GROUP_NAME]/[PROJECT_NAME]:[TAG]</span><br><span class="line"></span><br><span class="line">ex) </span><br><span class="line">sudo docker tag broker-api [url]:[port]/ai-labs-aip/broker-api:0.0.1</span><br></pre></td></tr></table></figure></li>
+<li>push 명령어는 다음과 같습니다.<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker push [url]:[port]/ai-labs-aip/broker-api</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><img src="/img/2020/02/25/57.png" alt="image57"></p>
+<ul>
+<li>정상적으로 Push 된지 확인해 봅니다.</li>
+</ul>
+<p><img src="/img/2020/02/25/58.png" alt="image58"></p>
+<h3 id="2-4-Container-Registry에서-Image-Pull-받아서-Container-구동해보기"><a href="#2-4-Container-Registry에서-Image-Pull-받아서-Container-구동해보기" class="headerlink" title="2.4 Container Registry에서 Image Pull 받아서 Container 구동해보기"></a>2.4 Container Registry에서 Image Pull 받아서 Container 구동해보기</h3><ul>
+<li>Container Registry 에서 Image 를 받아보겠습니다.<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker pull [url]:[port]/ai-labs-aip/broker-api:0.0.1</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><img src="/img/2020/02/25/59.png" alt="image59"></p>
+<ul>
+<li>Pull 받은 Image로 Container를 구동해보겠습니다.</li>
+</ul>
+<p><img src="/img/2020/02/25/60.png" alt="image60"></p>
+<ul>
+<li>접속 확인</li>
+</ul>
+<p><img src="/img/2020/02/25/61.png" alt="image61"></p>
+</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2020/02/25/Docker%20-%207.%20Docker%20Compose/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div><ins class="adsbygoogle adsense-bottom" style="display:block" data-ad-client="ca-pub-6188640546219653" data-ad-slot="6129396565" data-ad-format="auto"></ins><div class="fb-comments-area"><div class="fb-comments" data-href="http://yoursite.com/2020/02/25/Docker - 8. Image 저장소/" data-width="700" data-numposts="5"></div></div><div class="copyright"><p>© 2019 - 2020 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>
