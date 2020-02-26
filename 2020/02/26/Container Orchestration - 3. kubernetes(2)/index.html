@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="kr" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>Container Orchestration - 3. kubernetes(2) · 개인 저장소</title><meta name="description" content=""><meta name="og:title" content="Container Orchestration - 3. kubernetes(2)"><meta name="og:type" content="website"><meta name="og:url" content="http://yoursite.com/2020/02/26/Container Orchestration - 3. kubernetes(2)/"><meta name="og:image" content="http://image.toast.com/aaaaahq/hola_cover.JPG"><meta name="og:description" content=""><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><meta name="fb:app_id" content="1258629384258634"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="개인 저장소"><meta name="generator" content="Hexo 4.0.0"><link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
+</head><body class="post"><div id="fb-root"></div><div class="wrap"><header><nav class="navi-post"><a class="navi-post-back" href="javascript:history.back()" target="_blank" rel="noopener"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="navi-post-home" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></nav></header><main class="post"><div class="post"><article class="post-block"><h1 class="post-title">Container Orchestration - 3. kubernetes(2)</h1><div class="post-info"><div class="post-info-profile"><a href="https://github.com/thinkub" target="_blank"><img src="/image/profile.jpg"></a></div><div class="post-info-details"><div class="post-categories"></div><div class="post-date">Feb 26, 2020</div></div></div><div class="post-share"><div class="fb-like" data-href="http://yoursite.com/2020/02/26/Container Orchestration - 3. kubernetes(2)/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">                 </div><div class="fb-share-button" data-href="http://yoursite.com/2020/02/26/Container Orchestration - 3. kubernetes(2)/" data-layout="button" data-size="small" data-mobile-iframe="true"></div><div class="fb-follow" data-href="https://www.facebook.com/holaxprogramming/" data-layout="button_count" data-size="small" data-show-faces="true"></div></div><div class="post-content"><h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><hr>
+<ol>
+<li>Docker <ol>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%201.%20Docker의%20개념/" target="_blank" rel="noopener">Docker 개념</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%202.%20Docker%20Install/" target="_blank" rel="noopener">Docker Install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%203.%20Docker%20Command/" target="_blank" rel="noopener">Docker Command</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%204.%20Docker%20Example/" target="_blank" rel="noopener">Docker Example</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%205.%20Image%20만들기/" target="_blank" rel="noopener">Image 만들기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%206.%20Dockerfile/" target="_blank" rel="noopener">Dockerfile</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%207.%20Docker%20Compose/" target="_blank" rel="noopener">Docker Compose</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%208.%20Image%20저장소/" target="_blank" rel="noopener">Image 저장소</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>Container Orchestration <ol>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/" target="_blank" rel="noopener">Container Orchestration 이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" target="_blank" rel="noopener">kubernetes(1)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(2)/" target="_blank" rel="noopener">kubernetes(2)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" target="_blank" rel="noopener">kubernetes install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" target="_blank" rel="noopener">kubernetes ui</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes를%20이용해%20배포해보기/" target="_blank" rel="noopener">kubernetes를 이용해 배포해보기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" target="_blank" rel="noopener">kubectl CLI</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>Provisioning <ol>
+<li>Provisioning이란</li>
+<li>Ansible</li>
+<li>Ansible을 이용해 kubernetes cluster 생성하기</li>
+</ol>
+</li>
+</ol>
+<h2 id="3-Controller"><a href="#3-Controller" class="headerlink" title="3. Controller"></a>3. Controller</h2><p>컨트롤러는 객체가 원래 설정된 상태를 잘 유지할수있게 관리하는 역할을 합니다.</p>
+<h3 id="3-1-Replication-Controller"><a href="#3-1-Replication-Controller" class="headerlink" title="3.1 Replication Controller"></a>3.1 Replication Controller</h3><p>언제든지 지정된 숫자 만큼의 Pod가 항상 클러스터 내에서 실행되고 있도록 관리합니다. 다시말하면 Pod 또는 동일종류의 Pod의 셋이 항상 가동되고 사용가능한지 확인합니다.</p>
+<p><img src="/img/2020/02/26/9.svg" alt=""></p>
+<h3 id="3-2-ReplicaSet"><a href="#3-2-ReplicaSet" class="headerlink" title="3.2 ReplicaSet"></a>3.2 ReplicaSet</h3><p>replicaset은 Replication Controller 다음 버전입니다. Replication Controller와 동일하게 동작하고 차이점은 집합 기반(set-based)의 셀렉터(selector)를 지원하는 것이 다릅니다. 복제 컨트롤러 같은 경우에는 셀렉터가 등호기반(equal-based)라서 라벨을 선택할때 같은지(=) 다른지(!=)만 확인합니다. 하지만 집합기반의 셀렉터는 in, notin, exists같은 연산자를 지원합니다.</p>
+<p><img src="/img/2020/02/26/10.png" width="40%" height="40%"> <br></p>
+<h3 id="3-3-Deployment"><a href="#3-3-Deployment" class="headerlink" title="3.3 Deployment"></a>3.3 Deployment</h3><p>Replication controller와 Replica Set의 좀더 상위 추상화 개념입니다. 가장 기본적인 배포 방법으로 ReplicaSet를 관리하면서 앱의 배포를 보다 세밀하게 관리할 수 있게 합니다. 단순히 실행시켜야할 pod의 개수를 유지 하는 것만이 아니라 배포할때 롤링업데이트가 가능한 것은 물론, 배포도중 멈췄다가 다시 배포하는것도 가능합니다. 배포후 이전 버전으로 롤백도 할 수 있습니다.</p>
+<p><img src="/img/2020/02/26/11.svg" alt=""></p>
+<h4 id="3-3-1-Rolling-Update"><a href="#3-3-1-Rolling-Update" class="headerlink" title="3.3.1 Rolling Update"></a>3.3.1 Rolling Update</h4><p>롤링 업데이트는 Pod 인스턴스를 점진적으로 새로운 것으로 업데이트하여 Deployment 업데이트가 <strong>서비스 중단 없이</strong> 이루어질 수 있도록 해줍니다.</p>
+<p><img src="/img/2020/02/26/12.svg" width="60%" height="60%"> <br><br><img src="/img/2020/02/26/13.svg" width="60%" height="60%"> <br><br><img src="/img/2020/02/26/14.svg" width="60%" height="60%"> <br><br><img src="/img/2020/02/26/15.svg" width="60%" height="60%"> <br></p>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><blockquote>
+<p><a href="https://kubernetes.io/ko/docs/concepts/overview/" target="_blank" rel="noopener">https://kubernetes.io/ko/docs/concepts/overview/</a> <br><br><a href="https://subicura.com/2019/05/19/kubernetes-basic-1.html" target="_blank" rel="noopener">https://subicura.com/2019/05/19/kubernetes-basic-1.html</a><br><br><a href="https://bcho.tistory.com/1256?category=731548" target="_blank" rel="noopener">https://bcho.tistory.com/1256?category=731548</a> <br><br><a href="https://arisu1000.tistory.com/" target="_blank" rel="noopener">https://arisu1000.tistory.com/</a></p>
+</blockquote>
+</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="next" href="/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><ins class="adsbygoogle adsense-bottom" style="display:block" data-ad-client="ca-pub-6188640546219653" data-ad-slot="6129396565" data-ad-format="auto"></ins><div class="fb-comments-area"><div class="fb-comments" data-href="http://yoursite.com/2020/02/26/Container Orchestration - 3. kubernetes(2)/" data-width="700" data-numposts="5"></div></div><div class="copyright"><p>© 2019 - 2020 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>

@@ -2,51 +2,100 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2020/02/25/Docker%20-%208.%20Image%20%EC%A0%80%EC%9E%A5%EC%86%8C/</loc>
+    <loc>http://yoursite.com/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/</loc>
     
-    <lastmod>2020-02-25T07:35:29.139Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/02/25/Docker%20-%207.%20Docker%20Compose/</loc>
-    
-    <lastmod>2020-02-25T07:18:20.195Z</lastmod>
+    <lastmod>2020-02-26T06:20:34.394Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/02/25/Docker%20-%206.%20Dockerfile/</loc>
+    <loc>http://yoursite.com/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/</loc>
     
-    <lastmod>2020-02-25T07:18:19.346Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/02/25/Docker%20-%205.%20Image%20%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
-    
-    <lastmod>2020-02-25T07:18:18.470Z</lastmod>
+    <lastmod>2020-02-26T06:20:33.697Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/02/25/Docker%20-%204.%20Docker%20Example/</loc>
+    <loc>http://yoursite.com/2020/02/26/Container%20Orchestration%20-%203.%20kubernetes(2)/</loc>
     
-    <lastmod>2020-02-25T07:18:17.529Z</lastmod>
+    <lastmod>2020-02-26T06:20:32.924Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/02/25/Docker%20-%203.%20Docker%20Command/</loc>
+    <loc>http://yoursite.com/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/</loc>
     
-    <lastmod>2020-02-25T07:18:16.399Z</lastmod>
+    <lastmod>2020-02-26T06:20:32.008Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/</loc>
+    
+    <lastmod>2020-02-26T06:20:31.161Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20%EB%B0%B0%ED%8F%AC%ED%95%B4%EB%B3%B4%EA%B8%B0/</loc>
+    
+    <lastmod>2020-02-26T06:20:29.543Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/</loc>
+    
+    <lastmod>2020-02-26T06:20:28.732Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://yoursite.com/2020/02/25/Docker%20-%202.%20Docker%20Install/</loc>
     
-    <lastmod>2020-02-25T07:18:15.511Z</lastmod>
+    <lastmod>2020-02-26T06:20:27.286Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%203.%20Docker%20Command/</loc>
+    
+    <lastmod>2020-02-26T06:20:26.422Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%204.%20Docker%20Example/</loc>
+    
+    <lastmod>2020-02-26T06:20:25.562Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%205.%20Image%20%EB%A7%8C%EB%93%A4%EA%B8%B0/</loc>
+    
+    <lastmod>2020-02-26T06:20:24.661Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%206.%20Dockerfile/</loc>
+    
+    <lastmod>2020-02-26T06:20:23.781Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%207.%20Docker%20Compose/</loc>
+    
+    <lastmod>2020-02-26T06:20:22.867Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%208.%20Image%20%EC%A0%80%EC%9E%A5%EC%86%8C/</loc>
+    
+    <lastmod>2020-02-26T06:20:20.528Z</lastmod>
     
   </url>
   

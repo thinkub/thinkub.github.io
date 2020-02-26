@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="kr" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>Container Orchestration - 5. kubernetes ui · 개인 저장소</title><meta name="description" content=""><meta name="og:title" content="Container Orchestration - 5. kubernetes ui"><meta name="og:type" content="website"><meta name="og:url" content="http://yoursite.com/2020/02/26/Container Orchestration - 5. kubernetes ui/"><meta name="og:image" content="http://image.toast.com/aaaaahq/hola_cover.JPG"><meta name="og:description" content=""><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><meta name="fb:app_id" content="1258629384258634"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="개인 저장소"><meta name="generator" content="Hexo 4.0.0"><link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
+</head><body class="post"><div id="fb-root"></div><div class="wrap"><header><nav class="navi-post"><a class="navi-post-back" href="javascript:history.back()" target="_blank" rel="noopener"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="navi-post-home" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></nav></header><main class="post"><div class="post"><article class="post-block"><h1 class="post-title">Container Orchestration - 5. kubernetes ui</h1><div class="post-info"><div class="post-info-profile"><a href="https://github.com/thinkub" target="_blank"><img src="/image/profile.jpg"></a></div><div class="post-info-details"><div class="post-categories"></div><div class="post-date">Feb 26, 2020</div></div></div><div class="post-share"><div class="fb-like" data-href="http://yoursite.com/2020/02/26/Container Orchestration - 5. kubernetes ui/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">                 </div><div class="fb-share-button" data-href="http://yoursite.com/2020/02/26/Container Orchestration - 5. kubernetes ui/" data-layout="button" data-size="small" data-mobile-iframe="true"></div><div class="fb-follow" data-href="https://www.facebook.com/holaxprogramming/" data-layout="button_count" data-size="small" data-show-faces="true"></div></div><div class="post-content"><h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><hr>
+<ol>
+<li>Docker <ol>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%201.%20Docker의%20개념/" target="_blank" rel="noopener">Docker 개념</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%202.%20Docker%20Install/" target="_blank" rel="noopener">Docker Install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%203.%20Docker%20Command/" target="_blank" rel="noopener">Docker Command</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%204.%20Docker%20Example/" target="_blank" rel="noopener">Docker Example</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%205.%20Image%20만들기/" target="_blank" rel="noopener">Image 만들기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%206.%20Dockerfile/" target="_blank" rel="noopener">Dockerfile</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%207.%20Docker%20Compose/" target="_blank" rel="noopener">Docker Compose</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%208.%20Image%20저장소/" target="_blank" rel="noopener">Image 저장소</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>Container Orchestration <ol>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/" target="_blank" rel="noopener">Container Orchestration 이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" target="_blank" rel="noopener">kubernetes(1)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(2)/" target="_blank" rel="noopener">kubernetes(2)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" target="_blank" rel="noopener">kubernetes install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" target="_blank" rel="noopener">kubernetes ui</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes를%20이용해%20배포해보기/" target="_blank" rel="noopener">kubernetes를 이용해 배포해보기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" target="_blank" rel="noopener">kubectl CLI</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>Provisioning <ol>
+<li>Provisioning이란</li>
+<li>Ansible</li>
+<li>Ansible을 이용해 kubernetes cluster 생성하기</li>
+</ol>
+</li>
+</ol>
+<h1 id="대시보드-UI"><a href="#대시보드-UI" class="headerlink" title="대시보드 UI"></a>대시보드 UI</h1><p>대시보드는 웹 기반 쿠버네티스 유저 인터페이스입니다. 대시보드를 통해 컨테이너화 된 애플리케이션을 쿠버네티스 클러스터에 배포할 수 있고, 컨테이너화 된 애플리케이션을 트러블슈팅 할 수 있으며, 클러스터 리소스들을 관리할 수 있습니다. </p>
+<p><img src="/img/2020/02/26/22.png" alt=""></p>
+<h2 id="1-설치"><a href="#1-설치" class="headerlink" title="1. 설치"></a>1. 설치</h2><p>대시보드 UI는 기본으로 설치되지 않습니다. 설치하려면 다음 커맨드를 이용하면 됩니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/2020/02/26/23.png" alt=""></p>
+<h2 id="2-설치확인"><a href="#2-설치확인" class="headerlink" title="2. 설치확인"></a>2. 설치확인</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods --all-namespaces</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/2020/02/26/24.png" alt=""></p>
+<h2 id="3-접속"><a href="#3-접속" class="headerlink" title="3. 접속"></a>3. 접속</h2><p>접속 방법은 총 3가지 입니다. </p>
+<ul>
+<li>Proxy를 이용하기</li>
+<li>NodePort 이용하기</li>
+<li>API Server 이용하기</li>
+</ul>
+<p><strong>여기서는 API Server를 이용해서 진행할 예정입니다.</strong></p>
+<h3 id="3-1-API-Server-이용하기"><a href="#3-1-API-Server-이용하기" class="headerlink" title="3.1 API Server 이용하기"></a>3.1 API Server 이용하기</h3><ol>
+<li>kube-apiserver 접근하기 위한 인증서 생성</li>
+<li>클라이언트 브라우저에 인증서 적용하기</li>
+</ol>
+<ul>
+<li><p>kube-apiserver 접근하기 위한 인증서 생성</p>
+<ul>
+<li>인증서 생성하기<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">'client-certificate-data'</span> ~/.kube/config | head -n 1 | awk <span class="string">'&#123;print $2&#125;'</span> | base64 -d &gt;&gt; kubecfg.crt</span><br><span class="line">grep <span class="string">'client-key-data'</span> ~/.kube/config | head -n 1 | awk <span class="string">'&#123;print $2&#125;'</span> | base64 -d &gt;&gt; kubecfg.key</span><br></pre></td></tr></table></figure></li>
+<li>다음으로 생성한 키를 기반으로 p12 인증서 파일을 생성합니다. (<code>password는 기억해둬야 합니다.</code>)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -<span class="built_in">export</span> -clcerts -inkey kubecfg.key -<span class="keyword">in</span> kubecfg.crt -out kubecfg.p12 -name <span class="string">"kubernetes-admin"</span></span><br></pre></td></tr></table></figure>
+<img src="/img/2020/02/26/25.png" alt=""></li>
+</ul>
+</li>
+<li><p>클라이언트 브라우저에 인증서 적용하기</p>
+<ul>
+<li><p>생성된 인증서 클라이언트로 Download </p>
+</li>
+<li><p>생성된 <code>kubecfg.p12</code> 파일과 <code>/etc/kubernetes/pki/ca.crt</code> 인증서를 사용하려는 PC에 다운받습니다.</p>
+</li>
+<li><p>다운로드한 인증서를 클라이언트에 적용합니다.</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil.exe -addstore "Root" D:\...\<span class="number">00</span>_Project\ca.crt</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/26/26.png" alt=""></p>
+</li>
+<li><p>p12 파일 적용시 아래와같은 인증서 설치 여부를 묻게되며 ‘예’를 선택하면 됩니다.</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil.exe -p [password] -user -importPFX D:\...\<span class="number">00</span>_Project\kubecfg.p12</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/26/27.png" alt=""></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-접속확인"><a href="#4-접속확인" class="headerlink" title="4. 접속확인"></a>4. 접속확인</h2><p>ui dashboard 에 접속해 봅니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://[server_ip]:6443/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>접근시 다음과 같이 인증서 적용 여부를 확인하게 됩니다.<br><img src="/img/2020/02/26/28.png" alt=""></p>
+</li>
+<li><p>dashboard 접속<br><img src="/img/2020/02/26/29.png" alt=""></p>
+</li>
+</ul>
+<h3 id="4-1-Token-키-생성해서-인증하기"><a href="#4-1-Token-키-생성해서-인증하기" class="headerlink" title="4.1 Token 키 생성해서 인증하기"></a>4.1 Token 키 생성해서 인증하기</h3><ul>
+<li><p>service 계정 생성</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt;EOF | kubectl create -f -</span><br><span class="line">apiVersion: v1</span><br><span class="line">kind: ServiceAccount</span><br><span class="line">metadata:</span><br><span class="line">  name: admin-user</span><br><span class="line">  namespace: kube-system</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+<ul>
+<li>ClusterRoleBinding<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt;EOF | kubectl create -f -</span><br><span class="line">apiVersion: rbac.authorization.k8s.io/v1</span><br><span class="line">kind: ClusterRoleBinding</span><br><span class="line">metadata:</span><br><span class="line">  name: admin-user</span><br><span class="line">roleRef:</span><br><span class="line">  apiGroup: rbac.authorization.k8s.io</span><br><span class="line">  kind: ClusterRole</span><br><span class="line">  name: cluster-admin</span><br><span class="line">subjects:</span><br><span class="line">- kind: ServiceAccount</span><br><span class="line">  name: admin-user</span><br><span class="line">  namespace: kube-system</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Token 가져오기</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk <span class="string">'&#123;print $1&#125;'</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/26/30.png" alt=""></p>
+</li>
+<li><p>Token 값을 이용해 인증하기<br><img src="/img/2020/02/26/31.png" alt=""></p>
+</li>
+</ul>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><blockquote>
+<p><a href="https://kubernetes.io/ko/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" rel="noopener">https://kubernetes.io/ko/docs/tasks/access-application-cluster/web-ui-dashboard/</a><br><a href="https://github.com/kubernetes/dashboard" target="_blank" rel="noopener">https://github.com/kubernetes/dashboard</a><br><a href="https://crystalcube.co.kr/199" target="_blank" rel="noopener">https://crystalcube.co.kr/199</a><br><a href="https://waspro.tistory.com/516" target="_blank" rel="noopener">https://waspro.tistory.com/516</a></p>
+</blockquote>
+</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="next" href="/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20%EB%B0%B0%ED%8F%AC%ED%95%B4%EB%B3%B4%EA%B8%B0/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><ins class="adsbygoogle adsense-bottom" style="display:block" data-ad-client="ca-pub-6188640546219653" data-ad-slot="6129396565" data-ad-format="auto"></ins><div class="fb-comments-area"><div class="fb-comments" data-href="http://yoursite.com/2020/02/26/Container Orchestration - 5. kubernetes ui/" data-width="700" data-numposts="5"></div></div><div class="copyright"><p>© 2019 - 2020 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>
