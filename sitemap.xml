@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/02/28/Provisioning%20-%203.%20Ansible%EC%9D%84%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20kubernetes%20cluster%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/</loc>
+    
+    <lastmod>2020-02-28T00:30:07.683Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/28/Provisioning%20-%202.%20Ansible/</loc>
+    
+    <lastmod>2020-02-28T00:22:48.748Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/28/Provisioning%20-%201.%20Provisioning/</loc>
+    
+    <lastmod>2020-02-28T00:18:40.826Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/02/25/Docker%20-%201.%20Docker%EC%9D%98%20%EA%B0%9C%EB%85%90/</loc>
+    
+    <lastmod>2020-02-28T00:16:32.193Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/02/26/Container%20Orchestration%20-%203.%20kubernetes(2)/</loc>
     
     <lastmod>2020-02-26T06:39:17.504Z</lastmod>
