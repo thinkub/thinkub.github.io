@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2020/09/07/Java13%20Releases%20notes/</loc>
+    
+    <lastmod>2020-09-07T13:49:16.728Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2020/09/07/Java11%20Releases%20notes/</loc>
+    
+    <lastmod>2020-09-07T13:49:12.056Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2020/08/26/Java10%20Releases%20notes/</loc>
     
     <lastmod>2020-09-07T13:48:11.016Z</lastmod>
@@ -9,23 +23,9 @@
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/09/07/Java11%20Releases%20notes/</loc>
-    
-    <lastmod>2020-09-07T13:48:07.225Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2020/09/07/Java12%20Releases%20notes/</loc>
     
     <lastmod>2020-09-07T13:47:54.158Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/09/07/Java13%20Releases%20notes/</loc>
-    
-    <lastmod>2020-09-07T13:47:30.761Z</lastmod>
     
   </url>
   
