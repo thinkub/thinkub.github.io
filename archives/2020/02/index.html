@@ -1,2 +1,370 @@
-<!DOCTYPE html><html lang="kr" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>개인 저장소</title><meta name="description" content=""><meta name="og:url" content="http://yoursite.com/archives/"><meta name="og:type" content="website"><meta name="og:title" content="개인 저장소"><meta name="og:description" content=""><meta name="og:image" content="http://image.toast.com/aaaaahq/hola_cover.JPG"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><meta name="fb:app_id" content="1258629384258634"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="개인 저장소"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
-</head><body><div class="wrap"><header><a class="logo-link" href="/"><img src="/logo.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a class="nav-list-link" href="/introduce/" target="_self">소개</a></li><li class="nav-list-item"><a class="nav-list-link" href="/archives/" target="_self">블로그</a></li><li class="nav-list-item"><a class="nav-list-link" href="https://github.com/thinkub" target="_blank">JOIN</a></li></ul></header><main class="container"><div class="archive"><h2 class="archive-year">2020</h2><div class="post-item"><div class="post-info"><div class="post-date">Feb 28, 2020</div></div><a class="post-title-link" href="/2020/02/28/Provisioning%20-%203.%20Ansible%EC%9D%84%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20kubernetes%20cluster%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/">Provisioning - 3. Ansible을 이용해 kubernetes cluster 생성하기</a></div><div class="post-item"><div class="post-info"><div class="post-date">Feb 28, 2020</div></div><a class="post-title-link" href="/2020/02/28/Provisioning%20-%202.%20Ansible/">Provisioning - 2. Ansible</a></div><div class="post-item"><div class="post-info"><div class="post-date">Feb 28, 2020</div></div><a class="post-title-link" href="/2020/02/28/Provisioning%20-%201.%20Provisioning/">Provisioning - 1. Provisioning</a></div><div class="post-item"><div class="post-info"><div class="post-date">Feb 26, 2020</div></div><a class="post-title-link" href="/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/">Container Orchestration - 7. kubectl CLI</a></div><div class="post-item"><div class="post-info"><div class="post-date">Feb 26, 2020</div></div><a class="post-title-link" href="/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20%EB%B0%B0%ED%8F%AC%ED%95%B4%EB%B3%B4%EA%B8%B0/">Container Orchestration - 6. kubenetes를 이용해 배포해보기</a></div><div class="post-item"><div class="post-info"><div class="post-date">Feb 26, 2020</div></div><a class="post-title-link" href="/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/">Container Orchestration - 5. kubernetes ui</a></div><div class="post-item"><div class="post-info"><div class="post-date">Feb 26, 2020</div></div><a class="post-title-link" href="/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/">Container Orchestration - 4. kubernetes install</a></div><div class="post-item"><div class="post-info"><div class="post-date">Feb 26, 2020</div></div><a class="post-title-link" href="/2020/02/26/Container%20Orchestration%20-%203.%20kubernetes(2)/">Container Orchestration - 3. kubernetes(2)</a></div><div class="post-item"><div class="post-info"><div class="post-date">Feb 26, 2020</div></div><a class="post-title-link" href="/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/">Container Orchestration - 2. kubernetes(1)</a></div><div class="post-item"><div class="post-info"><div class="post-date">Feb 26, 2020</div></div><a class="post-title-link" href="/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/">Container Orchestration - 1. Container Orchestration</a></div></div></main><footer><div class="paginator"><a class="next" href="/archives/2020/02/page/2/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><div class="copyright"><p>© 2019 - 2021 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Archives: 2020/2 | 개인 저장소</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="개인 저장소">
+<meta property="og:url" content="http://yoursite.com/archives/2020/02/index.html">
+<meta property="og:site_name" content="개인 저장소">
+<meta property="og:locale">
+<meta property="article:author" content="Ming">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">개인 저장소</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/02/28/Provisioning%20-%203.%20Ansible%EC%9D%84%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20kubernetes%20cluster%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/" class="archive-article-date">
+  <time datetime="2020-02-28T00:23:48.365Z" itemprop="datePublished">Feb 28</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/02/28/Provisioning%20-%203.%20Ansible%EC%9D%84%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20kubernetes%20cluster%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/">Provisioning - 3. Ansible을 이용해 kubernetes cluster 생성하기</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/02/28/Provisioning%20-%202.%20Ansible/" class="archive-article-date">
+  <time datetime="2020-02-28T00:18:58.751Z" itemprop="datePublished">Feb 28</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/02/28/Provisioning%20-%202.%20Ansible/">Provisioning - 2. Ansible</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/02/28/Provisioning%20-%201.%20Provisioning/" class="archive-article-date">
+  <time datetime="2020-02-28T00:13:18.692Z" itemprop="datePublished">Feb 28</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/02/28/Provisioning%20-%201.%20Provisioning/">Provisioning - 1. Provisioning</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" class="archive-article-date">
+  <time datetime="2020-02-26T06:06:40.736Z" itemprop="datePublished">Feb 26</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/">Container Orchestration - 7. kubectl CLI</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20%EB%B0%B0%ED%8F%AC%ED%95%B4%EB%B3%B4%EA%B8%B0/" class="archive-article-date">
+  <time datetime="2020-02-26T01:19:34.291Z" itemprop="datePublished">Feb 26</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20%EB%B0%B0%ED%8F%AC%ED%95%B4%EB%B3%B4%EA%B8%B0/">Container Orchestration - 6. kubenetes를 이용해 배포해보기</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" class="archive-article-date">
+  <time datetime="2020-02-26T01:12:29.115Z" itemprop="datePublished">Feb 26</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/">Container Orchestration - 5. kubernetes ui</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" class="archive-article-date">
+  <time datetime="2020-02-26T01:08:01.268Z" itemprop="datePublished">Feb 26</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/">Container Orchestration - 4. kubernetes install</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/02/26/Container%20Orchestration%20-%203.%20kubernetes(2)/" class="archive-article-date">
+  <time datetime="2020-02-26T01:05:05.438Z" itemprop="datePublished">Feb 26</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/02/26/Container%20Orchestration%20-%203.%20kubernetes(2)/">Container Orchestration - 3. kubernetes(2)</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" class="archive-article-date">
+  <time datetime="2020-02-25T23:59:01.165Z" itemprop="datePublished">Feb 26</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/">Container Orchestration - 2. kubernetes(1)</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/" class="archive-article-date">
+  <time datetime="2020-02-25T23:49:25.844Z" itemprop="datePublished">Feb 26</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/">Container Orchestration - 1. Container Orchestration</a>
+    </h1>
+  
+
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
+
+
+  <nav id="page-nav">
+    
+    <span class="page-number current">1</span><a class="page-number" href="/archives/2020/02/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/02/page/2/">Next &amp;raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/07/21/%EC%97%98%EB%A0%88%EA%B0%95%ED%8A%B8%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%201-1/">엘레강트 오브젝트 1-1</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/24/Spring%20Rest%20Doc/">Spring Rest Doc</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/14/JPA%20Cascade/">JPA Cascade</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/08/JPA%20Entity%20LifeCycle/">JPA Entity LifeCycle</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/07/Java14%20Releases%20notes/">Java14 Releases notes</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Ming<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

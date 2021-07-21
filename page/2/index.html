@@ -1,2 +1,1889 @@
-<!DOCTYPE html><html lang="kr" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>개인 저장소</title><meta name="description" content=""><meta name="og:url" content="http://yoursite.com"><meta name="og:type" content="website"><meta name="og:title" content="개인 저장소"><meta name="og:description" content=""><meta name="og:image" content="http://image.toast.com/aaaaahq/hola_cover.JPG"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><meta name="fb:app_id" content="1258629384258634"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="개인 저장소"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
-</head><body><div class="wrap"><header><a class="logo-link" href="/"><img src="/logo.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a class="nav-list-link" href="/introduce/" target="_self">소개</a></li><li class="nav-list-item"><a class="nav-list-link" href="/archives/" target="_self">블로그</a></li><li class="nav-list-item"><a class="nav-list-link" href="https://github.com/thinkub" target="_blank">JOIN</a></li></ul></header><main class="container"><ul class="home post-list"><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2020/03/03/VSCode%EB%A1%9C%20Spring%20Boot%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/">VSCode로 Spring Boot 사용해보기</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2020/02/28/Provisioning%20-%203.%20Ansible%EC%9D%84%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20kubernetes%20cluster%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/">Provisioning - 3. Ansible을 이용해 kubernetes cluster 생성하기</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2020/02/28/Provisioning%20-%202.%20Ansible/">Provisioning - 2. Ansible</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2020/02/28/Provisioning%20-%201.%20Provisioning/">Provisioning - 1. Provisioning</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/">Container Orchestration - 7. kubectl CLI</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20%EB%B0%B0%ED%8F%AC%ED%95%B4%EB%B3%B4%EA%B8%B0/">Container Orchestration - 6. kubenetes를 이용해 배포해보기</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/">Container Orchestration - 5. kubernetes ui</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/">Container Orchestration - 4. kubernetes install</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2020/02/26/Container%20Orchestration%20-%203.%20kubernetes(2)/">Container Orchestration - 3. kubernetes(2)</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/">Container Orchestration - 2. kubernetes(1)</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li></ul></main><footer><div class="paginator"><a class="prev" href="/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="next" href="/page/3/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><ins class="adsbygoogle adsense-bottom" style="display:block" data-ad-client="ca-pub-6188640546219653" data-ad-slot="3335325225" data-ad-format="auto"></ins><div class="copyright"><p>© 2019 - 2021 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>개인 저장소</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="개인 저장소">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="개인 저장소">
+<meta property="og:locale">
+<meta property="article:author" content="Ming">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">개인 저장소</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-VSCode로 Spring Boot 사용해보기" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/03/VSCode%EB%A1%9C%20Spring%20Boot%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/" class="article-date">
+  <time datetime="2020-03-03T00:43:15.869Z" itemprop="datePublished">2020-03-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/03/VSCode%EB%A1%9C%20Spring%20Boot%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/">VSCode로 Spring Boot 사용해보기</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>처음 개발을 시작하면서 사용했던 IDE는 eclipse를 사용했습니다. Spring Framework를 사용하면서 STS로 갈아타서 사용하다가<br>본사와 신규로 입사한 시니어개발자 최모 군이 IntelliJ 를 사용하는 걸 보고, 팀장님과 회사를 조르고 졸라서 구매해서 사용했었습니다.<br>현재도 IntelliJ를 이용해서 개발중이지만, 이직한 회사에서는 구매해줄 것 같지 않은 분위기에 개인 라이선스를 구매해서 사용했습니다.<br>그러다 요즘 VSCode를 많이 이용한다하여 시도해봤습니다.</p>
+<h1 id="사전작업"><a href="#사전작업" class="headerlink" title="사전작업"></a>사전작업</h1><p>VSCode 는 설치되어있다는 가정하에 진행하겠습니다.<br>Mac OS 에서 진행했습니다.</p>
+<h3 id="Market에서-확장-Plugin-download"><a href="#Market에서-확장-Plugin-download" class="headerlink" title="Market에서 확장 Plugin download"></a>Market에서 확장 Plugin download</h3><ol>
+<li><strong>Java Extension Pack</strong> (해당 Plugin을 설치하면 아래 Plugin 도 같이 설치가 됨 (Mac기준 Windows 에서는 안깔려있는데 이유는 모르겠음))<ul>
+<li>Maven for Java (<code>Gradle을 사용하기 위해서는 Gradle Language Support 를 설치해야 합니다.</code>)</li>
+<li>Debegger for Java</li>
+<li>Java Test Runner</li>
+<li>Languages Support for Java</li>
+<li>Java Dependency Viewer</li>
+</ul>
+</li>
+</ol>
+<p><img src="/img/2020/03/03/1.png" alt=""></p>
+<ol start="2">
+<li><strong>Spring Boot Extension Pack</strong> (아래 Plugin도 같이 설치가 됨)<ul>
+<li>Spring Initializr Java Support </li>
+<li>Spring Boot Tools</li>
+</ul>
+</li>
+</ol>
+<p><img src="/img/2020/03/03/2.png" alt=""></p>
+<ol start="3">
+<li>Tomcat for java (Tomcat을 사용하는 Project가 있는경우 설치하자)</li>
+<li>Checkstyle for Java (<code>선택</code>)</li>
+<li>Java Code Generators (<code>선택</code>)</li>
+</ol>
+<h3 id="jdk경로-설정"><a href="#jdk경로-설정" class="headerlink" title="jdk경로 설정"></a>jdk경로 설정</h3><ol>
+<li>Code &gt; Preferences &gt; Settings<br><img src="/img/2020/03/03/3.png" alt=""></li>
+<li>Search settings에 <code>jdk</code> 입력하면 Java:Home 의 setting 파일을 수정할 수 있습니다. (<code>Edit in settings.json 클릭</code>)<br><img src="/img/2020/03/03/4.png" alt=""></li>
+<li>java.home 설정<br><img src="/img/2020/03/03/4-1.png" alt=""></li>
+</ol>
+<h1 id="간단한-Spring-Boot-Project-만들어보기"><a href="#간단한-Spring-Boot-Project-만들어보기" class="headerlink" title="간단한 Spring Boot Project 만들어보기"></a>간단한 Spring Boot Project 만들어보기</h1><ol>
+<li>cmd + shift + p 입력 후 <code>spring initializr</code> 입력 후 선택 (전 spring initializr: Generate a Gradle Project를 선택했습니다.)<br><img src="/img/2020/03/03/5.png" alt=""></li>
+<li>language 선택 (전 Java를 선택하겠습니다.)</li>
+<li>group ID 지정<br><img src="/img/2020/03/03/7.png" alt=""></li>
+<li>artifact ID 지정<br><img src="/img/2020/03/03/8.png" alt=""></li>
+<li>spring boot version 선택<br><img src="/img/2020/03/03/9.png" alt=""></li>
+<li>dependency 설정<br><img src="/img/2020/03/03/10.png" alt=""></li>
+<li>설치 folder 설정<br><img src="/img/2020/03/03/11.png" alt=""></li>
+<li>설정 완료<br><img src="/img/2020/03/03/12.png" alt=""></li>
+</ol>
+<h1 id="간단한-Application생성-후-실행해보기"><a href="#간단한-Application생성-후-실행해보기" class="headerlink" title="간단한 Application생성 후 실행해보기"></a>간단한 Application생성 후 실행해보기</h1><ol>
+<li>간단하게 입력받은 text를 화면에 보여주는 기능을 구현해보겠습니다.<br><img src="/img/2020/03/03/13.png" alt=""></li>
+<li>local 실행하기<br><img src="/img/2020/03/03/14.png" alt=""><br><img src="/img/2020/03/03/15.png" alt=""><br><img src="/img/2020/03/03/16.png" alt=""></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/03/VSCode%EB%A1%9C%20Spring%20Boot%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/" data-id="ckrdkv818000z9d2a14a2ef1b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Provisioning - 3. Ansible을 이용해 kubernetes cluster 생성하기" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/28/Provisioning%20-%203.%20Ansible%EC%9D%84%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20kubernetes%20cluster%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/" class="article-date">
+  <time datetime="2020-02-28T00:23:48.365Z" itemprop="datePublished">2020-02-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/28/Provisioning%20-%203.%20Ansible%EC%9D%84%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20kubernetes%20cluster%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/">Provisioning - 3. Ansible을 이용해 kubernetes cluster 생성하기</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><hr>
+<ol>
+<li>Docker <ol>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%201.%20Docker의%20개념/" target="_blank" rel="noopener">Docker 개념</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%202.%20Docker%20Install/" target="_blank" rel="noopener">Docker Install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%203.%20Docker%20Command/" target="_blank" rel="noopener">Docker Command</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%204.%20Docker%20Example/" target="_blank" rel="noopener">Docker Example</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%205.%20Image%20만들기/" target="_blank" rel="noopener">Image 만들기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%206.%20Dockerfile/" target="_blank" rel="noopener">Dockerfile</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%207.%20Docker%20Compose/" target="_blank" rel="noopener">Docker Compose</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%208.%20Image%20저장소/" target="_blank" rel="noopener">Image 저장소</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>Container Orchestration <ol>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/" target="_blank" rel="noopener">Container Orchestration 이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" target="_blank" rel="noopener">kubernetes(1)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(2)/" target="_blank" rel="noopener">kubernetes(2)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" target="_blank" rel="noopener">kubernetes install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" target="_blank" rel="noopener">kubernetes ui</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes를%20이용해%20배포해보기/" target="_blank" rel="noopener">kubernetes를 이용해 배포해보기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" target="_blank" rel="noopener">kubectl CLI</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>Provisioning <ol>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%201.%20Provisioning/" target="_blank" rel="noopener">Provisioning이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%202.%20Ansible/" target="_blank" rel="noopener">Ansible</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%203.%20Ansible을%20이용해%20kubernetes%20cluster%20생성하기/" target="_blank" rel="noopener">Ansible을 이용해 kubernetes cluster 생성하기</a></li>
+</ol>
+</li>
+</ol>
+<h1 id="목표"><a href="#목표" class="headerlink" title="목표"></a>목표</h1><p>Ansible을 이용해서 k8s cluster을 생성해보겠습니다.<br>cluster를 생성하는 방법은 <a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" target="_blank" rel="noopener">Container Orchestration - 4. kubernetes Install</a>에 작성 한 것과 같이 <strong>master</strong> 1대와 <strong>node</strong> 2대를 셋팅해 보겠습니다.<br><strong>기존에 공유드린 것과 같이 master / node 클러스터 구성시 <code>방화벽작업</code>을 하고 <code>docker를 설치</code>하고 <code>k8s 관련 install</code> 작업을 했습니다. 이러한 작업을 ansible playbook 을 이용해 한번에 처리해보도록 하겠습니다.</strong></p>
+<h1 id="1-구성"><a href="#1-구성" class="headerlink" title="1. 구성"></a>1. 구성</h1><table>
+<thead>
+<tr>
+<th>host name</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ansible-manager</td>
+<td>Ansible 제어 노드 및 작업자용 노드</td>
+</tr>
+<tr>
+<td>ansible-master</td>
+<td>k8s Master</td>
+</tr>
+<tr>
+<td>ansible-node1</td>
+<td>k8s Node</td>
+</tr>
+<tr>
+<td>ansible-node2</td>
+<td>k9s Node</td>
+</tr>
+</tbody></table>
+<p><img src="/img/2020/02/28/2.png" alt=""></p>
+<h1 id="2-Ansible-설치"><a href="#2-Ansible-설치" class="headerlink" title="2. Ansible 설치"></a>2. Ansible 설치</h1><h3 id="2-1-ansible-manager-에-Ansible-설치"><a href="#2-1-ansible-manager-에-Ansible-설치" class="headerlink" title="2.1 ansible-manager 에 Ansible 설치"></a>2.1 ansible-manager 에 Ansible 설치</h3><p>ansible-manager 에 Ansible을 설치하겠습니다. Ansible 이 다른 IaC보다 편한점이 <strong>Pull 방식이 아닌 Push 방식으로 대상 서버에는 별도의 셋팅이 필요하지 않습니다.</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install -y eple-release</span><br><span class="line">yum install -y ansible</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/28/3.png" alt=""></p>
+<h3 id="2-2-Password-없이-접속이-가능하도록-작업"><a href="#2-2-Password-없이-접속이-가능하도록-작업" class="headerlink" title="2.2 Password 없이 접속이 가능하도록 작업"></a>2.2 Password 없이 접속이 가능하도록 작업</h3><ul>
+<li><p>ROOT 로그인을 허용하도록 설정을 수정합니다. <code>ansible-master</code>, <code>ansible-node1</code>, <code>ansible-node2</code> 에서 작업</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PermitRootLogin yes</span><br><span class="line">PasswordAuthentication yes</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart sshd</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>ansible-manager</strong> 에서 SSH키 생성을 합니다. <strong>password 는 별도로 작성하지 않습니다.</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/28/4.png" alt=""></p>
+</li>
+<li><p>생성한 key를 ansible-master, ansible-node1, ansible-node2 에 복사해줍니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id [serverIP]</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/28/5.png" alt=""></p>
+</li>
+<li><p>ssh 접속이 되는지 확인합니다</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh [server_host_name]</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/28/6.png" alt=""></p>
+</li>
+</ul>
+<h3 id="2-1-Inventory를-작성하여-Ping-Test"><a href="#2-1-Inventory를-작성하여-Ping-Test" class="headerlink" title="2.1 Inventory를 작성하여 Ping Test"></a>2.1 Inventory를 작성하여 Ping Test</h3><ul>
+<li><p>다음과 같이 host파일을 생성합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">master ansible_host=10.128.0.40 ansible_user=root</span><br><span class="line"></span><br><span class="line">[nodes]</span><br><span class="line">node1 ansible_host=10.128.0.42 ansible_user=root</span><br><span class="line">node2 ansible_host=10.128.0.43 ansible_user=root</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ping 명령어를 통해 연결상태를 확인합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible -m ping all -i hosts</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/28/7.png" alt=""></p>
+</li>
+</ul>
+<h1 id="3-Ansible을-이용해-k8s-클러스터-구성해보기"><a href="#3-Ansible을-이용해-k8s-클러스터-구성해보기" class="headerlink" title="3. Ansible을 이용해 k8s 클러스터 구성해보기"></a>3. Ansible을 이용해 k8s 클러스터 구성해보기</h1><h3 id="3-1-setup-yml-작성"><a href="#3-1-setup-yml-작성" class="headerlink" title="3.1 setup.yml 작성"></a>3.1 setup.yml 작성</h3><p><code>master</code> <code>nodes</code> 에 공통으로 설정할 내용과 k8s 설치용 playbook 파일을 작성합니다.<br><a href="https://raw.githubusercontent.com/thinkub/ansible-k8s-cluster/master/setup.yml" target="_blank" rel="noopener">https://raw.githubusercontent.com/thinkub/ansible-k8s-cluster/master/setup.yml</a></p>
+<h3 id="3-2-playbook-실행-shell-script-작성"><a href="#3-2-playbook-실행-shell-script-작성" class="headerlink" title="3.2 playbook 실행 shell script 작성"></a>3.2 playbook 실행 shell script 작성</h3><p>작성한 playbook 용 yaml 파일을 실행할 shell script 를 작성합니다.<br><a href="https://raw.githubusercontent.com/thinkub/ansible-k8s-cluster/master/build-cluster.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/thinkub/ansible-k8s-cluster/master/build-cluster.sh</a></p>
+<h3 id="3-3-실행"><a href="#3-3-실행" class="headerlink" title="3.3 실행"></a>3.3 실행</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./build-cluster.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-4-결과"><a href="#3-4-결과" class="headerlink" title="3.4 결과"></a>3.4 결과</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">TASK [add Kubernetes YUM repository] ***************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line">changed: [node1]</span><br><span class="line">changed: [node2]</span><br><span class="line"></span><br><span class="line">TASK [install kubelet] ******************************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line">changed: [node1]</span><br><span class="line">changed: [node2]</span><br><span class="line"></span><br><span class="line">TASK [install kubeadm] ******************************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line">changed: [node1]</span><br><span class="line">changed: [node2]</span><br><span class="line"></span><br><span class="line">TASK [start kubelet] ********************************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line">changed: [node1]</span><br><span class="line">changed: [node2]</span><br><span class="line"></span><br><span class="line">TASK [install kubectl] ******************************************************************************************</span><br><span class="line">ok: [master]</span><br><span class="line">ok: [node1]</span><br><span class="line">ok: [node2]</span><br><span class="line"></span><br><span class="line">PLAY [master] ***************************************************************************************************</span><br><span class="line"></span><br><span class="line">TASK [Gathering Facts] ******************************************************************************************</span><br><span class="line">ok: [master]</span><br><span class="line"></span><br><span class="line">TASK [initialize the cluster] ***********************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line"></span><br><span class="line">TASK [create .kube directory] ***********************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line"></span><br><span class="line">TASK [copy admin.conf to user kube config] ********************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line"></span><br><span class="line">TASK [install Pod network] **************************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line"></span><br><span class="line">PLAY [master] ***************************************************************************************************</span><br><span class="line"></span><br><span class="line">TASK [get join <span class="built_in">command</span>] *****************************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line"></span><br><span class="line">TASK [<span class="built_in">set</span> join <span class="built_in">command</span>] *****************************************************************************************</span><br><span class="line">ok: [master]</span><br><span class="line"></span><br><span class="line">PLAY [nodes] ****************************************************************************************************</span><br><span class="line"></span><br><span class="line">TASK [Gathering Facts] ******************************************************************************************</span><br><span class="line">ok: [node1]</span><br><span class="line">ok: [node2]</span><br><span class="line"></span><br><span class="line">TASK [join cluster] *********************************************************************************************</span><br><span class="line">changed: [node1]</span><br><span class="line">changed: [node2]</span><br><span class="line"></span><br><span class="line">PLAY RECAP ******************************************************************************************************</span><br><span class="line">master                     : ok=21   changed=16   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   </span><br><span class="line">node1                      : ok=16   changed=12   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   </span><br><span class="line">node2                      : ok=16   changed=12   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>master 에서 cluster 확인하기<br><img src="/img/2020/02/28/8.png" alt=""></li>
+</ul>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><blockquote>
+<p><a href="https://zerobig-k8s.tistory.com/31" target="_blank" rel="noopener">https://zerobig-k8s.tistory.com/31</a><br><a href="https://github.com/zer0big/ansible-k8s-cluster" target="_blank" rel="noopener">https://github.com/zer0big/ansible-k8s-cluster</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/28/Provisioning%20-%203.%20Ansible%EC%9D%84%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20kubernetes%20cluster%20%EC%83%9D%EC%84%B1%ED%95%98%EA%B8%B0/" data-id="ckrdkv817000y9d2a9ogq0pum" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Provisioning - 2. Ansible" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/28/Provisioning%20-%202.%20Ansible/" class="article-date">
+  <time datetime="2020-02-28T00:18:58.751Z" itemprop="datePublished">2020-02-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/28/Provisioning%20-%202.%20Ansible/">Provisioning - 2. Ansible</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><hr>
+<ol>
+<li>Docker <ol>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%201.%20Docker의%20개념/" target="_blank" rel="noopener">Docker 개념</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%202.%20Docker%20Install/" target="_blank" rel="noopener">Docker Install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%203.%20Docker%20Command/" target="_blank" rel="noopener">Docker Command</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%204.%20Docker%20Example/" target="_blank" rel="noopener">Docker Example</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%205.%20Image%20만들기/" target="_blank" rel="noopener">Image 만들기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%206.%20Dockerfile/" target="_blank" rel="noopener">Dockerfile</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%207.%20Docker%20Compose/" target="_blank" rel="noopener">Docker Compose</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%208.%20Image%20저장소/" target="_blank" rel="noopener">Image 저장소</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>Container Orchestration <ol>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/" target="_blank" rel="noopener">Container Orchestration 이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" target="_blank" rel="noopener">kubernetes(1)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(2)/" target="_blank" rel="noopener">kubernetes(2)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" target="_blank" rel="noopener">kubernetes install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" target="_blank" rel="noopener">kubernetes ui</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes를%20이용해%20배포해보기/" target="_blank" rel="noopener">kubernetes를 이용해 배포해보기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" target="_blank" rel="noopener">kubectl CLI</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>Provisioning <ol>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%201.%20Provisioning/" target="_blank" rel="noopener">Provisioning이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%202.%20Ansible/" target="_blank" rel="noopener">Ansible</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%203.%20Ansible을%20이용해%20kubernetes%20cluster%20생성하기/" target="_blank" rel="noopener">Ansible을 이용해 kubernetes cluster 생성하기</a></li>
+</ol>
+</li>
+</ol>
+<h1 id="Ansible"><a href="#Ansible" class="headerlink" title="Ansible"></a>Ansible</h1><p><img src="/img/2020/02/28/1.png" alt=""></p>
+<p>Ansible은 오픈 소스 소프트웨어 프로비저닝, 구성 관리, 애플리케이션 전개 도구입니다. 수많은 유닉스 계열 시스템에서 실행되며 유닉스 계열 운영 체제 및 마이크로소프트 윈도우의 구성이 가능합니다. 시스템 구성을 기술하기 위해 자체 선언형 언어를 포함하고 있습니다.<br>python으로 개발되고 <strong>YAML</strong> 언어를 통해 정의하며 json으로 통신합니다. (python Github project 중 상위 6위) </p>
+<p><strong>IaC (Infrastructure as a Code)</strong> 라는 개념에서 나온 기술로 여러대의 서버를 효율적으로 관리하기 위해 만들어진 자동화 툴입니다.</p>
+<h3 id="1-Ansible-특징"><a href="#1-Ansible-특징" class="headerlink" title="1. Ansible 특징"></a>1. Ansible 특징</h3><ul>
+<li>SSH 통신, 빠른 provision 이 가능합니다.</li>
+<li>추후 상용 환경에서 사용할 때 agent 기반이면 방화벽 이슈, agent 데몬 관리라는 불편한 점이 존재합니다. (agent 방식의 장점도 물론 존재합니다. 확장성, 대규모 provision을 할 경우 매우 효과적입니다. 대신 서버와 통신하는 부분이 고도화되기 때문에 빠르고 간단한 provision을 할 수 없습니다.</li>
+<li>자동 배포 환경이 쉽습니다.</li>
+<li>개발 가능성이 높은 오픈소스 입니다.</li>
+<li>멱등성을 제공합니다.</li>
+<li>대상 서버에 별도 에이전트를 설치 하지 않아도 됩니다. </li>
+<li>설정 파일은 YAML 형식으로 가독성이 좋습니다.</li>
+<li>700개 이상 대다수의 서버와 네트워크 장비를 지원합니다.</li>
+</ul>
+<h3 id="2-Ansible-구성요소"><a href="#2-Ansible-구성요소" class="headerlink" title="2. Ansible 구성요소"></a>2. Ansible 구성요소</h3><p>Ansible에는 크게 3가지 요소가 있습니다. Inventory, playbook, module 입니다. 간단히 말해서 <strong>어디서(Inventory)</strong>, <strong>무엇을(playbook)</strong>, <strong>어떻게(module)</strong> 수행할 지를 정의합니다.<br>module은 playbook이 정의된 파일 내부에서 사용됩니다.</p>
+<h4 id="2-1-Inventory"><a href="#2-1-Inventory" class="headerlink" title="2.1 Inventory"></a>2.1 Inventory</h4><p>배포 대상을 정리한 파일입니다. 간단히 말해 host ip와 접근방식등을 기록해 놓은 파일입니다. yaml문법을 적용하지 않았고 기본파일은 <strong>/etc/ansible/hosts</strong> 를 읽게 하거나, 따로 inventory 파일을 만들고 옵션을 주어 동작하게 할 수 있습니다. </p>
+<ul>
+<li>ex)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">master ansible_host=10.128.0.37 ansible_user=root</span><br><span class="line"></span><br><span class="line">[workers]</span><br><span class="line">worker1 ansible_host=10.128.0.38 ansible_user=root</span><br><span class="line">worker2 ansible_host=10.128.0.39 ansible_user=root</span><br></pre></td></tr></table></figure>
+<h4 id="2-2-ad-hoc"><a href="#2-2-ad-hoc" class="headerlink" title="2.2 ad-hoc"></a>2.2 ad-hoc</h4>임시적으로 수행하는 의미로 ansible의 playbook을 작성하여 수행하는 것이 아니라 임시적으로 작업을 수행하는 방법입니다.</li>
+</ul>
+<h4 id="2-3-playbook"><a href="#2-3-playbook" class="headerlink" title="2.3 playbook"></a>2.3 playbook</h4><p>다수의 서버에 대한 배포시스템의 기본 단위입니다. Inventory에 작성된 서버들을 대상으로 실행 스크립트를 정의한 파일입니다. YAML 문법을사용합니다.</p>
+<ul>
+<li>ex<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">hosts:</span> <span class="string">all</span></span><br><span class="line">  <span class="attr">become:</span> <span class="literal">yes</span></span><br><span class="line">  <span class="attr">tasks:</span></span><br><span class="line">   <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">install</span> <span class="string">Docker</span></span><br><span class="line">     <span class="attr">yum:</span></span><br><span class="line">       <span class="attr">name:</span> <span class="string">docker</span></span><br><span class="line">       <span class="attr">state:</span> <span class="string">present</span></span><br><span class="line">       <span class="attr">update_cache:</span> <span class="literal">true</span></span><br><span class="line">  </span><br><span class="line">   <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">start</span> <span class="string">Docker</span></span><br><span class="line">     <span class="attr">service:</span></span><br><span class="line">       <span class="attr">name:</span> <span class="string">docker</span></span><br><span class="line">       <span class="attr">enabled:</span> <span class="literal">yes</span></span><br><span class="line">       <span class="attr">state:</span> <span class="string">started</span></span><br><span class="line">       </span><br><span class="line">   <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Stop</span> <span class="string">and</span> <span class="string">disable</span> <span class="string">firewalld.</span></span><br><span class="line">     <span class="attr">service:</span></span><br><span class="line">       <span class="attr">name:</span> <span class="string">firewalld</span></span><br><span class="line">       <span class="attr">state:</span> <span class="string">stopped</span></span><br><span class="line">       <span class="attr">enabled:</span> <span class="literal">False</span>       </span><br><span class="line"><span class="string">...</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><blockquote>
+<p><a href="https://www.ansible.com/" target="_blank" rel="noopener">https://www.ansible.com/</a><br><a href="https://ko.wikipedia.org/wiki/Ansible" target="_blank" rel="noopener">https://ko.wikipedia.org/wiki/Ansible</a><br><a href="https://brownbears.tistory.com/358" target="_blank" rel="noopener">https://brownbears.tistory.com/358</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/28/Provisioning%20-%202.%20Ansible/" data-id="ckrdkv814000u9d2aaxpk47ii" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Provisioning - 1. Provisioning" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/28/Provisioning%20-%201.%20Provisioning/" class="article-date">
+  <time datetime="2020-02-28T00:13:18.692Z" itemprop="datePublished">2020-02-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/28/Provisioning%20-%201.%20Provisioning/">Provisioning - 1. Provisioning</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><hr>
+<ol>
+<li>Docker <ol>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%201.%20Docker의%20개념/" target="_blank" rel="noopener">Docker 개념</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%202.%20Docker%20Install/" target="_blank" rel="noopener">Docker Install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%203.%20Docker%20Command/" target="_blank" rel="noopener">Docker Command</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%204.%20Docker%20Example/" target="_blank" rel="noopener">Docker Example</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%205.%20Image%20만들기/" target="_blank" rel="noopener">Image 만들기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%206.%20Dockerfile/" target="_blank" rel="noopener">Dockerfile</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%207.%20Docker%20Compose/" target="_blank" rel="noopener">Docker Compose</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%208.%20Image%20저장소/" target="_blank" rel="noopener">Image 저장소</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>Container Orchestration <ol>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/" target="_blank" rel="noopener">Container Orchestration 이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" target="_blank" rel="noopener">kubernetes(1)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(2)/" target="_blank" rel="noopener">kubernetes(2)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" target="_blank" rel="noopener">kubernetes install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" target="_blank" rel="noopener">kubernetes ui</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes를%20이용해%20배포해보기/" target="_blank" rel="noopener">kubernetes를 이용해 배포해보기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" target="_blank" rel="noopener">kubectl CLI</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>Provisioning <ol>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%201.%20Provisioning/" target="_blank" rel="noopener">Provisioning이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%202.%20Ansible/" target="_blank" rel="noopener">Ansible</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%203.%20Ansible을%20이용해%20kubernetes%20cluster%20생성하기/" target="_blank" rel="noopener">Ansible을 이용해 kubernetes cluster 생성하기</a></li>
+</ol>
+</li>
+</ol>
+<h1 id="목표"><a href="#목표" class="headerlink" title="목표"></a>목표</h1><p>지금까지 Docker와 Container Orchestration 인 Kubernetes 에 대해서 알아봤습니다.<br>k8s를 사용하기 위해서는 결국 Master / Node에 k8s를 사용하기 위한 설정들을 미리 해둬야합니다.<br><strong>이러한 설정들을 서버가 증설 되거나 또 다른 프로젝트에 대한 배포환경을 만들때 마다 반복한다면 꽤 불편할 거라 생각됩니다.</strong></p>
+<h1 id="1-Provisioning-프로비저닝-이란"><a href="#1-Provisioning-프로비저닝-이란" class="headerlink" title="1. Provisioning (프로비저닝) 이란?"></a>1. Provisioning (프로비저닝) 이란?</h1><p>프로비저닝은 사용자의 요구에 맞게 시스템 자원을 할당, 배치, 배포해 두었다가 <strong>필요 시 시스템을 즉시 사용할 수 있는 상태로 미리 준비해 두는 것</strong>을 말합니다. </p>
+<p>여러 프로비저닝 오픈소스중 저희는 <strong>Ansible (앤서블)</strong> 에 대해 알아볼 예정입니다.<br>목표는 <strong>Ansible</strong>을 이용해 k8s의 Master, Node 의 환경구성 자동화를 진행해 보겠습니다.</p>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><blockquote>
+<p><a href="https://ko.wikipedia.org/wiki/%ED%94%84%EB%A1%9C%EB%B9%84%EC%A0%80%EB%8B%9D" target="_blank" rel="noopener">https://ko.wikipedia.org/wiki/%ED%94%84%EB%A1%9C%EB%B9%84%EC%A0%80%EB%8B%9D</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/28/Provisioning%20-%201.%20Provisioning/" data-id="ckrdkv813000t9d2a4hd4bron" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Container Orchestration - 7. kubectl CLI" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" class="article-date">
+  <time datetime="2020-02-26T06:06:40.736Z" itemprop="datePublished">2020-02-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/">Container Orchestration - 7. kubectl CLI</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><hr>
+<ol>
+<li>Docker <ol>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%201.%20Docker의%20개념/" target="_blank" rel="noopener">Docker 개념</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%202.%20Docker%20Install/" target="_blank" rel="noopener">Docker Install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%203.%20Docker%20Command/" target="_blank" rel="noopener">Docker Command</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%204.%20Docker%20Example/" target="_blank" rel="noopener">Docker Example</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%205.%20Image%20만들기/" target="_blank" rel="noopener">Image 만들기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%206.%20Dockerfile/" target="_blank" rel="noopener">Dockerfile</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%207.%20Docker%20Compose/" target="_blank" rel="noopener">Docker Compose</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%208.%20Image%20저장소/" target="_blank" rel="noopener">Image 저장소</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>Container Orchestration <ol>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/" target="_blank" rel="noopener">Container Orchestration 이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" target="_blank" rel="noopener">kubernetes(1)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(2)/" target="_blank" rel="noopener">kubernetes(2)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" target="_blank" rel="noopener">kubernetes install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" target="_blank" rel="noopener">kubernetes ui</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes를%20이용해%20배포해보기/" target="_blank" rel="noopener">kubernetes를 이용해 배포해보기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" target="_blank" rel="noopener">kubectl CLI</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>Provisioning <ol>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%201.%20Provisioning/" target="_blank" rel="noopener">Provisioning이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%202.%20Ansible/" target="_blank" rel="noopener">Ansible</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%203.%20Ansible을%20이용해%20kubernetes%20cluster%20생성하기/" target="_blank" rel="noopener">Ansible을 이용해 kubernetes cluster 생성하기</a></li>
+</ol>
+</li>
+</ol>
+<h1 id="목표"><a href="#목표" class="headerlink" title="목표"></a>목표</h1><p>쿠버네티스는 클러스터 API 서버와 통신하기 위해 <code>kubectl</code>이라는 커맨드라인 인터페이스를 사용합니다. 클러스터와 상호 작용하고 바라는 상태를 설정하거나 수정하기 위해서 쿠버네티스 API를 직접 사용할 수도 있습니다. </p>
+<h1 id="1-Syntax"><a href="#1-Syntax" class="headerlink" title="1. Syntax"></a>1. Syntax</h1><p>kubectl의 기본 구분은 다음과 같습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl [<span class="built_in">command</span>] [TYPE] [NAME] [flag]</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p><strong>command</strong></p>
+<ul>
+<li>create, get, describe, delete 등 자원에 대해 수행하려는 조작을 지정합니다.</li>
+</ul>
+</li>
+<li><p><strong>TYPE</strong></p>
+<ul>
+<li>리소스에 대한 유형을 지정하며, 대소 문자를 구분하지 않으나, 단수, 복수, 약식을 지정할 수 있습니다.</li>
+<li>다음 예시는 모두 같은 출력을 실행합니다.<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pod pod1</span><br><span class="line">kubectl get pods pod1</span><br><span class="line">kubectl get po pod1</span><br></pre></td></tr></table></figure>
+<img src="/img/2020/02/26/44.png" alt=""></li>
+</ul>
+</li>
+<li><p><strong>NAME</strong></p>
+<ul>
+<li>리소스의 이름을 지정합니다. 이름은 대소 문자를 구분합니다. 이름을 생략하면 모든 리소스에 대한 세부 정보가 표시됩니다<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods</span><br></pre></td></tr></table></figure>
+<img src="/img/2020/02/26/45.png" alt=""></li>
+<li>여러 리소스에 대한 조작을 수행 할 때 유형 및 이름별로 각 리소스를 지정하거나 하나 이상의 파일을 지정할 수 있습니다.<ul>
+<li>리소스가 모두 같은 유형인 경우 <strong>TYPE NAME1 NAME2 NAME3 …</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pod pod1 pod2 pod3 ...</span><br></pre></td></tr></table></figure></li>
+<li>여러 리소스 유형을 개별적으로 지정하는경우 <strong>TYPE1/NAME1 TYPE1/NAME2 TYPE2/NAME3 …</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pod/pod1 pod/pod2 service/service1 ...</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>하나 이상의 파일로 리소스를 지정 <strong>-f file1 -f file2 -f file</strong><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pod -f ./pod.yaml</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p><strong>flag</strong></p>
+<ul>
+<li>선택적 플래그를 지정합니다. 예를 들어, -s 또는 –server 플래그를 사용하여 Kubernetes API 서버의 주소와 포트를 지정할 수 있습니다.</li>
+</ul>
+</li>
+</ul>
+<h1 id="2-Operations"><a href="#2-Operations" class="headerlink" title="2. Operations"></a>2. Operations</h1><p>다음 표에는 모든 kubectl 작업에 대한 간단한 설명과 일반적인 구문이 포함되어 있습니다.<br><br>자세한 사항은 <a href="https://kubernetes.io/docs/reference/kubectl/kubectl/" target="_blank" rel="noopener">이곳</a> 을 참고해주세요.</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Syntax</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>annotate</td>
+<td>kubectl annotate (-f FILENAME | TYPE NAME | TYPE/NAME) KEY_1=VAL_1 … KEY_N=VAL_N [–overwrite] [–all] [–resource-version=version] [flags]</td>
+<td>하나 이상의 리소스 주석을 추가하거나 업데이트</td>
+</tr>
+<tr>
+<td>api-versions</td>
+<td>kubectl api-versions [flags]</td>
+<td>사용가능한 API 버전 List</td>
+</tr>
+<tr>
+<td>apply</td>
+<td>kubectl apply -f FILENAME [flags]</td>
+<td>파일 또는 stdin에서 자원에 구성 변경 사항을 적용</td>
+</tr>
+<tr>
+<td>attach</td>
+<td>kubectl attach POD -c CONTAINER [-i] [-t] [flags]</td>
+<td>실행중인 컨테이너에 연결하여 출력 스트림을 보거나 컨테이너 (stdin)와 상호 작용하십시오.</td>
+</tr>
+<tr>
+<td>autoscale</td>
+<td>kubectl autoscale (-f FILENAME | TYPE NAME | TYPE/NAME) [–min=MINPODS] –max=MAXPODS [–cpu-percent=CPU] [flags]</td>
+<td>복제 컨트롤러에서 관리하는 포드 세트를 자동으로 조정합니다.</td>
+</tr>
+<tr>
+<td>cluster-info</td>
+<td>kubectl cluster-info [flags]</td>
+<td>클러스터의 마스터 및 서비스에 대한 엔드 포인트 정보를 표시하십시오.</td>
+</tr>
+<tr>
+<td>config</td>
+<td>kubectl config SUBCOMMAND [flags]</td>
+<td>kubeconfig 파일을 수정합니다. 세부 사항은 개별 부속 명령을 참조하십시오.</td>
+</tr>
+<tr>
+<td>create</td>
+<td>kubectl create -f FILENAME [flags]</td>
+<td>파일 또는 stdin에서 하나 이상의 자원을 작성하십시오.</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>kubectl delete (-f FILENAME | TYPE [NAME | /NAME | -l label | –all]) [flags]</td>
+<td>파일, stdin에서 또는 label selectors, names, resource selectors 또는 resources 지정하여 resources를 삭제하십시오.</td>
+</tr>
+<tr>
+<td>describe</td>
+<td>kubectl describe (-f FILENAME | TYPE [NAME_PREFIX | /NAME | -l label]) [flags]</td>
+<td>하나 이상의 리소스의 자세한 상태를 표시합니다.</td>
+</tr>
+<tr>
+<td>diff</td>
+<td>kubectl diff -f FILENAME [flags]</td>
+<td>라이브 구성에 대한 Diff 파일 또는 표준 입력 (BETA)</td>
+</tr>
+<tr>
+<td>edit</td>
+<td>kubectl edit (-f FILENAME | TYPE NAME | TYPE/NAME) [flags]</td>
+<td>기본 편집기를 사용하여 서버에서 하나 이상의 자원 정의를 편집하고 업데이트하십시오.</td>
+</tr>
+<tr>
+<td>exec</td>
+<td>kubectl exec POD [-c CONTAINER] [-i] [-t] [flags] [– COMMAND [args…]]</td>
+<td>pod의 컨테이너에 대해 명령을 실행하십시오.</td>
+</tr>
+<tr>
+<td>explain</td>
+<td>kubectl explain [–recursive=false] [flags]</td>
+<td>다양한 리소스에 대한 설명서를 받으십시오. pods, nodes, services 등</td>
+</tr>
+<tr>
+<td>expose</td>
+<td>kubectl expose (-f FILENAME | TYPE NAME | TYPE/NAME) [–port=port] [–protocol=TCP|UDP] [–target-port=number-or-name] [–name=name] [–external-ip=external-ip-of-service] [–type=type] [flags]</td>
+<td>replication controller, service 또는 pod를 새로운 Kubernetes 서비스로 노출하십시오.</td>
+</tr>
+<tr>
+<td>get</td>
+<td>kubectl get (-f FILENAME | TYPE [NAME | /NAME | -l label]) [–watch] [–sort-by=FIELD] [[-o | –output]=OUTPUT_FORMAT] [flags]</td>
+<td>하나 이상의 리소스를 나열하십시오.</td>
+</tr>
+<tr>
+<td>label</td>
+<td>kubectl label (-f FILENAME | TYPE NAME | TYPE/NAME) KEY_1=VAL_1 … KEY_N=VAL_N [–overwrite] [–all] [–resource-version=version] [flags]</td>
+<td>하나 이상의 리소스 레이블 추가 또는 업데이트</td>
+</tr>
+<tr>
+<td>logs</td>
+<td>kubectl logs POD [-c CONTAINER] [–follow] [flags]</td>
+<td>컨테이너 내부의 pod log를 출력합니다.</td>
+</tr>
+<tr>
+<td>patch</td>
+<td>kubectl patch (-f FILENAME | TYPE NAME | TYPE/NAME) –patch PATCH [flags]</td>
+<td>전략적 병합 패치 프로세스를 사용하여 리소스의 하나 이상의 필드를 업데이트하십시오.</td>
+</tr>
+<tr>
+<td>port-forward</td>
+<td>kubectl port-forward POD [LOCAL_PORT:]REMOTE_PORT […[LOCAL_PORT_N:]REMOTE_PORT_N] [flags]</td>
+<td>하나 이상의 로컬 포트를 pod로 전달합니다.</td>
+</tr>
+<tr>
+<td>proxy</td>
+<td>kubectl proxy [–port=PORT] [–www=static-dir] [–www-prefix=prefix] [–api-prefix=prefix] [flags]</td>
+<td>Kubernetes API 서버에 프록시를 실행하십시오.</td>
+</tr>
+<tr>
+<td>replace</td>
+<td>kubectl replace -f FILENAME</td>
+<td>파일 또는 stdin에서 리소스를 바꾸십시오.</td>
+</tr>
+<tr>
+<td>rolling-update</td>
+<td>kubectl rolling-update OLD_CONTROLLER_NAME ([NEW_CONTROLLER_NAME] –image=NEW_CONTAINER_IMAGE | -f NEW_CONTROLLER_SPEC) [flags]</td>
+<td>지정된 replication controller 및 해당 pod를 점차적으로 교체하여 rolling update를 수행하십시오.</td>
+</tr>
+<tr>
+<td>run</td>
+<td>kubectl run NAME –image=image [–env=”key=value”] [–port=port] [–replicas=replicas] [–dry-run=bool] [–overrides=inline-json] [flags]</td>
+<td>클러스터에서 지정된 이미지를 실행하십시오.</td>
+</tr>
+<tr>
+<td>scale</td>
+<td>kubectl scale (-f FILENAME | TYPE NAME | TYPE/NAME) –replicas=COUNT [–resource-version=version] [–current-replicas=count] [flags]</td>
+<td>지정된 replacation controller의 크기를 업데이트하십시오.</td>
+</tr>
+<tr>
+<td>version</td>
+<td>kubectl version [–client] [flags]</td>
+<td>클라이언트와 서버에서 실행중인 Kubernetes 버전을 표시합니다.</td>
+</tr>
+</tbody></table>
+<h1 id="3-Resource-types"><a href="#3-Resource-types" class="headerlink" title="3. Resource types"></a>3. Resource types</h1><table>
+<thead>
+<tr>
+<th>Resource Name</th>
+<th>ShortNames</th>
+<th>API Group</th>
+<th>Namespaced</th>
+<th>Resource kind</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bindings</td>
+<td></td>
+<td></td>
+<td>true</td>
+<td>Binding</td>
+</tr>
+<tr>
+<td>componentstatuses</td>
+<td>cs</td>
+<td></td>
+<td>false</td>
+<td>ComponentStatus</td>
+</tr>
+<tr>
+<td>configmaps</td>
+<td>cm</td>
+<td></td>
+<td>true</td>
+<td>ConfigMap</td>
+</tr>
+<tr>
+<td>endpoints</td>
+<td>ep</td>
+<td></td>
+<td>true</td>
+<td>Endpoints</td>
+</tr>
+<tr>
+<td>limitranges</td>
+<td>limits</td>
+<td></td>
+<td>true</td>
+<td>LimitRange</td>
+</tr>
+<tr>
+<td>namespaces</td>
+<td>ns</td>
+<td></td>
+<td>false</td>
+<td>Namespace</td>
+</tr>
+<tr>
+<td>nodes</td>
+<td>no</td>
+<td></td>
+<td>false</td>
+<td>Node</td>
+</tr>
+<tr>
+<td>persistentvolumeclaims</td>
+<td>pvc</td>
+<td></td>
+<td>true</td>
+<td>PersistentVolumeClaim</td>
+</tr>
+<tr>
+<td>persistentvolumes</td>
+<td>pv</td>
+<td></td>
+<td>false</td>
+<td>PersistentVolume</td>
+</tr>
+<tr>
+<td>pods</td>
+<td>po</td>
+<td></td>
+<td>true</td>
+<td>Pod</td>
+</tr>
+<tr>
+<td>podtemplates</td>
+<td></td>
+<td></td>
+<td>true</td>
+<td>PodTemplate</td>
+</tr>
+<tr>
+<td>replicationcontrollers</td>
+<td>rc</td>
+<td></td>
+<td>true</td>
+<td>ReplicationController</td>
+</tr>
+<tr>
+<td>resourcequotas</td>
+<td>quota</td>
+<td></td>
+<td>true</td>
+<td>ResourceQuota</td>
+</tr>
+<tr>
+<td>secrets</td>
+<td></td>
+<td></td>
+<td>true</td>
+<td>Secret</td>
+</tr>
+<tr>
+<td>serviceaccounts</td>
+<td>sa</td>
+<td></td>
+<td>true</td>
+<td>ServiceAccount</td>
+</tr>
+<tr>
+<td>services</td>
+<td>svc</td>
+<td></td>
+<td>true</td>
+<td>Service</td>
+</tr>
+<tr>
+<td>mutatingwebhookconfigurations</td>
+<td></td>
+<td>admissionregistration.k8s.io</td>
+<td>false</td>
+<td>MutatingWebhookConfiguration</td>
+</tr>
+<tr>
+<td>validatingwebhookconfigurations</td>
+<td></td>
+<td>admissionregistration.k8s.io</td>
+<td>false</td>
+<td>ValidatingWebhookConfiguration</td>
+</tr>
+<tr>
+<td>customresourcedefinitions</td>
+<td>crd, crds</td>
+<td>apiextensions.k8s.io</td>
+<td>false</td>
+<td>CustomResourceDefinition</td>
+</tr>
+<tr>
+<td>apiservices</td>
+<td></td>
+<td>apiregistration.k8s.io</td>
+<td>false</td>
+<td>APIService</td>
+</tr>
+<tr>
+<td>controllerrevisions</td>
+<td></td>
+<td>apps</td>
+<td>true</td>
+<td>ControllerRevision</td>
+</tr>
+<tr>
+<td>daemonsets</td>
+<td>ds</td>
+<td>apps</td>
+<td>true</td>
+<td>DaemonSet</td>
+</tr>
+<tr>
+<td>deployments</td>
+<td>deploy</td>
+<td>apps</td>
+<td>true</td>
+<td>Deployment</td>
+</tr>
+<tr>
+<td>replicasets</td>
+<td>rs</td>
+<td>apps</td>
+<td>true</td>
+<td>ReplicaSet</td>
+</tr>
+<tr>
+<td>statefulsets</td>
+<td>sts</td>
+<td>apps</td>
+<td>true</td>
+<td>StatefulSet</td>
+</tr>
+<tr>
+<td>tokenreviews</td>
+<td></td>
+<td>authentication.k8s.io</td>
+<td>false</td>
+<td>TokenReview</td>
+</tr>
+<tr>
+<td>localsubjectaccessreviews</td>
+<td></td>
+<td>authorization.k8s.io</td>
+<td>true</td>
+<td>LocalSubjectAccessReview</td>
+</tr>
+<tr>
+<td>selfsubjectaccessreviews</td>
+<td></td>
+<td>authorization.k8s.io</td>
+<td>false</td>
+<td>SelfSubjectAccessReview</td>
+</tr>
+<tr>
+<td>selfsubjectrulesreviews</td>
+<td></td>
+<td>authorization.k8s.io</td>
+<td>false</td>
+<td>SelfSubjectRulesReview</td>
+</tr>
+<tr>
+<td>subjectaccessreviews</td>
+<td></td>
+<td>authorization.k8s.io</td>
+<td>false</td>
+<td>SubjectAccessReview</td>
+</tr>
+<tr>
+<td>horizontalpodautoscalers</td>
+<td>hpa</td>
+<td>autoscaling</td>
+<td>true</td>
+<td>HorizontalPodAutoscaler</td>
+</tr>
+<tr>
+<td>cronjobs</td>
+<td>cj</td>
+<td>batch</td>
+<td>true</td>
+<td>CronJob</td>
+</tr>
+<tr>
+<td>jobs</td>
+<td></td>
+<td>batch</td>
+<td>true</td>
+<td>Job</td>
+</tr>
+<tr>
+<td>certificatesigningrequests</td>
+<td>csr</td>
+<td>certificates.k8s.io</td>
+<td>false</td>
+<td>CertificateSigningRequest</td>
+</tr>
+<tr>
+<td>leases</td>
+<td></td>
+<td>coordination.k8s.io</td>
+<td>true</td>
+<td>Lease</td>
+</tr>
+<tr>
+<td>events</td>
+<td>ev</td>
+<td>events.k8s.io</td>
+<td>true</td>
+<td>Event</td>
+</tr>
+<tr>
+<td>ingresses</td>
+<td>ing</td>
+<td>extensions</td>
+<td>true</td>
+<td>Ingress</td>
+</tr>
+<tr>
+<td>networkpolicies</td>
+<td>netpol</td>
+<td>networking.k8s.io</td>
+<td>true</td>
+<td>NetworkPolicy</td>
+</tr>
+<tr>
+<td>poddisruptionbudgets</td>
+<td>pdb</td>
+<td>policy</td>
+<td>true</td>
+<td>PodDisruptionBudget</td>
+</tr>
+<tr>
+<td>podsecuritypolicies</td>
+<td>psp</td>
+<td>policy</td>
+<td>false</td>
+<td>PodSecurityPolicy</td>
+</tr>
+<tr>
+<td>clusterrolebindings</td>
+<td></td>
+<td>rbac.authorization.k8s.io</td>
+<td>false</td>
+<td>ClusterRoleBinding</td>
+</tr>
+<tr>
+<td>clusterroles</td>
+<td></td>
+<td>rbac.authorization.k8s.io</td>
+<td>false</td>
+<td>ClusterRole</td>
+</tr>
+<tr>
+<td>rolebindings</td>
+<td></td>
+<td>rbac.authorization.k8s.io</td>
+<td>true</td>
+<td>RoleBinding</td>
+</tr>
+<tr>
+<td>roles</td>
+<td></td>
+<td>rbac.authorization.k8s.io</td>
+<td>true</td>
+<td>Role</td>
+</tr>
+<tr>
+<td>priorityclasses</td>
+<td>pc</td>
+<td>scheduling.k8s.io</td>
+<td>false</td>
+<td>PriorityClass</td>
+</tr>
+<tr>
+<td>csidrivers</td>
+<td></td>
+<td>storage.k8s.io</td>
+<td>false</td>
+<td>CSIDriver</td>
+</tr>
+<tr>
+<td>csinodes</td>
+<td></td>
+<td>storage.k8s.io</td>
+<td>false</td>
+<td>CSINode</td>
+</tr>
+<tr>
+<td>storageclasses</td>
+<td>sc</td>
+<td>storage.k8s.io</td>
+<td>false</td>
+<td>StorageClass</td>
+</tr>
+<tr>
+<td>volumeattachments</td>
+<td></td>
+<td>storage.k8s.io</td>
+<td>false</td>
+<td>VolumeAttachment</td>
+</tr>
+</tbody></table>
+<h3 id="3-1-Example"><a href="#3-1-Example" class="headerlink" title="3.1 Example"></a>3.1 Example</h3><ul>
+<li><p>node 정보 확인</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl get no</span><br><span class="line">kubectl get node</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/26/46.png" alt=""></p>
+</li>
+<li><p>pod 확인</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">kubectl get po</span><br><span class="line">kubectl get pod</span><br><span class="line">`</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/26/47.png" alt=""></p>
+</li>
+<li><p>service 확인</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl get svc</span><br><span class="line">kubectl get service</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/26/48.png" alt=""></p>
+</li>
+<li><p>deployments 확인</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubectl get deploy</span><br><span class="line">kubectl get deployments</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/26/49.png" alt=""></p>
+</li>
+</ul>
+<h1 id="4-Output-Option"><a href="#4-Output-Option" class="headerlink" title="4. Output Option"></a>4. Output Option</h1><p>모든 kubectl 명령의 기본 출력 형식은 사람이 읽을 수있는 일반 텍스트 형식입니다. 특정 형식으로 터미널 창에 세부 사항을 출력하려면 지원되는 kubectl 명령에 -o 또는 –output 플래그를 추가 할 수 있습니다.</p>
+<h3 id="4-1-Syntax"><a href="#4-1-Syntax" class="headerlink" title="4.1 Syntax"></a>4.1 Syntax</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl [command] [TYPE] [NAME] -o &lt;output_format&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>kubectl 조작에 따라 다음 출력 형식이 지원됩니다.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Output format</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-o custom-columns=&lt;spec&gt;</td>
+<td>쉼표로 구분 된 사용자 정의 열 목록을 사용하여 테이블을 보여줍니다.</td>
+</tr>
+<tr>
+<td>-o custom-columns-file=&lt;filename&gt;</td>
+<td>&lt;filename&gt; 파일에서 사용자 정의 열 템플리트를 사용하여 테이블을 보여줍니다.</td>
+</tr>
+<tr>
+<td>-o json</td>
+<td>JSON 형식의 API 객체를 보여줍니다.</td>
+</tr>
+<tr>
+<td>-o jsonpath=&lt;template&gt;</td>
+<td>jsonpath 표현식에 정의 된 필드를 보여줍니다.</td>
+</tr>
+<tr>
+<td>-o jsonpath-file=&lt;filename&gt;</td>
+<td>&lt;filename&gt; 파일에서 jsonpath 표현식으로 정의 된 필드를 보여줍니다.</td>
+</tr>
+<tr>
+<td>-o name</td>
+<td>리소스 이름 만 보여줍니다.</td>
+</tr>
+<tr>
+<td>-o wide</td>
+<td>추가 정보가 포함 된 일반 텍스트 형식으로 보여줍니다. pod의 경우 노드 이름이 포함됩니다.</td>
+</tr>
+<tr>
+<td>-o yaml</td>
+<td>YAML 형식의 API 객체를 보여줍니다.</td>
+</tr>
+</tbody></table>
+<h3 id="4-2-Example"><a href="#4-2-Example" class="headerlink" title="4.2 Example"></a>4.2 Example</h3><ul>
+<li>pod 세부정보를 yaml 파일로 출력하기<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pod storm-684494d768-8nkm7 -o yaml</span><br></pre></td></tr></table></figure>
+<img src="/img/2020/02/26/50.png" alt=""></li>
+</ul>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><blockquote>
+<p><a href="https://kubernetes.io/docs/reference/kubectl/overview/" target="_blank" rel="noopener">https://kubernetes.io/docs/reference/kubectl/overview/</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" data-id="ckrdkv80d00049d2aab1pdw27" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Container Orchestration - 6. kubenetes를 이용해 배포해보기" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20%EB%B0%B0%ED%8F%AC%ED%95%B4%EB%B3%B4%EA%B8%B0/" class="article-date">
+  <time datetime="2020-02-26T01:19:34.291Z" itemprop="datePublished">2020-02-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20%EB%B0%B0%ED%8F%AC%ED%95%B4%EB%B3%B4%EA%B8%B0/">Container Orchestration - 6. kubenetes를 이용해 배포해보기</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><hr>
+<ol>
+<li>Docker <ol>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%201.%20Docker의%20개념/" target="_blank" rel="noopener">Docker 개념</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%202.%20Docker%20Install/" target="_blank" rel="noopener">Docker Install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%203.%20Docker%20Command/" target="_blank" rel="noopener">Docker Command</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%204.%20Docker%20Example/" target="_blank" rel="noopener">Docker Example</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%205.%20Image%20만들기/" target="_blank" rel="noopener">Image 만들기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%206.%20Dockerfile/" target="_blank" rel="noopener">Dockerfile</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%207.%20Docker%20Compose/" target="_blank" rel="noopener">Docker Compose</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%208.%20Image%20저장소/" target="_blank" rel="noopener">Image 저장소</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>Container Orchestration <ol>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/" target="_blank" rel="noopener">Container Orchestration 이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" target="_blank" rel="noopener">kubernetes(1)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(2)/" target="_blank" rel="noopener">kubernetes(2)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" target="_blank" rel="noopener">kubernetes install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" target="_blank" rel="noopener">kubernetes ui</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes를%20이용해%20배포해보기/" target="_blank" rel="noopener">kubernetes를 이용해 배포해보기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" target="_blank" rel="noopener">kubectl CLI</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>Provisioning <ol>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%201.%20Provisioning/" target="_blank" rel="noopener">Provisioning이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%202.%20Ansible/" target="_blank" rel="noopener">Ansible</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%203.%20Ansible을%20이용해%20kubernetes%20cluster%20생성하기/" target="_blank" rel="noopener">Ansible을 이용해 kubernetes cluster 생성하기</a></li>
+</ol>
+</li>
+</ol>
+<h1 id="목표"><a href="#목표" class="headerlink" title="목표"></a>목표</h1><p>이번엔 k8s를 이용해서 node에 container 배포를 진행해 보겠습니다.<br>설치할 application 은 storm 입니다. </p>
+<h1 id="1-Application-Image-생성"><a href="#1-Application-Image-생성" class="headerlink" title="1. Application Image 생성"></a>1. Application Image 생성</h1><h3 id="1-1-storm-Dockerfile"><a href="#1-1-storm-Dockerfile" class="headerlink" title="1.1 storm Dockerfile"></a>1.1 storm Dockerfile</h3><figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> centos:centos7</span><br><span class="line"></span><br><span class="line"><span class="keyword">MAINTAINER</span> thinkub0219@gmail.com</span><br><span class="line"></span><br><span class="line"><span class="keyword">ENV</span> JAVA_HOME /usr/lib/jvm/java-openjdk</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Packages &amp; open jdk 1.9</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> yum update -y; \</span></span><br><span class="line"><span class="bash">    yum install -y java-1.8.0-openjdk-devel.x86_64; \</span></span><br><span class="line"><span class="bash">    yum clean all</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> mkdir -p /home/sor</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># source copy</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> ./ /home/sor</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># app start</span></span><br><span class="line"><span class="keyword">EXPOSE</span> <span class="number">6010</span> <span class="number">6020</span> <span class="number">9999</span></span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /home/sor/startup_linux</span></span><br><span class="line"><span class="keyword">ENTRYPOINT</span><span class="bash"> [<span class="string">"./startsor.sh"</span>]</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">"console"</span>]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2-생성된-Image-저장소에-push"><a href="#1-2-생성된-Image-저장소에-push" class="headerlink" title="1.2 생성된 Image 저장소에 push"></a>1.2 생성된 Image 저장소에 push</h3><h1 id="2-Secrets-생성하기"><a href="#2-Secrets-생성하기" class="headerlink" title="2. Secrets 생성하기"></a>2. Secrets 생성하기</h1><p>private repository 를 사용하는경우 image를 pull받기 위해서는 인증 절차가 필요합니다. 그외 사용자 암호, oAuth 토큰 및 ssh키와 같은 민감한 정보를 저장하고 관리해주는 기능으로 k8s Secrets를 사용합니다. 이번 실습에서는 Docker Hub Secrets 를 생성해보도록 하겠습니다.</p>
+<h3 id="2-1-Docker-Hub-Private-Registry-로그인"><a href="#2-1-Docker-Hub-Private-Registry-로그인" class="headerlink" title="2.1 Docker Hub Private Registry 로그인"></a>2.1 Docker Hub Private Registry 로그인</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker login</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-2-인증-token-정보-확인"><a href="#2-2-인증-token-정보-확인" class="headerlink" title="2.2 인증 token 정보 확인"></a>2.2 인증 token 정보 확인</h3><ul>
+<li>login을 하게되면 <code>~/.docker/config.json</code> 파일이 생성됩니다. 파일 내용을 확인해봅니다.<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.docker/config.json</span><br></pre></td></tr></table></figure>
+<img src="/img/2020/02/26/32.png" alt=""></li>
+</ul>
+<h3 id="2-3-인증-토큰을-사용하여-Secret-생성하기"><a href="#2-3-인증-토큰을-사용하여-Secret-생성하기" class="headerlink" title="2.3 인증 토큰을 사용하여 Secret 생성하기"></a>2.3 인증 토큰을 사용하여 Secret 생성하기</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl create secret docker-registry &lt;name&gt; --docker-server=DOCKER_REGISTRY_SERVER --docker-username=DOCKER_USER --docker-password=DOCKER_PASSWORD --docker-email=DOCKER_EMAIL --namespace=&lt;namespace-name&gt;</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/2020/02/26/33.png" alt=""></p>
+<h1 id="3-yaml-파일을-이용한-배포"><a href="#3-yaml-파일을-이용한-배포" class="headerlink" title="3. yaml 파일을 이용한 배포"></a>3. yaml 파일을 이용한 배포</h1><h3 id="3-1-storm배포를-위한-yaml-파일-작성"><a href="#3-1-storm배포를-위한-yaml-파일-작성" class="headerlink" title="3.1 storm배포를 위한 yaml 파일 작성"></a>3.1 storm배포를 위한 yaml 파일 작성</h3><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">kind:</span> <span class="string">Deployment</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">apps/v1</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">storm-dp</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">default</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">k8s-app:</span> <span class="string">storm</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">replicas:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">matchLabels:</span></span><br><span class="line">      <span class="attr">k8s-app:</span> <span class="string">storm</span></span><br><span class="line">  <span class="attr">template:</span></span><br><span class="line">    <span class="attr">metadata:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">storm</span></span><br><span class="line">      <span class="attr">creationTimestamp:</span> <span class="literal">null</span></span><br><span class="line">      <span class="attr">labels:</span></span><br><span class="line">        <span class="attr">k8s-app:</span> <span class="string">storm</span></span><br><span class="line">    <span class="attr">spec:</span></span><br><span class="line">      <span class="attr">containers:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">storm</span></span><br><span class="line">          <span class="attr">image:</span> <span class="string">'thinkub/storm:10.32.0.3'</span></span><br><span class="line">          <span class="attr">imagePullPolicy:</span> <span class="string">IfNotPresent</span></span><br><span class="line">          <span class="attr">securityContext:</span></span><br><span class="line">            <span class="attr">privileged:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">restartPolicy:</span> <span class="string">Always</span></span><br><span class="line">      <span class="attr">imagePullSecrets:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">docker-hub</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Pod</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">storm-pod</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">default</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">k8s-app:</span> <span class="string">storm</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">containers:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">storm</span></span><br><span class="line">      <span class="attr">image:</span> <span class="string">'thinkub/storm:10.32.0.3'</span></span><br><span class="line">      <span class="attr">imagePullPolicy:</span> <span class="string">IfNotPresent</span></span><br><span class="line">      <span class="attr">securityContext:</span></span><br><span class="line">        <span class="attr">privileged:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">restartPolicy:</span> <span class="string">Always</span></span><br><span class="line">  <span class="attr">nodeName:</span> <span class="string">node-1</span></span><br><span class="line">  <span class="attr">imagePullSecrets:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">docker-hub</span></span><br><span class="line"></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"></span><br><span class="line"><span class="attr">kind:</span> <span class="string">Service</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">v1</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">storm-svc</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">defalut</span></span><br><span class="line">  <span class="attr">labels:</span></span><br><span class="line">    <span class="attr">k8s-app:</span> <span class="string">storm</span></span><br><span class="line"><span class="attr">spec:</span></span><br><span class="line">  <span class="attr">ports:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">tcp-9999-9999</span></span><br><span class="line">      <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">      <span class="attr">port:</span> <span class="number">9999</span></span><br><span class="line">      <span class="attr">targetPort:</span> <span class="number">9999</span></span><br><span class="line">      <span class="attr">nodePort:</span> <span class="number">30000</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">tcp-6010-6010</span></span><br><span class="line">      <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">      <span class="attr">port:</span> <span class="number">6010</span></span><br><span class="line">      <span class="attr">targetPort:</span> <span class="number">6010</span></span><br><span class="line">      <span class="attr">nodePort:</span> <span class="number">30001</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">tcp-6020-6020</span></span><br><span class="line">      <span class="attr">protocol:</span> <span class="string">TCP</span></span><br><span class="line">      <span class="attr">port:</span> <span class="number">6020</span></span><br><span class="line">      <span class="attr">targetPort:</span> <span class="number">6020</span></span><br><span class="line">      <span class="attr">nodePort:</span> <span class="number">30002</span></span><br><span class="line">  <span class="attr">selector:</span></span><br><span class="line">    <span class="attr">k8s-app:</span> <span class="string">storm</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">LoadBalancer</span></span><br><span class="line"><span class="attr">status:</span></span><br><span class="line">  <span class="attr">loadBalancer:</span> <span class="string">&#123;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-2-생성된-yaml파일로-배포-해보기"><a href="#3-2-생성된-yaml파일로-배포-해보기" class="headerlink" title="3.2 생성된 yaml파일로 배포 해보기"></a>3.2 생성된 yaml파일로 배포 해보기</h3><ul>
+<li>아래 명령어로 yaml 파일을 통한 배포를 진행합니다.<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl create -f &lt;yaml file&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><img src="/img/2020/02/26/34.png" alt=""></p>
+<h3 id="3-3-App-접속-확인"><a href="#3-3-App-접속-확인" class="headerlink" title="3.3 App 접속 확인"></a>3.3 App 접속 확인</h3><ul>
+<li>service를 조회하면 app의 접근포트인 <code>9999</code> 포트가 <code>30000</code> 으로 포트포워딩 된것을 확인 할 수 있습니다.</li>
+<li>해당 서버의 ip / port를 이용해 정상적으로 접속되는 것을 확인 할 수 있습니다.</li>
+</ul>
+<p><img src="/img/2020/02/26/35.png" alt=""></p>
+<h1 id="4-UI-를-이용한-배포"><a href="#4-UI-를-이용한-배포" class="headerlink" title="4. UI 를 이용한 배포"></a>4. UI 를 이용한 배포</h1><h3 id="4-1-우측위-버튼을-클릭합니다"><a href="#4-1-우측위-버튼을-클릭합니다" class="headerlink" title="4.1 우측위 + 버튼을 클릭합니다."></a>4.1 우측위 <code>+</code> 버튼을 클릭합니다.</h3><p><img src="/img/2020/02/26/36.png" alt=""></p>
+<h3 id="4-2-Create-from-form-를-클릭해서-UI-배포를-진행합니다"><a href="#4-2-Create-from-form-를-클릭해서-UI-배포를-진행합니다" class="headerlink" title="4.2 Create from form 를 클릭해서 UI 배포를 진행합니다."></a>4.2 <code>Create from form</code> 를 클릭해서 UI 배포를 진행합니다.</h3><ul>
+<li>Create from input 은 yaml 파일 형식을 직접 작성해서 배포하는 방식입니다.</li>
+<li>Create from file 은 yaml을 upload 해서 배포하는 방식입니다.<br><img src="/img/2020/02/26/37.png" alt=""></li>
+</ul>
+<h3 id="4-3-App의-기본정보를-입력합니다"><a href="#4-3-App의-기본정보를-입력합니다" class="headerlink" title="4.3 App의 기본정보를 입력합니다."></a>4.3 App의 기본정보를 입력합니다.</h3><ul>
+<li>App Name 에 배포되는 application 명칭을 작성합니다.</li>
+<li>Container Image 에 사용하려는 Image 명칭을 작성합니다.</li>
+<li>Number of pods 에는 생성하려는 pod의 갯수를 작성합니다.<br><img src="/img/2020/02/26/38.png" alt=""></li>
+</ul>
+<h3 id="4-4-Service-정보를-입력합니다"><a href="#4-4-Service-정보를-입력합니다" class="headerlink" title="4.4 Service 정보를 입력합니다."></a>4.4 Service 정보를 입력합니다.</h3><ul>
+<li>Service 는 <code>NONE</code> <code>Internal</code> <code>External</code> 이 있습니다. 이번 실습에서는 외부에 오픈되는 App이기 때문에 External을 선택합니다.</li>
+<li>Port 에는 application에서 사용하는 Port중 외부에 오픈되어야 하는 Port를 연결해 줍니다.<br><img src="/img/2020/02/26/39.png" alt=""></li>
+</ul>
+<h3 id="4-5-advance-option을-작성합니다"><a href="#4-5-advance-option을-작성합니다" class="headerlink" title="4.5 advance option을 작성합니다."></a>4.5 advance option을 작성합니다.</h3><ul>
+<li>Show advanced option을 클릭합니다.</li>
+<li>Description 에는 배포되는 application 의 세부 정보를 작성합니다.</li>
+<li>Image Pull Secret는 private repository를 사용하는경우 미리 설정한 secret을 선택해서 Image pull 받을때 인증을 하게됩니다. 미리 생성한 <code>docker-hub</code> 를 선택합니다.<br><img src="/img/2020/02/26/40.png" alt=""></li>
+</ul>
+<h3 id="4-6-Deploy-를-클릭해서-배포를-시작합니다"><a href="#4-6-Deploy-를-클릭해서-배포를-시작합니다" class="headerlink" title="4.6 Deploy 를 클릭해서 배포를 시작합니다."></a>4.6 <code>Deploy</code> 를 클릭해서 배포를 시작합니다.</h3><p><img src="/img/2020/02/26/41.png" alt=""></p>
+<h3 id="4-7-배포완료가-되면-초록색-으로-정상적으로-배포되었다는것을-확인-할-수-있습니다"><a href="#4-7-배포완료가-되면-초록색-으로-정상적으로-배포되었다는것을-확인-할-수-있습니다" class="headerlink" title="4.7 배포완료가 되면 초록색 으로 정상적으로 배포되었다는것을 확인 할 수 있습니다."></a>4.7 배포완료가 되면 <code>초록색</code> 으로 정상적으로 배포되었다는것을 확인 할 수 있습니다.</h3><p><img src="/img/2020/02/26/42.png" alt=""></p>
+<h3 id="4-8-Application-접속"><a href="#4-8-Application-접속" class="headerlink" title="4.8 Application 접속"></a>4.8 Application 접속</h3><p><img src="/img/2020/02/26/43.png" alt=""></p>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><blockquote>
+<p><a href="https://kubernetes.io/ko/docs/concepts/" target="_blank" rel="noopener">https://kubernetes.io/ko/docs/concepts/</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%B4%20%EB%B0%B0%ED%8F%AC%ED%95%B4%EB%B3%B4%EA%B8%B0/" data-id="ckrdkv80f00069d2ahy7532u7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Container Orchestration - 5. kubernetes ui" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" class="article-date">
+  <time datetime="2020-02-26T01:12:29.115Z" itemprop="datePublished">2020-02-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/">Container Orchestration - 5. kubernetes ui</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><hr>
+<ol>
+<li>Docker <ol>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%201.%20Docker의%20개념/" target="_blank" rel="noopener">Docker 개념</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%202.%20Docker%20Install/" target="_blank" rel="noopener">Docker Install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%203.%20Docker%20Command/" target="_blank" rel="noopener">Docker Command</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%204.%20Docker%20Example/" target="_blank" rel="noopener">Docker Example</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%205.%20Image%20만들기/" target="_blank" rel="noopener">Image 만들기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%206.%20Dockerfile/" target="_blank" rel="noopener">Dockerfile</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%207.%20Docker%20Compose/" target="_blank" rel="noopener">Docker Compose</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%208.%20Image%20저장소/" target="_blank" rel="noopener">Image 저장소</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>Container Orchestration <ol>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/" target="_blank" rel="noopener">Container Orchestration 이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" target="_blank" rel="noopener">kubernetes(1)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(2)/" target="_blank" rel="noopener">kubernetes(2)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" target="_blank" rel="noopener">kubernetes install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" target="_blank" rel="noopener">kubernetes ui</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes를%20이용해%20배포해보기/" target="_blank" rel="noopener">kubernetes를 이용해 배포해보기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" target="_blank" rel="noopener">kubectl CLI</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>Provisioning <ol>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%201.%20Provisioning/" target="_blank" rel="noopener">Provisioning이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%202.%20Ansible/" target="_blank" rel="noopener">Ansible</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%203.%20Ansible을%20이용해%20kubernetes%20cluster%20생성하기/" target="_blank" rel="noopener">Ansible을 이용해 kubernetes cluster 생성하기</a></li>
+</ol>
+</li>
+</ol>
+<h1 id="대시보드-UI"><a href="#대시보드-UI" class="headerlink" title="대시보드 UI"></a>대시보드 UI</h1><p>대시보드는 웹 기반 쿠버네티스 유저 인터페이스입니다. 대시보드를 통해 컨테이너화 된 애플리케이션을 쿠버네티스 클러스터에 배포할 수 있고, 컨테이너화 된 애플리케이션을 트러블슈팅 할 수 있으며, 클러스터 리소스들을 관리할 수 있습니다. </p>
+<p><img src="/img/2020/02/26/22.png" alt=""></p>
+<h2 id="1-설치"><a href="#1-설치" class="headerlink" title="1. 설치"></a>1. 설치</h2><p>대시보드 UI는 기본으로 설치되지 않습니다. 설치하려면 다음 커맨드를 이용하면 됩니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/2020/02/26/23.png" alt=""></p>
+<h2 id="2-설치확인"><a href="#2-설치확인" class="headerlink" title="2. 설치확인"></a>2. 설치확인</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get pods --all-namespaces</span><br></pre></td></tr></table></figure>
+
+<p><img src="/img/2020/02/26/24.png" alt=""></p>
+<h2 id="3-접속"><a href="#3-접속" class="headerlink" title="3. 접속"></a>3. 접속</h2><p>접속 방법은 총 3가지 입니다. </p>
+<ul>
+<li>Proxy를 이용하기</li>
+<li>NodePort 이용하기</li>
+<li>API Server 이용하기</li>
+</ul>
+<p><strong>여기서는 API Server를 이용해서 진행할 예정입니다.</strong></p>
+<h3 id="3-1-API-Server-이용하기"><a href="#3-1-API-Server-이용하기" class="headerlink" title="3.1 API Server 이용하기"></a>3.1 API Server 이용하기</h3><ol>
+<li>kube-apiserver 접근하기 위한 인증서 생성</li>
+<li>클라이언트 브라우저에 인증서 적용하기</li>
+</ol>
+<ul>
+<li><p>kube-apiserver 접근하기 위한 인증서 생성</p>
+<ul>
+<li>인증서 생성하기<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">'client-certificate-data'</span> ~/.kube/config | head -n 1 | awk <span class="string">'&#123;print $2&#125;'</span> | base64 -d &gt;&gt; kubecfg.crt</span><br><span class="line">grep <span class="string">'client-key-data'</span> ~/.kube/config | head -n 1 | awk <span class="string">'&#123;print $2&#125;'</span> | base64 -d &gt;&gt; kubecfg.key</span><br></pre></td></tr></table></figure></li>
+<li>다음으로 생성한 키를 기반으로 p12 인증서 파일을 생성합니다. (<code>password는 기억해둬야 합니다.</code>)<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">openssl pkcs12 -<span class="built_in">export</span> -clcerts -inkey kubecfg.key -<span class="keyword">in</span> kubecfg.crt -out kubecfg.p12 -name <span class="string">"kubernetes-admin"</span></span><br></pre></td></tr></table></figure>
+<img src="/img/2020/02/26/25.png" alt=""></li>
+</ul>
+</li>
+<li><p>클라이언트 브라우저에 인증서 적용하기</p>
+<ul>
+<li><p>생성된 인증서 클라이언트로 Download </p>
+</li>
+<li><p>생성된 <code>kubecfg.p12</code> 파일과 <code>/etc/kubernetes/pki/ca.crt</code> 인증서를 사용하려는 PC에 다운받습니다.</p>
+</li>
+<li><p>다운로드한 인증서를 클라이언트에 적용합니다.</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil.exe -addstore "Root" D:\...\<span class="number">00</span>_Project\ca.crt</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/26/26.png" alt=""></p>
+</li>
+<li><p>p12 파일 적용시 아래와같은 인증서 설치 여부를 묻게되며 ‘예’를 선택하면 됩니다.</p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil.exe -p [password] -user -importPFX D:\...\<span class="number">00</span>_Project\kubecfg.p12</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/26/27.png" alt=""></p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-접속확인"><a href="#4-접속확인" class="headerlink" title="4. 접속확인"></a>4. 접속확인</h2><p>ui dashboard 에 접속해 봅니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://[server_ip]:6443/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>접근시 다음과 같이 인증서 적용 여부를 확인하게 됩니다.<br><img src="/img/2020/02/26/28.png" alt=""></p>
+</li>
+<li><p>dashboard 접속<br><img src="/img/2020/02/26/29.png" alt=""></p>
+</li>
+</ul>
+<h3 id="4-1-Token-키-생성해서-인증하기"><a href="#4-1-Token-키-생성해서-인증하기" class="headerlink" title="4.1 Token 키 생성해서 인증하기"></a>4.1 Token 키 생성해서 인증하기</h3><ul>
+<li><p>service 계정 생성</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt;EOF | kubectl create -f -</span><br><span class="line">apiVersion: v1</span><br><span class="line">kind: ServiceAccount</span><br><span class="line">metadata:</span><br><span class="line">  name: admin-user</span><br><span class="line">  namespace: kube-system</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+<ul>
+<li>ClusterRoleBinding<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt;EOF | kubectl create -f -</span><br><span class="line">apiVersion: rbac.authorization.k8s.io/v1</span><br><span class="line">kind: ClusterRoleBinding</span><br><span class="line">metadata:</span><br><span class="line">  name: admin-user</span><br><span class="line">roleRef:</span><br><span class="line">  apiGroup: rbac.authorization.k8s.io</span><br><span class="line">  kind: ClusterRole</span><br><span class="line">  name: cluster-admin</span><br><span class="line">subjects:</span><br><span class="line">- kind: ServiceAccount</span><br><span class="line">  name: admin-user</span><br><span class="line">  namespace: kube-system</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li><p>Token 가져오기</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk <span class="string">'&#123;print $1&#125;'</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/26/30.png" alt=""></p>
+</li>
+<li><p>Token 값을 이용해 인증하기<br><img src="/img/2020/02/26/31.png" alt=""></p>
+</li>
+</ul>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><blockquote>
+<p><a href="https://kubernetes.io/ko/docs/tasks/access-application-cluster/web-ui-dashboard/" target="_blank" rel="noopener">https://kubernetes.io/ko/docs/tasks/access-application-cluster/web-ui-dashboard/</a><br><a href="https://github.com/kubernetes/dashboard" target="_blank" rel="noopener">https://github.com/kubernetes/dashboard</a><br><a href="https://crystalcube.co.kr/199" target="_blank" rel="noopener">https://crystalcube.co.kr/199</a><br><a href="https://waspro.tistory.com/516" target="_blank" rel="noopener">https://waspro.tistory.com/516</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" data-id="ckrdkv80c00039d2ad4yga7zu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Container Orchestration - 4. kubernetes install" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" class="article-date">
+  <time datetime="2020-02-26T01:08:01.268Z" itemprop="datePublished">2020-02-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/">Container Orchestration - 4. kubernetes install</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><hr>
+<ol>
+<li>Docker <ol>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%201.%20Docker의%20개념/" target="_blank" rel="noopener">Docker 개념</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%202.%20Docker%20Install/" target="_blank" rel="noopener">Docker Install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%203.%20Docker%20Command/" target="_blank" rel="noopener">Docker Command</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%204.%20Docker%20Example/" target="_blank" rel="noopener">Docker Example</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%205.%20Image%20만들기/" target="_blank" rel="noopener">Image 만들기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%206.%20Dockerfile/" target="_blank" rel="noopener">Dockerfile</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%207.%20Docker%20Compose/" target="_blank" rel="noopener">Docker Compose</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%208.%20Image%20저장소/" target="_blank" rel="noopener">Image 저장소</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>Container Orchestration <ol>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/" target="_blank" rel="noopener">Container Orchestration 이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" target="_blank" rel="noopener">kubernetes(1)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(2)/" target="_blank" rel="noopener">kubernetes(2)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" target="_blank" rel="noopener">kubernetes install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" target="_blank" rel="noopener">kubernetes ui</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes를%20이용해%20배포해보기/" target="_blank" rel="noopener">kubernetes를 이용해 배포해보기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" target="_blank" rel="noopener">kubectl CLI</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>Provisioning <ol>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%201.%20Provisioning/" target="_blank" rel="noopener">Provisioning이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%202.%20Ansible/" target="_blank" rel="noopener">Ansible</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%203.%20Ansible을%20이용해%20kubernetes%20cluster%20생성하기/" target="_blank" rel="noopener">Ansible을 이용해 kubernetes cluster 생성하기</a></li>
+</ol>
+</li>
+</ol>
+<h1 id="목표"><a href="#목표" class="headerlink" title="목표"></a>목표</h1><p>쿠버네틱스에 대한 개념을 살펴봤습니다. 이번엔 직접 설치해서 어떻게 작동하는지 확인해 보겠습니다.</p>
+<p>쿠버네티스 클러스터 중 가장 쉽게 접할 수 있는 건 <a href="https://kubernetes.io/ko/docs/setup/learning-environment/minikube/" target="_blank" rel="noopener">Minikube</a> 입니다. 하지만 Minikube 는 Master 하나로 이루어져 있어 부족한 점이 많습니다. 쿠버네티스의 다양한 기능을 살펴보려면 Master 노드와 Worker 노드 여러 개로 이루어진 실제 클러스터 환경을 구성할 필요가 있습니다.</p>
+<p>쿠버네티스 클러스터를 구성하는 것이 간단한 일은 아닙니다. 그래서 개발자들이 처음 쿠버네티스 클러스터를 구성할 때 많은 어려움을 겪습니다. 하지만 쿠버네티스에서 제공하는 kubeadm이라는 툴을 이용하면 비교적 쉽게 설치할 수 있습니다.</p>
+<p>앞써 쿠버네티스의 <a href="https://gitlab.ziny.us/ai-labs-aip/docker/wikis/2-Container-Orchestration/2.-kubernetes(k8s)#11-master-node" target="_blank" rel="noopener">클러스터 구조</a>를 확인했습니다.<br>Pod(Container)가 실행되는 Node와 Node를 제어하는 Master가 있습니다. <code>Master 는 cpu가 최소 2core 이상이어야 합니다.</code> </p>
+<h1 id="1-준비하기"><a href="#1-준비하기" class="headerlink" title="1. 준비하기"></a>1. 준비하기</h1><p>Master 1대와 Node 2대로 구성해서 설치 해보겠습니다. (테스트는 개인 GCP 를 사용했습니다.)</p>
+<p><img src="/img/2020/02/26/16.png" alt=""></p>
+<h1 id="2-Install"><a href="#2-Install" class="headerlink" title="2. Install"></a>2. Install</h1><h3 id="2-1-사전작업"><a href="#2-1-사전작업" class="headerlink" title="2.1 사전작업"></a>2.1 사전작업</h3><p><code>모든 설치 과정은 root 권한으로 진행합니다.</code><br><code>master</code> <code>node-1</code> <code>node-2</code> 공통 작업입니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su -</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>Swap 은 메모리가 부족하거나 절전 모드에서 디스크의 일부 공간을 메모리처럼 사용하는 기능입니다. Kubelet 이 정상 동작할 수 있도록 해당 기능을 swap 디바이스와 파일 모두 disable 합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">swapoff -a                                  <span class="comment"># paging 과 swap 기능을 끕니다.</span></span><br><span class="line"><span class="built_in">echo</span> 0 &gt; /proc/sys/vm/swappiness            <span class="comment"># 커널 속성을 변경해 swap을 disable 합니다.</span></span><br><span class="line">sed -e <span class="string">'/swap/ s/^#*/#/'</span> -i /etc/fstab      <span class="comment"># Swap을 하는 파일 시스템을 찾아 disable 합니다.</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>각 노드의 통신을 원활하게 하기 위해 방화벽 기능을 해제합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">disable</span> firewalld</span><br><span class="line">systemctl stop firewalld</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>SELinux(Security-Enhanced Linux)는 리눅스 보안 모듈로 액세스 권한을 제어합니다. 쿠버네티스에서는 컨테이너가 호스트의 파일시스템에 접속할 수 있도록 해당 기능을 꺼야 합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setenforce 0</span><br><span class="line">sed -i <span class="string">'s/^SELINUX=enforcing$/SELINUX=permissive/'</span> /etc/selinux/config</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>RHEL 과 CentOS 7에서 iptables 관련 이슈가 있어서 커널 매개변수를 다음과 같이 수정하고 적용합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt;  /etc/sysctl.d/k8s.conf</span><br><span class="line">net.bridge.bridge-nf-call-ip6tables = 1</span><br><span class="line">net.bridge.bridge-nf-call-iptables = 1</span><br><span class="line">EOF</span><br><span class="line">sysctl --system</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>br_netfilter 모듈이 활성화되어 있어야 합니다. modprobe br_netfilter 명령어로 해당 모듈을 명시적으로 추가하고, lsmod | grep br_netfilter 명령어로 추가 여부를 확인할 수 있습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">modprobe br_netfilter</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>컨테이너 실행 환경인 도커(Docker)를 설치하고 실행합니다. 쿠버네티스는 도커 외에도 여러가지 CRI(Container Runtime Interface) 구현체를 지원하기 때문에 도커에 종속적이지 않습니다</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br><span class="line">yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">yum install -y docker-ce</span><br><span class="line"></span><br><span class="line">systemctl start docker.service</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-2-k8s-설치"><a href="#2-2-k8s-설치" class="headerlink" title="2.2 k8s 설치"></a>2.2 k8s 설치</h3><ul>
+<li><p>Kubeadm은 Kubelet 과 Kubectl 을 설치하지 않기 때문에 직접 설치해야 합니다. 리파지토리를 추가하고 설치 및 실행합니다. Kubectl 은 클러스터에게 명령을 내리기 위한 CLI 유틸입니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cat &lt;&lt;EOF &gt; /etc/yum.repos.d/kubernetes.repo</span><br><span class="line">[kubernetes]</span><br><span class="line">name=Kubernetes</span><br><span class="line">baseurl=https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64</span><br><span class="line">enabled=1</span><br><span class="line">gpgcheck=1</span><br><span class="line">repo_gpgcheck=1</span><br><span class="line">gpgkey=https://packages.cloud.google.com/yum/doc/yum-key.gpg https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg</span><br><span class="line">exclude=kube*</span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">yum install -y kubelet kubeadm kubectl --disableexcludes=kubernetes</span><br><span class="line">systemctl <span class="built_in">enable</span> kubelet &amp;&amp; systemctl start kubelet</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>설치 시 사용할 이미지를 먼저 다운로드 합니다. <code>master</code> 에서만 진행합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm config images pull</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>master 초기화를 진행합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm init</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>설치 완료시 다음과 같은 로그를 확인 할 수 있습니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Your Kubernetes control-plane has initialized successfully!</span><br><span class="line"></span><br><span class="line">To start using your cluster, you need to run the following as a regular user:</span><br><span class="line"></span><br><span class="line">  mkdir -p $HOME/.kube</span><br><span class="line">  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config</span><br><span class="line">  sudo chown $(id -u):$(id -g) $HOME/.kube/config</span><br><span class="line"></span><br><span class="line">You should now deploy a pod network to the cluster.</span><br><span class="line">Run &quot;kubectl apply -f [podnetwork].yaml&quot; with one of the options listed at:</span><br><span class="line">  https://kubernetes.io/docs/concepts/cluster-administration/addons/</span><br><span class="line"></span><br><span class="line">Then you can join any number of worker nodes by running the following on each as root:</span><br><span class="line"></span><br><span class="line">kubeadm join 10.128.0.32:6443 --token l53w07.r3jv3r9z87dberca \</span><br><span class="line">    --discovery-token-ca-cert-hash sha256:03efcec987556feb1a7e2109e814fb4b74c5bc0ba47b20b8af8ce2c28dcd20ed</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>해당 로그의 표시된 부분을 사용해야 하니 확인해주세요</p>
+</li>
+</ul>
+<p><img src="/img/2020/02/26/17.png" alt=""></p>
+<ul>
+<li><p>여기서 일반 사용자가 kubectl 을 사용할 수 있도록 로그 중간에 있는 명령어를 복사해서 실행합니다</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p <span class="variable">$HOME</span>/.kube</span><br><span class="line">sudo cp -i /etc/kubernetes/admin.conf <span class="variable">$HOME</span>/.kube/config</span><br><span class="line">sudo chown $(id -u):$(id -g) <span class="variable">$HOME</span>/.kube/config</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>맨 마지막 라인의 명령어는 Node를 Master에 연결하는 명령어 입니다. 해당 명령어를 복사해서 <code>node-1</code> <code>node-2</code> 에서 수행합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">kubeadm join 10.128.0.32:6443 --token l53w07.r3jv3r9z87dberca \</span><br><span class="line">    --discovery-token-ca-cert-hash sha256:03efcec987556feb1a7e2109e814fb4b74c5bc0ba47b20b8af8ce2c28dcd20ed</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><img src="/img/2020/02/26/18.png" alt=""></p>
+<ul>
+<li><p>command를 복사해놓지 않고 지워진 경우에는 다음과 같이 token을 확인 할 수 있습니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm token list</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>해당 토큰은 24시간 동안만 사용할 수 있습니다. 새 토큰이 필요한 경우는 다음 명령어를 실행하면 됩니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubeadm token create</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="2-3-Pod-network-add-on-설치"><a href="#2-3-Pod-network-add-on-설치" class="headerlink" title="2.3 Pod network add-on 설치"></a>2.3 Pod network add-on 설치</h3><p>Pod 은 실제로 여러 노드에 걸쳐 배포되는데, Pod 끼리는 하나의 네트워크에 있는 것처럼 통신할 수 있습니다. 이를 오버레이 네트워크(Overlay Network)라고 합니다.</p>
+<p>오버레이 네트워크를 지원하는 CNI(Container Network Interface) 플러그인을 설치해보겠습니다. CNI 에는 여러 종류가 있는데, 이번 실습에서는 Weave 를 이용합니다.</p>
+<ul>
+<li><p>Master 노드에서 다음과 같이 설치합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl apply -f <span class="string">"https://cloud.weave.works/k8s/net?k8s-version=<span class="variable">$(kubectl version | base64 | tr -d '\n')</span>"</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>첨부파일 처런 각 node들의 상태가 <code>NotReday</code> 에서 <code>Reday</code> 로 변경된 것을 확인 할 수 있습니다.</p>
+</li>
+</ul>
+<p><img src="/img/2020/02/26/19.png" alt=""></p>
+<h1 id="3-설치-확인하기"><a href="#3-설치-확인하기" class="headerlink" title="3. 설치 확인하기"></a>3. 설치 확인하기</h1><ul>
+<li>쿠버네티스의 구성 요소가 모두 동작하는 것을 확인할 수 있습니다.<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get componentstatuses</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><img src="/img/2020/02/26/20.png" alt=""></p>
+<ul>
+<li>쿠버네티스의 구성 요소가 Pod 으로 어떤 노드에 떠있는지 확인할 수 있습니다. </li>
+<li>etcd, API server, Scheduler, Controller Manager, DNS Server 는 master 에서 실행됩니다. </li>
+<li>Kube proxy 와 Weave 는 각 worker 에서 실행됩니다.<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kubectl get po -o custom-columns=POD:metadata.name,NODE:spec.nodeName --sort-by spec.nodeName -n kube-system</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<p><img src="/img/2020/02/26/21.png" alt=""></p>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><blockquote>
+<p><a href="https://futurecreator.github.io/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/" target="_blank" rel="noopener">https://futurecreator.github.io/2019/02/25/kubernetes-cluster-on-google-compute-engine-for-developers/</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" data-id="ckrdkv80e00059d2a54r652ie" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Container Orchestration - 3. kubernetes(2)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/26/Container%20Orchestration%20-%203.%20kubernetes(2)/" class="article-date">
+  <time datetime="2020-02-26T01:05:05.438Z" itemprop="datePublished">2020-02-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/26/Container%20Orchestration%20-%203.%20kubernetes(2)/">Container Orchestration - 3. kubernetes(2)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><hr>
+<ol>
+<li>Docker <ol>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%201.%20Docker의%20개념/" target="_blank" rel="noopener">Docker 개념</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%202.%20Docker%20Install/" target="_blank" rel="noopener">Docker Install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%203.%20Docker%20Command/" target="_blank" rel="noopener">Docker Command</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%204.%20Docker%20Example/" target="_blank" rel="noopener">Docker Example</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%205.%20Image%20만들기/" target="_blank" rel="noopener">Image 만들기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%206.%20Dockerfile/" target="_blank" rel="noopener">Dockerfile</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%207.%20Docker%20Compose/" target="_blank" rel="noopener">Docker Compose</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%208.%20Image%20저장소/" target="_blank" rel="noopener">Image 저장소</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>Container Orchestration <ol>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/" target="_blank" rel="noopener">Container Orchestration 이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" target="_blank" rel="noopener">kubernetes(1)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(2)/" target="_blank" rel="noopener">kubernetes(2)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" target="_blank" rel="noopener">kubernetes install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" target="_blank" rel="noopener">kubernetes ui</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes를%20이용해%20배포해보기/" target="_blank" rel="noopener">kubernetes를 이용해 배포해보기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" target="_blank" rel="noopener">kubectl CLI</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>Provisioning <ol>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%201.%20Provisioning/" target="_blank" rel="noopener">Provisioning이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%202.%20Ansible/" target="_blank" rel="noopener">Ansible</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%203.%20Ansible을%20이용해%20kubernetes%20cluster%20생성하기/" target="_blank" rel="noopener">Ansible을 이용해 kubernetes cluster 생성하기</a></li>
+</ol>
+</li>
+</ol>
+<h2 id="3-Controller"><a href="#3-Controller" class="headerlink" title="3. Controller"></a>3. Controller</h2><p>컨트롤러는 객체가 원래 설정된 상태를 잘 유지할수있게 관리하는 역할을 합니다.</p>
+<h3 id="3-1-Replication-Controller"><a href="#3-1-Replication-Controller" class="headerlink" title="3.1 Replication Controller"></a>3.1 Replication Controller</h3><p>언제든지 지정된 숫자 만큼의 Pod가 항상 클러스터 내에서 실행되고 있도록 관리합니다. 다시말하면 Pod 또는 동일종류의 Pod의 셋이 항상 가동되고 사용가능한지 확인합니다.</p>
+<p><img src="/img/2020/02/26/9.svg" alt=""></p>
+<h3 id="3-2-ReplicaSet"><a href="#3-2-ReplicaSet" class="headerlink" title="3.2 ReplicaSet"></a>3.2 ReplicaSet</h3><p>replicaset은 Replication Controller 다음 버전입니다. Replication Controller와 동일하게 동작하고 차이점은 집합 기반(set-based)의 셀렉터(selector)를 지원하는 것이 다릅니다. 복제 컨트롤러 같은 경우에는 셀렉터가 등호기반(equal-based)라서 라벨을 선택할때 같은지(=) 다른지(!=)만 확인합니다. 하지만 집합기반의 셀렉터는 in, notin, exists같은 연산자를 지원합니다.</p>
+<p><img src="/img/2020/02/26/10.png" width="40%" height="40%"> <br></p>
+<h3 id="3-3-Deployment"><a href="#3-3-Deployment" class="headerlink" title="3.3 Deployment"></a>3.3 Deployment</h3><p>Replication controller와 Replica Set의 좀더 상위 추상화 개념입니다. 가장 기본적인 배포 방법으로 ReplicaSet를 관리하면서 앱의 배포를 보다 세밀하게 관리할 수 있게 합니다. 단순히 실행시켜야할 pod의 개수를 유지 하는 것만이 아니라 배포할때 롤링업데이트가 가능한 것은 물론, 배포도중 멈췄다가 다시 배포하는것도 가능합니다. 배포후 이전 버전으로 롤백도 할 수 있습니다.</p>
+<p><img src="/img/2020/02/26/11.svg" alt=""></p>
+<h4 id="3-3-1-Rolling-Update"><a href="#3-3-1-Rolling-Update" class="headerlink" title="3.3.1 Rolling Update"></a>3.3.1 Rolling Update</h4><p>롤링 업데이트는 Pod 인스턴스를 점진적으로 새로운 것으로 업데이트하여 Deployment 업데이트가 <strong>서비스 중단 없이</strong> 이루어질 수 있도록 해줍니다.</p>
+<p><img src="/img/2020/02/26/12.svg" width="60%" height="60%"> <br><br><img src="/img/2020/02/26/13.svg" width="60%" height="60%"> <br><br><img src="/img/2020/02/26/14.svg" width="60%" height="60%"> <br><br><img src="/img/2020/02/26/15.svg" width="60%" height="60%"> <br></p>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><blockquote>
+<p><a href="https://kubernetes.io/ko/docs/concepts/overview/" target="_blank" rel="noopener">https://kubernetes.io/ko/docs/concepts/overview/</a><br><a href="https://subicura.com/2019/05/19/kubernetes-basic-1.html" target="_blank" rel="noopener">https://subicura.com/2019/05/19/kubernetes-basic-1.html</a><br><a href="https://bcho.tistory.com/1256?category=731548" target="_blank" rel="noopener">https://bcho.tistory.com/1256?category=731548</a><br><a href="https://arisu1000.tistory.com/" target="_blank" rel="noopener">https://arisu1000.tistory.com/</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/26/Container%20Orchestration%20-%203.%20kubernetes(2)/" data-id="ckrdkv80300009d2a5dgz29gg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Container Orchestration - 2. kubernetes(1)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" class="article-date">
+  <time datetime="2020-02-25T23:59:01.165Z" itemprop="datePublished">2020-02-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/">Container Orchestration - 2. kubernetes(1)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><hr>
+<ol>
+<li>Docker <ol>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%201.%20Docker의%20개념/" target="_blank" rel="noopener">Docker 개념</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%202.%20Docker%20Install/" target="_blank" rel="noopener">Docker Install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%203.%20Docker%20Command/" target="_blank" rel="noopener">Docker Command</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%204.%20Docker%20Example/" target="_blank" rel="noopener">Docker Example</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%205.%20Image%20만들기/" target="_blank" rel="noopener">Image 만들기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%206.%20Dockerfile/" target="_blank" rel="noopener">Dockerfile</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%207.%20Docker%20Compose/" target="_blank" rel="noopener">Docker Compose</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%208.%20Image%20저장소/" target="_blank" rel="noopener">Image 저장소</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>Container Orchestration <ol>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/" target="_blank" rel="noopener">Container Orchestration 이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" target="_blank" rel="noopener">kubernetes(1)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(2)/" target="_blank" rel="noopener">kubernetes(2)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" target="_blank" rel="noopener">kubernetes install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" target="_blank" rel="noopener">kubernetes ui</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes를%20이용해%20배포해보기/" target="_blank" rel="noopener">kubernetes를 이용해 배포해보기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" target="_blank" rel="noopener">kubectl CLI</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>Provisioning <ol>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%201.%20Provisioning/" target="_blank" rel="noopener">Provisioning이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%202.%20Ansible/" target="_blank" rel="noopener">Ansible</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%203.%20Ansible을%20이용해%20kubernetes%20cluster%20생성하기/" target="_blank" rel="noopener">Ansible을 이용해 kubernetes cluster 생성하기</a></li>
+</ol>
+</li>
+</ol>
+<h1 id="쿠버네티스란"><a href="#쿠버네티스란" class="headerlink" title="쿠버네티스란"></a>쿠버네티스란</h1><p><img src="/img/2020/02/26/4.png" width="50%" height="50%"> <br><br><strong>Kubernetes(k8s)는 컨테이너화된 애플리케이션을 자동으로 배포, 스케일링 및 관리해주는 오픈소스 시스템입니다.</strong><br>Kubernetes란 명칭은 키잡이(helmsman)이나 파일럿을 뜻하는 그리스어로 구글에서 개발한 2014년 오픈소스화 된 프로젝트입니다.</p>
+<p>k8s는 다른 Container Orchestration들 보다는 늦게 등장했지만 현재 사실상의 Container Orchestration의 표준이 되었습니다.<br>그 이유는 <a href="https://www.cncf.io/" target="_blank" rel="noopener">CNCF(Cloud Native Computing Foundation:클라우드 네이티브 컴퓨팅재단)</a>을 결성했기 때문이라고 말합니다.</p>
+<p>대규모 컨테이너를 관리했던 구글 (Google은 내부 플랫폼인 <a href="https://kubernetes.io/blog/2015/04/borg-predecessor-to-kubernetes/" target="_blank" rel="noopener">Borg</a>를 통해 일주일에 20억 개 이상의 컨테이너 배포를 생성하고 있습니다.)의 노하우와 CNCF에 AWS, Oracle, MS, RedHat, IBM 등 수많은 기업의의 참여로 k8s를 Container Orchestration의 표준이 될 수 있었습니다.</p>
+<h1 id="개념-이해"><a href="#개념-이해" class="headerlink" title="개념 이해"></a>개념 이해</h1><p>쿠버네티스에서 사용하는 개념은 크게 객체(Object)와 그걸 관리하는 컨트롤러(Controller)가 있습니다. 객체는 사용자가 쿠버네티스에 바라는 상태(desired state)를 의미하고 컨트롤러는 객체가 원래 설정된 상태를 잘 유지할수있게 관리하는 역할을 합니다.</p>
+<p>k8s의 <a href="https://kubernetes.io/ko/docs/concepts/" target="_blank" rel="noopener">공식문서</a>는 한글도 지원이 됩니다. <strong>자세한 내용은 공식문서를 참고해주세요</strong><br>공식문서를 읽다보면 개념을 잡기는 쉽지 않습니다. (낯선 용어와 환경….) 저희는 가벼운 수준으로 살펴보기로 하겠습니다.</p>
+<h2 id="1-클러스터-아키텍처"><a href="#1-클러스터-아키텍처" class="headerlink" title="1. 클러스터 아키텍처"></a>1. 클러스터 아키텍처</h2><h3 id="1-1-Master-Node"><a href="#1-1-Master-Node" class="headerlink" title="1.1 Master / Node"></a>1.1 Master / Node</h3><p>클러스터는 크게 Master 와 Node로 구성이 됩니다.<br><strong>클러스터 전체를 관리하는 Master가 존재하고, Container가 배포되는 Node가 존재합니다.</strong></p>
+<ul>
+<li>Master : 클러스터 관리를 담당합니다. 마스터는 애플리케이션을 스케줄링하거나, 애플리케이션의 항상성을 유지하거나, 애플리케이션을 스케일링하고, 새로운 변경사항을 순서대로 반영하는 일과 같은 클러스터 내 모든 활동을 조율합니다.</li>
+<li>Node : 쿠버네티스 클러스터 내 워커 머신으로써 동작하는 VM 또는 물리적인 컴퓨터입니다. 각 노드들은 <a href="https://gitlab.ziny.us/ai-labs-aip/docker/wikis/2-Container-Orchestration/2.-kubernetes(k8s)#21-pod" target="_blank" rel="noopener">Pod</a>를 동작시키기 위해 필요한 서비스를 포함하여 마스터 컴포넌트에 의해 관리됩니다.</li>
+</ul>
+<p><img src="/img/2020/02/26/5.svg" alt=""></p>
+<h2 id="2-Object"><a href="#2-Object" class="headerlink" title="2. Object"></a>2. Object</h2><p>쿠버네티스는 상태를 관리하기 위한 대상을 오브젝트로 정의합니다. 기본으로 수십 가지 오브젝트를 제공하고 새로운 오브젝트를 추가하기가 매우 쉽기 때문에 확장성이 좋습니다. 여러 오브젝트 중 주요 오브젝트는 다음과 같습니다.</p>
+<h3 id="2-1-Pod"><a href="#2-1-Pod" class="headerlink" title="2.1 Pod"></a>2.1 Pod</h3><p>Pod 는 쿠버네티스에서 생성되고 관리될 수 있는 배포 <code>가능한 최소 컴퓨팅 단위</code>입니다.</p>
+<ul>
+<li><strong>한개 이상의 컨테이너를 가질 수 있습니다.</strong> 하지만 대부분 1~2개의 컨테이너를 갖게 됩니다. 이유는 <code>배포의 최소 단위</code>이기 때문에 Pod내부에 다수의 컨테이너들이 묶여있으면 scale-out이 쉽지 않거나 비효율적으로 이뤄지는 문제가 있습니다.</li>
+<li>Pod 내부의 Container들은 Ip/Port와 볼륨등을 공유하고 서로 localhost로 통신이 가능합니다.</li>
+<li>Pod에서 사용하는 Ip / Port는 서비스에서 사용되지 않습니다 (<code>External 접근이 되지 않음</code>) Pod는 <code>Service</code>를 통해 접근이 가능하기 때문인데 <code>Service</code>를 Pod에 연결했을때 외부 접근이 가능합니다.</li>
+<li>Pod는 언젠가는 반드시 죽는(mortal) 오브젝트입니다. 수명이 있다는 의미로 Pod는 생성되고, 소멸된 후 부활하지 않습니다.</li>
+</ul>
+<p><img src="/img/2020/02/26/6.png" width="50%" height="50%"> <br></p>
+<ul>
+<li>Pod는 총 5개의 상태값을 가집니다.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>값</th>
+<th>의미</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Pending</td>
+<td>Pod가 쿠버네티스 시스템에 의해서 승인되었지만, Pod를 위한 하나 또는 하나 이상의 컨테이너 이미지 생성이 아직 완료되지 않았다. 여기에는 스케줄되기 이전까지의 시간 뿐만 아니라 오래 걸릴 수 있는 네트워크를 통한 이미지 다운로드 시간도 포함된다.</td>
+</tr>
+<tr>
+<td>Running</td>
+<td>Pod가 한 노드에 결합되었고, 모든 컨테이너들의 생성이 완료되었다. 적어도 하나의 컨테이너가 동작 중이거나, 시작 또는 재시작 중에 있다.</td>
+</tr>
+<tr>
+<td>Succeeded</td>
+<td>Pod에 있는 모든 컨테이너들이 성공으로 종료되었고, 재시작되지 않을 것이다.</td>
+</tr>
+<tr>
+<td>Failed</td>
+<td>Pod에 있는 모든 컨테이너들이 종료되었고, 적어도 하나 이상의 컨테이너가 실패로 종료되었다. 즉, 해당 컨테이너는 non-zero 상태로 빠져나왔거나(exited) 시스템에 의해서 종료(terminated)되었다</td>
+</tr>
+<tr>
+<td>Unknown</td>
+<td>어떤 이유에 의해서 Pod의 상태를 얻을 수 없다. 일반적으로 Pod 호스트와의 통신 오류에 의해서 발생한다.</td>
+</tr>
+</tbody></table>
+<h3 id="2-2-Sevice"><a href="#2-2-Sevice" class="headerlink" title="2.2 Sevice"></a>2.2 Sevice</h3><p>pod에서 실행 중인 프로세스를 위한 신원(identity)을 제공합니다. 쿠버네티스에서 서비스는 pod의 논리적 집합과 그것들에 접근할 수 있는 정책을 정의하는 추상적 개념입니다.</p>
+<p><code>Pod를 외부 네트워크와 연결해주고</code> 여러 개의 Pod을 바라보는 내부 로드 밸런서를 생성할 때 사용합니다. 내부 DNS에 서비스 이름을 도메인으로 등록하기 때문에 서비스 디스커버리 역할도 합니다.</p>
+<p>서비스를 정의할때, 어떤 Pod를 서비스로 묶을 것인지를 정의하는데, 이를 라벨 셀렉터라고 합니다. 각 Pod를 생성할때 메타데이타 정보 부분에 라벨을 정의할 수 있는데 서비스는 라벨 셀렉터에서 특정 라벨을 가지고 있는 Pod만 선택하여 서비스에 묶게 됩니다.</p>
+<p>Pod의 경우에는 동적으로 생성이 되고, 장애가 생기면 자동으로 리스타트 되면서 그 IP가 바뀌기 때문에, 로드밸런서에서 Pod의 목록을 지정할 때는 IP주소를 이용하는 것은 어렵습니다. 또한 오토 스케일링으로 인하여 Pod 가 동적으로 추가 또는 삭제되기 때문에, 이렇게 추가/삭제된 Pod 목록을 로드밸런서가 유연하게 선택해 줘야 합니다.<br>그래서 사용하는 것이 <strong>라벨(label)</strong> 과 <strong>라벨 셀렉터(label selector)</strong> 라는 개념입니다.</p>
+<p><img src="/img/2020/02/26/7.svg" width="50%" height="50%"> <br></p>
+<h3 id="2-3-Volume"><a href="#2-3-Volume" class="headerlink" title="2.3 Volume"></a>2.3 Volume</h3><p>저장소와 관련된 오브젝트입니다. 호스트 디렉토리를 그대로 사용할 수도 있고 EBS 같은 스토리지를 동적으로 생성하여 사용할 수도 있습니다.<br>사실상 인기 있는 대부분의 저장 방식을 <a href="https://kubernetes.io/docs/concepts/storage/#types-of-volumes" target="_blank" rel="noopener">지원</a>합니다.<br>Pod가 기동할때 디폴트로 컨테이너마다 로컬 디스크를 생성해서 기동되는데, 이 로컬 디스크의 경우에는 영구적이지 못합니다.<br>컨테이너가 리스타트 되거나 새로 배포될때 마다 로컬 디스크는 Pod 설정에 따라서 새롭게 정의되서 배포되기 때문에, 디스크에 기록된 내용이 유실됩니다.<br>데이타 베이스와 같이 영구적으로 파일을 저장해야 하는 경우에는 컨테이너 리스타트에 상관 없이 파일을 영속적으로 저장해야 하기때문에 Volume을 별도로 셋팅해야 합니다. 이부분은 Docker Volume와 비슷한 개념입니다.</p>
+<p><img src="/img/2020/02/26/8.png" width="50%" height="50%"> <br></p>
+<h3 id="2-4-NameSpace"><a href="#2-4-NameSpace" class="headerlink" title="2.4 NameSpace"></a>2.4 NameSpace</h3><p>네임스페이스는 한 쿠버네티스 클러스터내의 논리적인 분리단위입니다. Pod, Service 등은 네임스페이스 별로 생성이나 관리가 될 수 있고, 사용자의 권한 역시 이 네임스페이스 별로 나눠서 부여할 수 있습니다.<br>네임스페이스는 복수의 팀이나, 프로젝트에 걸쳐서 많은 사용자가 있는 환경에서 사용하도록 만들어졌습니다. 사용자가 거의 없거나, 수 십명 정도가 되는 경우에는, 네임스페이스를 고려할 필요가 없습니다.</p>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><blockquote>
+<p><a href="https://kubernetes.io/ko/docs/concepts/overview/" target="_blank" rel="noopener">https://kubernetes.io/ko/docs/concepts/overview/</a><br><a href="https://subicura.com/2019/05/19/kubernetes-basic-1.html" target="_blank" rel="noopener">https://subicura.com/2019/05/19/kubernetes-basic-1.html</a><br><a href="https://bcho.tistory.com/1256?category=731548" target="_blank" rel="noopener">https://bcho.tistory.com/1256?category=731548</a><br><a href="https://arisu1000.tistory.com/" target="_blank" rel="noopener">https://arisu1000.tistory.com/</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" data-id="ckrdkv80900019d2aa1kvf0kj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/07/21/%EC%97%98%EB%A0%88%EA%B0%95%ED%8A%B8%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%201-1/">엘레강트 오브젝트 1-1</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/24/Spring%20Rest%20Doc/">Spring Rest Doc</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/14/JPA%20Cascade/">JPA Cascade</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/08/JPA%20Entity%20LifeCycle/">JPA Entity LifeCycle</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/07/Java14%20Releases%20notes/">Java14 Releases notes</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Ming<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,5 +1,94 @@
-<!DOCTYPE html><html lang="kr" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>JPA Cascade · 개인 저장소</title><meta name="description" content=""><meta name="og:title" content="JPA Cascade"><meta name="og:type" content="website"><meta name="og:url" content="http://yoursite.com/2020/09/14/JPA Cascade/"><meta name="og:image" content="http://image.toast.com/aaaaahq/hola_cover.JPG"><meta name="og:description" content=""><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><meta name="fb:app_id" content="1258629384258634"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="개인 저장소"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
-</head><body class="post"><div id="fb-root"></div><div class="wrap"><header><nav class="navi-post"><a class="navi-post-back" href="javascript:history.back()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="navi-post-home" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></nav></header><main class="post"><div class="post"><article class="post-block"><h1 class="post-title">JPA Cascade</h1><div class="post-info"><div class="post-info-profile"><a href="https://github.com/thinkub" target="_blank"><img src="/image/profile.jpg"></a></div><div class="post-info-details"><div class="post-categories"></div><div class="post-date">Sep 14, 2020</div></div></div><div class="post-share"><div class="fb-like" data-href="http://yoursite.com/2020/09/14/JPA Cascade/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">                 </div><div class="fb-share-button" data-href="http://yoursite.com/2020/09/14/JPA Cascade/" data-layout="button" data-size="small" data-mobile-iframe="true"></div><div class="fb-follow" data-href="https://www.facebook.com/holaxprogramming/" data-layout="button_count" data-size="small" data-show-faces="true"></div></div><div class="post-content"><h1 id="영속성-전의란"><a href="#영속성-전의란" class="headerlink" title="영속성 전의란?"></a>영속성 전의란?</h1><p>엔티티간 연관관계에 있는 경우, 즉 A엔티티와 B엔티티는 연관관계인 경우 A엔티티가 영속 상태일때 B엔티티도 영속 상태일까?<br>일반적으로 별도 설정을 해주지 않는다면 B엔티티는 영속상태가 아니다. 이 경우 B엔티티를 영속 상태를 만들기 위해 영속성 전이를 할 수 있다.<br>JPA는 CASCADE 옵션으로 영속성 전이 기능을 제공한다. </p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>JPA Cascade | 개인 저장소</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="영속성 전의란?엔티티간 연관관계에 있는 경우, 즉 A엔티티와 B엔티티는 연관관계인 경우 A엔티티가 영속 상태일때 B엔티티도 영속 상태일까?일반적으로 별도 설정을 해주지 않는다면 B엔티티는 영속상태가 아니다. 이 경우 B엔티티를 영속 상태를 만들기 위해 영속성 전이를 할 수 있다.JPA는 CASCADE 옵션으로 영속성 전이 기능을 제공한다.  간단한 예제 부">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JPA Cascade">
+<meta property="og:url" content="http://yoursite.com/2020/09/14/JPA%20Cascade/index.html">
+<meta property="og:site_name" content="개인 저장소">
+<meta property="og:description" content="영속성 전의란?엔티티간 연관관계에 있는 경우, 즉 A엔티티와 B엔티티는 연관관계인 경우 A엔티티가 영속 상태일때 B엔티티도 영속 상태일까?일반적으로 별도 설정을 해주지 않는다면 B엔티티는 영속상태가 아니다. 이 경우 B엔티티를 영속 상태를 만들기 위해 영속성 전이를 할 수 있다.JPA는 CASCADE 옵션으로 영속성 전이 기능을 제공한다.  간단한 예제 부">
+<meta property="og:locale">
+<meta property="article:published_time" content="2020-09-14T13:58:58.991Z">
+<meta property="article:modified_time" content="2020-09-14T14:24:05.185Z">
+<meta property="article:author" content="Ming">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">개인 저장소</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-JPA Cascade" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/09/14/JPA%20Cascade/" class="article-date">
+  <time datetime="2020-09-14T13:58:58.991Z" itemprop="datePublished">2020-09-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      JPA Cascade
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="영속성-전의란"><a href="#영속성-전의란" class="headerlink" title="영속성 전의란?"></a>영속성 전의란?</h1><p>엔티티간 연관관계에 있는 경우, 즉 A엔티티와 B엔티티는 연관관계인 경우 A엔티티가 영속 상태일때 B엔티티도 영속 상태일까?<br>일반적으로 별도 설정을 해주지 않는다면 B엔티티는 영속상태가 아니다. 이 경우 B엔티티를 영속 상태를 만들기 위해 영속성 전이를 할 수 있다.<br>JPA는 CASCADE 옵션으로 영속성 전이 기능을 제공한다. </p>
 <h4 id="간단한-예제"><a href="#간단한-예제" class="headerlink" title="간단한 예제"></a>간단한 예제</h4><ul>
 <li><p>부모 엔티티</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Parent</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="meta">@GeneratedValue</span></span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@OneToMany</span>(mappedBy = <span class="string">"parent"</span>)</span><br><span class="line">    <span class="keyword">private</span> List&lt;Child&gt; children = <span class="keyword">new</span> ArrayList&lt;Child&gt;();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -24,4 +113,131 @@
 <p>참고로 <code>CascadeType.PERSIST</code> 와 <code>CascadeType.REMOVE</code> 는 em.persist(), em.remove()를 실행할때 바로 전이가 발생하지 않고 플러시가 호출 될 때 전이가 발생한다.</p>
 <h2 id="고아-객체"><a href="#고아-객체" class="headerlink" title="고아 객체"></a>고아 객체</h2><p>JPA는 부모 엔티티와 연관관계가 끊어진 자식 엔티티를 자동으로 삭제하는 기능을 제공하는데 이것ㄷ을 고아 객체(ORPHAN) 제거라 한다.<br>이 기능을 사용해서 부모 엔티티의 컬렉션에서 자식 엔티티의 참조만 제거하면 자식 엔티티가 자동으로 삭제되도록 설정 할 수 있다.<br>옵션중 orphanRemoval을 설정하면 고아 객체는 자동으로 삭제 된다.</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Parent</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="meta">@GeneratedValue</span></span><br><span class="line">    <span class="keyword">private</span> Long id;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@OneToMany</span>(mappedBy = <span class="string">"parent"</span>, orphanRemoval = <span class="keyword">true</span>)</span><br><span class="line">    <span class="keyword">private</span> List&lt;Child&gt; children = <span class="keyword">new</span> ArrayList&lt;Child&gt;();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2020/09/08/JPA%20Entity%20LifeCycle/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="next" href="/2020/09/24/Spring%20Rest%20Doc/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><ins class="adsbygoogle adsense-bottom" style="display:block" data-ad-client="ca-pub-6188640546219653" data-ad-slot="6129396565" data-ad-format="auto"></ins><div class="fb-comments-area"><div class="fb-comments" data-href="http://yoursite.com/2020/09/14/JPA Cascade/" data-width="700" data-numposts="5"></div></div><div class="copyright"><p>© 2019 - 2021 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/09/14/JPA%20Cascade/" data-id="ckrdkv80t000j9d2aewfu37jg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/09/24/Spring%20Rest%20Doc/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Spring Rest Doc
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/09/08/JPA%20Entity%20LifeCycle/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">JPA Entity LifeCycle</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/07/21/%EC%97%98%EB%A0%88%EA%B0%95%ED%8A%B8%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%201-1/">엘레강트 오브젝트 1-1</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/24/Spring%20Rest%20Doc/">Spring Rest Doc</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/14/JPA%20Cascade/">JPA Cascade</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/08/JPA%20Entity%20LifeCycle/">JPA Entity LifeCycle</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/07/Java14%20Releases%20notes/">Java14 Releases notes</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Ming<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

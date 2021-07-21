@@ -1,2 +1,994 @@
-<!DOCTYPE html><html lang="kr" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>개인 저장소</title><meta name="description" content=""><meta name="og:url" content="http://yoursite.com"><meta name="og:type" content="website"><meta name="og:title" content="개인 저장소"><meta name="og:description" content=""><meta name="og:image" content="http://image.toast.com/aaaaahq/hola_cover.JPG"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><meta name="fb:app_id" content="1258629384258634"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="개인 저장소"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
-</head><body><div class="wrap"><header><a class="logo-link" href="/"><img src="/logo.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a class="nav-list-link" href="/introduce/" target="_self">소개</a></li><li class="nav-list-item"><a class="nav-list-link" href="/archives/" target="_self">블로그</a></li><li class="nav-list-item"><a class="nav-list-link" href="https://github.com/thinkub" target="_blank">JOIN</a></li></ul></header><main class="container"><ul class="home post-list"><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2019/12/16/Docker(1)/">Docker(1)</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2019/12/13/Feign%20Client%20%EC%82%AC%EC%9A%A9%EC%8B%9C%20form%20encoder%20%EC%84%A4%EC%A0%95/">Feign Client 사용시 form encoder 설정</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2019/12/11/JUnit5/">JUnit5</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2019/12/11/Kafka/">Kafka</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2019/12/10/oracle%20%3E%20mysql%20migration(load%20data)/">oracle > mysql migration(load data)</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2019/11/28/GitLab%EC%84%A4%EC%B9%98%20(Docker)/">GitLab설치 (Docker)</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2019/11/27/SonarQube%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%9C%20%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0%20%ED%95%B4%EB%B3%B4%EA%B8%B0/">SonarQube를 이용한 코드리뷰 해보기</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2019/11/26/GitLab%EC%84%A4%EC%B9%98%20(GCP)/">GitLab설치 (GCP)</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2019/11/25/mongo%20DB%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0%20(Feat.%20Docker)/">mongo DB설치하기 (Feat. Docker)</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li><li class="post-list-item"><article class="post-block"><h2 class="post-title"><a class="post-title-link" href="/2019/11/22/Spring-boot%20War%20%EB%B0%B0%ED%8F%AC/">Spring-boot War 배포</a></h2><div class="post-info"><div class="post-info-home"><div class="post-categories"></div></div></div></article></li></ul></main><footer><div class="paginator"><a class="prev" href="/page/3/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="next" href="/page/5/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><ins class="adsbygoogle adsense-bottom" style="display:block" data-ad-client="ca-pub-6188640546219653" data-ad-slot="3335325225" data-ad-format="auto"></ins><div class="copyright"><p>© 2019 - 2021 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>개인 저장소</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="개인 저장소">
+<meta property="og:url" content="http://yoursite.com/page/4/index.html">
+<meta property="og:site_name" content="개인 저장소">
+<meta property="og:locale">
+<meta property="article:author" content="Ming">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">개인 저장소</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Docker(1)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/16/Docker(1)/" class="article-date">
+  <time datetime="2019-12-16T05:54:30.695Z" itemprop="datePublished">2019-12-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/16/Docker(1)/">Docker(1)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2020년의 첫 프로젝트를 시작하려 한다.<br>회사의 주요 서비스 (및 모듈) 들을 docker 배포 환경으로 만드는 작업이다.</p>
+<p>일단 멘붕.</p>
+<p>docker로 mongo-db 나 gitlab정도만 깔아봤지<br>정확한 개념을 잡고 있진 않았기에 어떻게 해야 할지 걱정이 많았다.<br>먼저 Docker가 무엇인지 알아보자.</p>
+<h1 id="Docker는-VM인가"><a href="#Docker는-VM인가" class="headerlink" title="Docker는 VM인가?"></a>Docker는 VM인가?</h1><p>처음 Docker를 접했을때 “아 이건 VM이구나?!” 라는 생각을 했다.<br>처음 docker를 접한건 2018년 말 mongo-db를 설치하면서 였다.<br>주변에서 docker docker 하길래 그래 이왕 하는김에 docker를 써보자. 하면서 구글링을 열심히 했다. 어찌저찌 깔려서 돌아가는 모습을 보면서. docker == VM 이라는 개념이 잡혀버렸다.<br>하지만 docker 는 VM과 비슷하지만 다르다. docker에 대해 알아보자.</p>
+<h1 id="Docker"><a href="#Docker" class="headerlink" title="Docker?"></a>Docker?</h1><p>개념은 Docker는 Container 기반의 오픈소스 가상화 플랫폼이다.<br>그렇다면 Container 무엇인가? 그리고 Container를 실행하는데 필수인 Image에 대해서 알아보자</p>
+<h3 id="Container"><a href="#Container" class="headerlink" title="Container"></a>Container</h3><p>격리된 공간에서 Process가 동작하는 기술. 가상화 기술의 하나. 하지만 기존 가상화 방식은 주로 OS가상화 였다. VMware, Virtualbox 등 가상머신은 호스트 OS위에 게스트 OS전체를 가상화하여 사용하는 방식이다. 이 경우 무겁고 느려서 운영환경에선 사용할 수 없었다.<br><img src="/img/2019/12/19/20191219_01.png" alt="image01"></p>
+<p>위 Image와 같이 Guest OS가 없이 단순히 프로세스를 격리 시키기 때문에 가볍고 빠르게 동작한다. CPU나 메모리는 딱 프로세스가 필요한 만큼만 추가하고 사용하고 성능적으로 손실이 적다.</p>
+<h3 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h3><p><img src="/img/2019/12/19/20191219_02.png" alt="image02"><br>Image는 Container 실행에 필요한 파일과 설정값등을 포함하고 있는것.<br>상태값을 가지지 않고 변하지 않는다. Container는 Image를 실행한 상태라고 볼 수 있고 추가되거나 변하는 값은 컨테이너에 저장된다. 같은 Image에서 여러개의 Continer를 생성할 수 있고 Conetiner의 상태변화에 Image는 영향이 없다. </p>
+<p>Docker Image는 <a href="https://hub.docker.com" target="_blank" rel="noopener">Docker Hub</a> 에서 다운받거나 등록 할 수 있다.<br><a href="docs.docker.com/registry/">Docker Registry</a> 저장소를 직접 만들어 관리할 수 있다.</p>
+<h1 id="Docker의-장점"><a href="#Docker의-장점" class="headerlink" title="Docker의 장점"></a>Docker의 장점</h1><h3 id="Layer-저장방식"><a href="#Layer-저장방식" class="headerlink" title="Layer 저장방식"></a>Layer 저장방식</h3><p><img src="/img/2019/12/19/20191219_03.png" alt="image03"><br>Docker Image는 위에 설명한 것 처럼 Container를 실행하기 위한 모든 정보를 가지고 있기 때문에 용량이 큰 편이다. 최초 Image를 다운 받은 후 기존 Image에 파일이 하나 추가됬다고 Image를 다시 다운받는다면 매우 비효율 적이다.</p>
+<p>Docker는 이런 문제를 Layer라는 개념을 사용하여 해결했다.<br>Image n개의 Layer로 구성되고 파일이 추가되거나 수정되면 새로운 Layer가 생성된다.<br>예를 들어 ubuntu Image가 <code>A</code>+<code>B</code>+<code>C</code> Layer로 이루어져있다면 ubuntu Image를 베이스로 만든 nginx Image는 <code>A</code>+<code>B</code>+<code>C</code>+<code>nginx</code> 가 된다. 여기에 webapp Image를 nginx기반으로 만들었다면 <code>A</code>+<code>B</code>+<code>C</code>+<code>nginx</code>+<code>source</code> 가 된다.<br>webapp source를 수정하면 <code>source</code> layer만 다운받으면 된다.</p>
+<h3 id="Dockerfile"><a href="#Dockerfile" class="headerlink" title="Dockerfile"></a>Dockerfile</h3><p>Docker는 Image를 만들기 위해 <code>Dockerfile</code>이라는 파일에 자체 DSL언어를 이용하여 이미지 생성과정을 적는다. 기존 어떠한 프로젝트 구성을 하기위해 centOS를 깔고 DB설치를 하고 jdk설치를 하고 apache+tomcat 과 같은 was 설정 등을 <code>Dockerfile</code>로 관리 할 수 있다.<br>Dockerfile은 소시와 함께 버전관리 되고 원한다면 누구나 이미지 생성과정을 보고 수정할 수 있다.</p>
+<p>아래는 최근에 작성한 sample이다. 이런식으로 image를 만들게 되면 해당 image로 container 생성시 app이 실행이 된다.</p>
+<ul>
+<li>centOS 설치</li>
+<li>Openjdk 설치</li>
+<li>source code copy</li>
+<li>java 실행<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">FROM centos</span><br><span class="line"></span><br><span class="line">MAINTAINER ming</span><br><span class="line"></span><br><span class="line">ENV JAVA_HOME /usr/lib/jvm/java-openjdk</span><br><span class="line"></span><br><span class="line"><span class="comment"># Install Packages &amp; open jdk 1.8</span></span><br><span class="line">RUN yum updagte -y;</span><br><span class="line">    yum install -y java-1.8.0-openjdk-devel.x86_64;</span><br><span class="line">    yum clean all</span><br><span class="line"></span><br><span class="line"><span class="comment"># make Folder</span></span><br><span class="line">RUN mkdir -p /home/tempFolder</span><br><span class="line"></span><br><span class="line"><span class="comment"># source copy</span></span><br><span class="line">COPY . /usr/src/app</span><br><span class="line"></span><br><span class="line"><span class="comment"># log path volume</span></span><br><span class="line">VOLUME /home/logs /home/logs</span><br><span class="line"></span><br><span class="line"><span class="comment"># app start</span></span><br><span class="line">EXPOSE 18080</span><br><span class="line">CMD java -server -Dspring.profiles.active=dev -jar /usr/src/app/app.jar</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="DockerHub"><a href="#DockerHub" class="headerlink" title="DockerHub"></a>DockerHub</h3><p><img src="/img/2019/12/19/20191219_04.png" alt="image04"><br>Docker Image의 용량응 보통 수백메가로 수기가가 넘는 경우도 흔하다. 이렇게 큰 용량의 이미지를 서버에 저장하고 관리하는 것은 쉽지 않은데 Docker hub를 통해 공개 이미지를 무료료 관리해준다.</p>
+<h3 id="Command와-API"><a href="#Command와-API" class="headerlink" title="Command와 API"></a>Command와 API</h3><p>Docker Client의 Command 명령어는 정말 잘 만들어져있다. 대부분의 명령어는 직관적이고 사용하기 쉬우며 Container의 복잡한 시스템 구성을 이해하지 못하더라도 편하게 사용할 수 있다. 또한 http기반의 Rest API도 지원하여 확장성이 굉장히 좋고 훌륭한 3rd party tool이 나오기 좋은 환경이다.</p>
+<h3 id="훌륭한-생태계"><a href="#훌륭한-생태계" class="headerlink" title="훌륭한 생태계"></a>훌륭한 생태계</h3><h3 id="커뮤니티-지원"><a href="#커뮤니티-지원" class="headerlink" title="커뮤니티 지원"></a>커뮤니티 지원</h3><p>다음엔 docker container를 실행해보고 명령어에 대해서 살펴볼 예정이다.</p>
+<h1 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h1><blockquote>
+<p><a href="https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html" target="_blank" rel="noopener">https://subicura.com/2017/01/19/docker-guide-for-beginners-1.html</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/16/Docker(1)/" data-id="ckrdkv80r000h9d2admfmbuwa" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Feign Client 사용시 form encoder 설정" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/13/Feign%20Client%20%EC%82%AC%EC%9A%A9%EC%8B%9C%20form%20encoder%20%EC%84%A4%EC%A0%95/" class="article-date">
+  <time datetime="2019-12-13T01:15:23.638Z" itemprop="datePublished">2019-12-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/13/Feign%20Client%20%EC%82%AC%EC%9A%A9%EC%8B%9C%20form%20encoder%20%EC%84%A4%EC%A0%95/">Feign Client 사용시 form encoder 설정</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>프로젝트에서 Unity로 만든 application과 back-end를 연결하는 Broker-api를 개발하게 되었다.<br>뭐 간단하게 api interface 맞춰서 전달하면 되겠네 라고 생각하며 작업을 진행했다.<br>api 호출은 당연히 feign client를 사용을 했다.<br>그러던 중 jpeg image file을 전달하는 api를 만들었는데(multipart/form-data)<br>다음과 같은 Exception을 만나게 되었다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">feign.codec.EncodeException: Could not write request: no suitable HttpMessageConverter found for request type .... and content type [multipart/form-data]</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+
+<h1 id="해결"><a href="#해결" class="headerlink" title="해결"></a>해결</h1><p>HttpMessageConver 설정을 해준다</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FeignClientConfig</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> ObjectFactory&lt;HttpMessageConverters&gt; messageConverters;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Encoder <span class="title">feignFormEncoder</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> SpringFormEncoder(<span class="keyword">new</span> SpringEncoder(messageConverters));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h1><blockquote>
+<p><a href="https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/converter/HttpMessageConverter.html" target="_blank" rel="noopener">https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/http/converter/HttpMessageConverter.html</a><br><a href="https://supawer0728.github.io/2018/03/11/Spring-Cloud-Feign/" target="_blank" rel="noopener">https://supawer0728.github.io/2018/03/11/Spring-Cloud-Feign/</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/13/Feign%20Client%20%EC%82%AC%EC%9A%A9%EC%8B%9C%20form%20encoder%20%EC%84%A4%EC%A0%95/" data-id="ckrdkv80q000g9d2af3xucqmt" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JUnit5" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/11/JUnit5/" class="article-date">
+  <time datetime="2019-12-11T01:24:02.115Z" itemprop="datePublished">2019-12-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/11/JUnit5/">JUnit5</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2018년 초에 프로젝트를 진행하면서 JUnit5 관련 스터디 한 자료가 있어서<br>블로그로 옮겨본다.</p>
+<h1 id="JUnit5"><a href="#JUnit5" class="headerlink" title="JUnit5"></a>JUnit5</h1><p>JUnit은 Java 단위테스트 작성을 위한 표준 framework<br>기존 우리가 사용하던버전은 JUnit4로 새로나온 JUnit5를 알아 볼께요</p>
+<h2 id="차이점"><a href="#차이점" class="headerlink" title="차이점"></a>차이점</h2><ul>
+<li>JUnit 4가 단일 jar였던 것에 비해, JUnit 5는 크게 JUnit Platform, JUnit Jupiter, JUnit Vintage 모듈로 구성되어 있다.<ul>
+<li>JUnit 5 = JUnit Platform + JUnit Jupiter + JUnit Vintage</li>
+</ul>
+</li>
+<li>테스트 작성자를 위한 API 모듈과 테스트 실행을 위한 API가 분리되어 있다.<ul>
+<li>예를 들어, JUnit Jupiter는 테스트 코드 작성에 필요한 junit-jupiter-api 모듈과 테스트 실행을 위한 junit-jupiter-engine 모듈로 분리되어 있다.</li>
+</ul>
+</li>
+<li>자바 8 또는 그 이상 버전을 요구한다.</li>
+</ul>
+<p><img src="/img/2019/12/11/20191211_01.png" alt="image01"></p>
+<h4 id="JUnit-Platform"><a href="#JUnit-Platform" class="headerlink" title="JUnit Platform"></a>JUnit Platform</h4><p>JUnit 플랫폼은 JVM에서 테스트 프레임 워크를 시작하기위한 기초 역할을합니다.<br>또한 플랫폼에서 실행되는 테스트 프레임 워크를 개발하기위한 TestEngine API를 정의합니다.<br>또한 플랫폼은 명령 행에서 플랫폼을 실행하고 Gradle 및 Maven 용 플러그인을 빌드하는 Console Launcher를 제공하며<br>플랫폼에서 TestEngine을 실행하기위한 JUnit 4 기반 Runner도 제공합니다.</p>
+<h4 id="JUnit-Jupiter"><a href="#JUnit-Jupiter" class="headerlink" title="JUnit Jupiter"></a>JUnit Jupiter</h4><p>JUnit 5에서 테스트 및 확장 작성을위한 새로운 프로그래밍 모델과 확장 모델의 조합입니다.<br>Jupiter 하위 프로젝트는 플랫폼에서 Jupiter 기반 테스트를 실행하기위한 TestEngine을 제공합니다.</p>
+<h4 id="JUnit-Vintage"><a href="#JUnit-Vintage" class="headerlink" title="JUnit Vintage"></a>JUnit Vintage</h4><p>플랫폼에서 JUnit 3 및 JUnit 4 기반 테스트를 실행하기위한 TestEngine을 제공합니다.</p>
+<h1 id="Maven-Dependency"><a href="#Maven-Dependency" class="headerlink" title="Maven Dependency"></a>Maven Dependency</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">&lt;!--JUnit 5 Dependency--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.junit.jupiter<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit-jupiter-api<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.junit.jupiter<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit-jupiter-engine<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="comment">&lt;!--JUnit 4 IDE Compatibility Dependencies--&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.junit.platform<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit-platform-launcher<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.junit.vintage<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit-vintage-engine<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.12.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mockito<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mockito-core<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.19.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">includes</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">include</span>&gt;</span>**/*Test.java<span class="tag">&lt;/<span class="name">include</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">includes</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.junit.platform<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit-platform-surefire-provider<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="JUnit4-와-달라진점"><a href="#JUnit4-와-달라진점" class="headerlink" title="JUnit4 와 달라진점"></a>JUnit4 와 달라진점</h1><h4 id="assert"><a href="#assert" class="headerlink" title="assert"></a>assert</h4><ul>
+<li>JUnit4<ul>
+<li>이 코드에서 만약 첫 번째 assertEquals()가 실패하면 그 시점에서 테스트 실패하므로 두 번째 assertEquals()를 실행하지 않는다. 이 두 assertEquals()는 실제로는 하나의 score를 검증하는 것이므로 개념적으로 하나를 검증하는 것이다<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">assertEach</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    Game game = <span class="keyword">new</span> Game(<span class="number">123</span>);</span><br><span class="line">    Score score = game.guess(<span class="number">134</span>);</span><br><span class="line">    assertEquals(<span class="number">1</span>, score.getStrikes());</span><br><span class="line">    assertEquals(<span class="number">1</span>, score.getBalls());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>JUnit5<ul>
+<li>assertAll()은 함수형인터페이스인 Executable 목록을 파라미터로 갖는다.(Executable 인터페이스는 파라미터가 없고 리턴 타입이 void인 execute() 메서드를 정의하고 있다.)</li>
+<li>함수형 인터페이스이므로 위 코드와 같이 람다식을 사용해서 여러개의 검증을 목록으로 전덜할 수 있다.</li>
+<li>assertAll()의 특징은 목록으로 받은 모두 Executable을 실행한다는 점이다. 그리고 그 중에서 실패한 검증에 대해서만 리포트를 한다. 예를 들어, 위 코드에서 assertAll()로 전달한 모든 Executable이 검증에 실패했다고 하자. 이를 인텔리J에서 실행해보면 assertAll()에서 실패한 모든 검증 결과가 콘솔에 출력되는 것을 알 수 있다.<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AssertAllTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">assertAllSample</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        Game game = <span class="keyword">new</span> Game(<span class="number">123</span>);</span><br><span class="line">        Score score = game.guess(<span class="number">145</span>);</span><br><span class="line">        assertAll(</span><br><span class="line">                () -&gt; assertEquals(<span class="number">2</span>, score.getStrikes()),</span><br><span class="line">                () -&gt; assertEquals(<span class="number">1</span>, score.getBalls())</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="assertThrows"><a href="#assertThrows" class="headerlink" title="assertThrows"></a>assertThrows</h4><ul>
+<li><p>JUnit4</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span>(expected = RuntimeException<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">void</span> <span class="title">testIsGroupSeats_SeatsAreInvalidByCache</span>() <span class="title">throws</span> <span class="title">Exception</span> </span>&#123;</span><br><span class="line">    <span class="comment">// given</span></span><br><span class="line">    List&lt;Integer&gt; logicalSeatIds = Arrays.asList(<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>);</span><br><span class="line">    mockingForSeatsAreInvalidByCache(logicalSeatIds);</span><br><span class="line">    <span class="comment">// when</span></span><br><span class="line">    service.isSameGroupSeats(logicalPlanId, logicalSeatIds);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>JUnit5</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">simple</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    assertThrows(ArithmeticException<span class="class">.<span class="keyword">class</span>, () -&gt; <span class="title">divide</span>(100, 0))</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">divide</span><span class="params">(<span class="keyword">int</span> op1, <span class="keyword">int</span> op2)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> op1 / op2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="보조-Annotation-DisplayName-Disabled"><a href="#보조-Annotation-DisplayName-Disabled" class="headerlink" title="보조 Annotation @DisplayName @Disabled"></a>보조 Annotation @DisplayName @Disabled</h4><ul>
+<li>@DisplayName은 테스트 클래스나 메서드의 표시 이름을 지정한다</li>
+<li>@Disabled 는 테스트 실행 대상에서 제외한다.<br><img src="/img/2019/12/11/20191211_02.png" alt="image02"></li>
+</ul>
+<h4 id="Assumption"><a href="#Assumption" class="headerlink" title="Assumption"></a>Assumption</h4><ul>
+<li>특정 상황에 따른 TestCode를 실행</li>
+<li>Assumptions.assumeTrue()는 인자로 전달받은 값이 true이면 이후 테스트를 진행하고, 그렇지 않으면 테스트를 생략한다<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">runTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    String osName = System.getProperty(<span class="string">"os.name"</span>);</span><br><span class="line">    assumingThat(</span><br><span class="line">            osName.startsWith(<span class="string">"Linux"</span>), <span class="comment">// (1) 가정 boolean 또는 BooleanSupplier</span></span><br><span class="line">            () -&gt; assertEquals(<span class="number">1</span>, <span class="number">2</span>) <span class="comment">// (2) 가정을 충족할 때 실행할 코드(Executable 타입)</span></span><br><span class="line">    );</span><br><span class="line">    assertEquals(<span class="number">1</span>, <span class="number">1</span>); <span class="comment">// (3)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="Nested"><a href="#Nested" class="headerlink" title="Nested"></a>Nested</h4><ul>
+<li>중첩된 구조로 테스트를 구성할 수 있습니다<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@DisplayName</span>(<span class="string">"A stack"</span>)</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TestingAStackDemo</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">    Stack&lt;Object&gt; stack;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="meta">@DisplayName</span>(<span class="string">"is instantiated with new Stack()"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">isInstantiatedWithNew</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="meta">@Nested</span></span><br><span class="line">    <span class="meta">@DisplayName</span>(<span class="string">"when new"</span>)</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">WhenNew</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">        <span class="meta">@BeforeEach</span></span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">createNewStack</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="meta">@Test</span></span><br><span class="line">        <span class="meta">@DisplayName</span>(<span class="string">"is empty"</span>)</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">isEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            assertTrue(stack.isEmpty());</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="meta">@Test</span></span><br><span class="line">        <span class="meta">@DisplayName</span>(<span class="string">"throws EmptyStackException when popped"</span>)</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">throwsExceptionWhenPopped</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            assertThrows(EmptyStackException<span class="class">.<span class="keyword">class</span>, () -&gt; <span class="title">stack</span>.<span class="title">pop</span>())</span>;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="meta">@Test</span></span><br><span class="line">        <span class="meta">@DisplayName</span>(<span class="string">"throws EmptyStackException when peeked"</span>)</span><br><span class="line">        <span class="function"><span class="keyword">void</span> <span class="title">throwsExceptionWhenPeeked</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            assertThrows(EmptyStackException<span class="class">.<span class="keyword">class</span>, () -&gt; <span class="title">stack</span>.<span class="title">peek</span>())</span>;</span><br><span class="line">        &#125;</span><br><span class="line"> </span><br><span class="line">        <span class="meta">@Nested</span></span><br><span class="line">        <span class="meta">@DisplayName</span>(<span class="string">"after pushing an element"</span>)</span><br><span class="line">        <span class="class"><span class="keyword">class</span> <span class="title">AfterPushing</span> </span>&#123;</span><br><span class="line"> </span><br><span class="line">            String anElement = <span class="string">"an element"</span>;</span><br><span class="line"> </span><br><span class="line">            <span class="meta">@BeforeEach</span></span><br><span class="line">            <span class="function"><span class="keyword">void</span> <span class="title">pushAnElement</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                stack.push(anElement);</span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">            <span class="meta">@Test</span></span><br><span class="line">            <span class="meta">@DisplayName</span>(<span class="string">"it is no longer empty"</span>)</span><br><span class="line">            <span class="function"><span class="keyword">void</span> <span class="title">isNotEmpty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                assertFalse(stack.isEmpty());</span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">            <span class="meta">@Test</span></span><br><span class="line">            <span class="meta">@DisplayName</span>(<span class="string">"returns the element when popped and is empty"</span>)</span><br><span class="line">            <span class="function"><span class="keyword">void</span> <span class="title">returnElementWhenPopped</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                assertEquals(anElement, stack.pop());</span><br><span class="line">                assertTrue(stack.isEmpty());</span><br><span class="line">            &#125;</span><br><span class="line"> </span><br><span class="line">            <span class="meta">@Test</span></span><br><span class="line">            <span class="meta">@DisplayName</span>(<span class="string">"returns the element when peeked but remains not empty"</span>)</span><br><span class="line">            <span class="function"><span class="keyword">void</span> <span class="title">returnElementWhenPeeked</span><span class="params">()</span> </span>&#123;</span><br><span class="line">                assertEquals(anElement, stack.peek());</span><br><span class="line">                assertFalse(stack.isEmpty());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h1 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h1><blockquote>
+<p><a href="http://junit.org/junit5/docs/current/user-guide/" target="_blank" rel="noopener">http://junit.org/junit5/docs/current/user-guide/</a><br><a href="http://javacan.tistory.com/entry/JUnit-5-Intro?category=454313" target="_blank" rel="noopener">http://javacan.tistory.com/entry/JUnit-5-Intro?category=454313</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/11/JUnit5/" data-id="ckrdkv80x000n9d2a2vwh7p3p" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Kafka" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/11/Kafka/" class="article-date">
+  <time datetime="2019-12-11T01:08:47.229Z" itemprop="datePublished">2019-12-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/11/Kafka/">Kafka</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>회사에 <a href="https://aladin.co.kr/shop/wproduct.aspx?ItemId=142100738" target="_blank" rel="noopener">카프카, 데이터 플랫폼의 최강자</a> 책의 저자인 고승범 님이 오셔서<br>Kafka에 대해 발표를 한적이 있는데 그 때 적었던 내용.<br>막 적다 보니까 뭘 쓴건 지도 모르겠다;;;<br>일단 기록 저장용으로 옮겨본다</p>
+<h4 id="Kafka란"><a href="#Kafka란" class="headerlink" title="Kafka란?"></a>Kafka란?</h4><p>Kafka®는 실시간 데이터 파이프 라인 및 스트리밍 앱을 구축하는 데 사용됩니다. 수평 확장 성, 내결함성, 빠른 속도를 자랑하며 수천 개의 회사에서 생산됩니다.</p>
+<ul>
+<li>메세지 브로커</li>
+<li>High Throughtput</li>
+<li>실시간 로그 통합</li>
+<li>무중단(장비의 장애)</li>
+<li>이기종과의 호환성</li>
+<li>간단한 스케일 아웃</li>
+<li>프로듀서와 컨슈머 역할 분리</li>
+</ul>
+<h4 id="성능-테스트시"><a href="#성능-테스트시" class="headerlink" title="성능 테스트시"></a>성능 테스트시</h4><ul>
+<li>kafka (초당 300만) vs rabbitMQ (초당 100만)</li>
+<li>kafka와 rabbitMQ의 가장 큰차이는 zookeeper가 있다는건가?</li>
+<li>kafka에서는 producer와 consumer간에 topic으로만 메세지 처리</li>
+<li>rabbitMQ는 ….. 복잡하데요</li>
+</ul>
+<h4 id="kafka의-성능"><a href="#kafka의-성능" class="headerlink" title="kafka의 성능"></a>kafka의 성능</h4><ul>
+<li>message크기가 작을수록 성능이 좋다</li>
+<li>broker가 많을수록 성능이 좋다</li>
+<li>replica는 작을수록 성능이 좋다 - message가 중요하면 3으로 설정 * 손실되도 좋다라고 하면 1이나 2로 설정하는게 좋다</li>
+<li>partition은 클수록 성능이 좋다 : 파티션 수는 늘리면 줄일수가 없다.</li>
+</ul>
+<h5 id="kakao-하루에-kafka가-얼마나-쓰이고있는지"><a href="#kakao-하루에-kafka가-얼마나-쓰이고있는지" class="headerlink" title="kakao - 하루에 kafka가 얼마나 쓰이고있는지?"></a>kakao - 하루에 kafka가 얼마나 쓰이고있는지?</h5><ul>
+<li>(메세지처리량) 1800억건</li>
+<li>205TB / day in</li>
+<li>350 TB / day out</li>
+<li>들어오는거보다 나가는양이많다?</li>
+<li>단일토픽하나로 가장 처리량이 높았던건 초당 80만</li>
+<li>2년 운영하면서 큰장애는 2건.</li>
+</ul>
+<h4 id="kakao-kafka사용시-장애-이슈"><a href="#kakao-kafka사용시-장애-이슈" class="headerlink" title="kakao kafka사용시 장애 이슈"></a>kakao kafka사용시 장애 이슈</h4><ul>
+<li>ISR (In-Synk Replicas) 축소<ul>
+<li>현재 복제되고있는구성원</li>
+<li>리더만 읽고 쓰기</li>
+<li>팔로워들은 리더를 주기적으로 동기화</li>
+<li>ISR의 구성원만이 리더의 자격을 갖는다</li>
+<li>isr축소 버그가 있음 (0.10.1.0)</li>
+</ul>
+</li>
+<li>Rack Power<ul>
+<li>broker는 idc랙별로 분산해서 놓는게 좋습니다.</li>
+<li>장애또는 이슈로 인한 리더가 변경되는경우…..<ul>
+<li>여러개의 broker가 있는 경우 장애로 리더가 자주 변경되게 되면 broker간의 sync 가 안맞게 된다 이경우 sync가 맞지 않은 broker가 장애로 인해 리더가 된다면……<br>기존 리더로 부터 메세지 복제가 이루어 져야 한다. 그런데 기존 리더가 올라오지 않는다면?????<br>기다려야 할지 아니면 먼저 올라온 broker가 리더로서의 역할을 해야 할지..</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Use-Case-KaKao"><a href="#Use-Case-KaKao" class="headerlink" title="Use Case (KaKao)"></a>Use Case (KaKao)</h4><p>로그를 통합하고 싶어요<br>CS때문에 각 서버에서 Grep하고 있어요….</p>
+<ul>
+<li>MSA<br>단점?? 카프카를 쓰면 다 해결된데요 ㅋㅋㅋㅋ</li>
+<li>RabbitMQ Log System<br>kibana</li>
+</ul>
+<h4 id="Producer"><a href="#Producer" class="headerlink" title="Producer"></a>Producer</h4><p>손실없이 kafka로 보내는것</p>
+<h5 id="Producer-ACKS"><a href="#Producer-ACKS" class="headerlink" title="Producer ACKS"></a>Producer ACKS</h5><ul>
+<li>ACKS 는 크게 3가지 타입으로 나누어져있음 ( 0, 1, ALL)</li>
+<li>0 : Message를 매우 빠르게 전송할수 있지만 리더가 받았는지 알수 없음</li>
+<li>1 : Message전송도 빠른 편이고 파티션의 리더가 받았는지 확인 (가장많이 사용)</li>
+<li>ALL : Message 전송은 느리지만 손실없는 전송 가능</li>
+<li>1는 손실가능성이 있음….</li>
+</ul>
+<h5 id="ACK1은-안전한가"><a href="#ACK1은-안전한가" class="headerlink" title="ACK1은 안전한가?"></a>ACK1은 안전한가?</h5><p>리더가 메세지를 받고 저장후 producer에게 잘받았다고 전달을 하고<br>바로 리더가 down되는경우 (sync가 안맞는 경우)는… 손실이 일어날 수 있다.</p>
+<h5 id="파티션…"><a href="#파티션…" class="headerlink" title="파티션…?"></a>파티션…?</h5><p>특정 파티션만 메세지를 못가져오고있어요<br>특정 파티션의 사이즈가 이상해요<br>Producer가 message를 보낼때 key value방식으로 보내는데<br>key를 안보낼 수 있다…<br>전송 방식은 RB<br>key를 주게 되는경우 특정 파티션으로 전달이 되는데<br>key가 중복이 되는경우…. ?</p>
+<h5 id="컨슈머가-자꾸-죽는경우…"><a href="#컨슈머가-자꾸-죽는경우…" class="headerlink" title="컨슈머가 자꾸 죽는경우…"></a>컨슈머가 자꾸 죽는경우…</h5><p>ack 설정값을 잘봐요… 메세지 손실때문에 그런건가?</p>
+<h4 id="Consumer"><a href="#Consumer" class="headerlink" title="Consumer"></a>Consumer</h4><p>브로커의 리더 파티션에서 message 를 가져오는역활</p>
+<p>파티션이 하나일때 :<br>파티션의 오프셋 순서대로 가져 옵니다</p>
+<p>파티션이 0개 이상일때 : 파티션별로 오프셋 순서대로 가져온다<br>한가지 보장할수 없는건 파티션 번호의 순서대로 가져오지 않는다.<br>파티션별루 오프셋 번호는 동일 (오프셋 0, 오프셋 1, 오프셋 2 …)</p>
+<p>파티션이 늘어나면 성능이 좋은 장점은 있지만<br>message가 꼬일수 있다. (해결방법은 timestamp를 이용)</p>
+<p>하나의 파티션에는 하나의 컨슈머만 가능?</p>
+<p>컨슈머 그룹을 이용한 멀티 컨슈머</p>
+<h5 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h5><p>컨슈머는 파티션의 몇번째 오프셋까지 가져왓는지 표시<br>이러한 행동을 commit 한다고 합<br>rebalancing이나 컨슈머 재시작시 commit된 위치부터 시작<br>auto commit / manual commit이 있다지만 auto commit을 사용<br>auto commit을 사용할 때 중복에 대한 예외처리를 해주면 좋다..</p>
+<h5 id="LAG"><a href="#LAG" class="headerlink" title="LAG"></a>LAG</h5><p>Burrow : lag 체크 할수 있는 툴</p>
+<h4 id="Operational-Tips"><a href="#Operational-Tips" class="headerlink" title="Operational Tips"></a>Operational Tips</h4><h5 id="파티션-수-늘려주세요"><a href="#파티션-수-늘려주세요" class="headerlink" title="파티션 수 늘려주세요 ??"></a>파티션 수 늘려주세요 ??</h5><p>파티션은 늘리면 줄일 수가 없어요…. 잘생각해서 늘려야함<br>lag이 밀린다면 partition을 늘려주는게 좋다. (파티션을 늘리면서 컨슈머를 늘려줘야함)</p>
+<h5 id="디스크-공간이-부족해요"><a href="#디스크-공간이-부족해요" class="headerlink" title="디스크 공간이 부족해요??"></a>디스크 공간이 부족해요??</h5><p>retention.hours 168 (7일) - global<br>카프카 메세지 기본 보관값이 7일이에요<br>카카오는 3일로 줄여놨다고 합니다.<br>그중에 메세지 사이즈가 큰거는 별도로 줄이고 있다고 합니다.<br>retention.ms = 86400000 (1일)<br>토픽마다 보관 주기를 할 수 있어요</p>
+<h5 id="scale-out"><a href="#scale-out" class="headerlink" title="scale out??"></a>scale out??</h5><p>기존 카프카를 복사하고 브로커 아이디만 유니크하게 바꿔서 올리면 되요?<br>새로운 추가 작업은 쉽지만<br>기존 운영중에 사용량이 많은 브로커에 대해 대안을 위한 스케일 아웃시에는<br>조금 복잡하다고 합니다 먼소린지 모르겠음</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/11/Kafka/" data-id="ckrdkv810000r9d2a5pkx8b7a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-oracle &gt; mysql migration(load data)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/10/oracle%20%3E%20mysql%20migration(load%20data)/" class="article-date">
+  <time datetime="2019-12-10T01:15:49.393Z" itemprop="datePublished">2019-12-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/12/10/oracle%20%3E%20mysql%20migration(load%20data)/">oracle &gt; mysql migration(load data)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2016년에 작업했던 기록 저장용<br>oracle &gt; mysql 과 같이 이기종간 마이그레이션은 지원하는 몇가지 툴이 있는것으로 알고있다.<br>사실 아는건 <a href="https://sourceforge.net/projects/pentaho/files/Data%20Integration/" target="_blank" rel="noopener">이것</a> 뿐이지만…<br>test를 해보니까 생각보다 너무느렸다.<br>서비스하는 회사에서 보통 주어지는 시간은 6시간 남짓이다. (이것도 내경험상 00시 ~ 06시)</p>
+<p>예전에 oracle DBA로 일했었는데.<br>그 때 동기종 migration는 꽤 자주 했다.<br>물론 거의 대부분 export / import를 이용해서 했는데.<br>sqlldr을 이용해서 해봤는데 속도가 괜찮아서 mysql 에 동일한 명령어가 있는지 찾아봤다.</p>
+<p>mysql <code>LOAD DATA</code> 를 사용하기로 했다.</p>
+<h1 id="LOAD-DATA"><a href="#LOAD-DATA" class="headerlink" title="LOAD DATA"></a>LOAD DATA</h1><p><a href="https://dev.mysql.com/doc/refman/8.0/en/load-data.html" target="_blank" rel="noopener">https://dev.mysql.com/doc/refman/8.0/en/load-data.html</a></p>
+<h1 id="Oracle에서의-작업"><a href="#Oracle에서의-작업" class="headerlink" title="Oracle에서의 작업"></a>Oracle에서의 작업</h1><p>LOAD DATA는 특정 구분자로 되어있는 file을 insert를 반복하는 작업이다.<br>그러기 위해선 Table을 먼저 만들어야 했다.</p>
+<h4 id="Table-생성"><a href="#Table-생성" class="headerlink" title="Table 생성"></a>Table 생성</h4><ul>
+<li>Oracle 의 Table create script를 가져와서 아래 2가지 타입에 대해 변경 작업<ul>
+<li>NUMBER TYPE -&gt; INT TYPE</li>
+<li>VARCHAR2 TYPE -&gt; VARCHAR TYPE</li>
+</ul>
+</li>
+<li>다른 TYPE도 확인해봐야한다. 내가 작업하는 DB는 저정도만 신경쓰면 됬다.</li>
+<li>참고로 나는 java test case로 table 생성 스크립트를 가져와서 type 변환하는 코드를 만들었었다. </li>
+</ul>
+<h4 id="쿼리생성"><a href="#쿼리생성" class="headerlink" title="쿼리생성"></a>쿼리생성</h4><ul>
+<li>select 절을 만들어 보자. (oracle 기준이다.)</li>
+<li>Delimiter는 <code>|</code> 를 사용했다.<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">ltrim</span>(sys_connect_by_path(column_name, <span class="string">'||''|''||'</span>), <span class="string">'||''|''||'</span>) column_name</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">column_name,</span><br><span class="line">row_number()</span><br><span class="line"><span class="keyword">OVER</span> (<span class="keyword">PARTITION</span> <span class="keyword">BY</span> <span class="keyword">num</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">num</span>) rn,</span><br><span class="line"><span class="keyword">count</span>(<span class="number">0</span>)</span><br><span class="line"><span class="keyword">OVER</span> (<span class="keyword">PARTITION</span> <span class="keyword">BY</span> <span class="keyword">num</span>) cnt</span><br><span class="line"><span class="keyword">FROM</span> (</span><br><span class="line"><span class="keyword">SELECT</span></span><br><span class="line">column_name,</span><br><span class="line"><span class="number">1</span> <span class="keyword">num</span></span><br><span class="line"><span class="keyword">FROM</span> cols</span><br><span class="line"><span class="keyword">WHERE</span> table_name = <span class="string">'TABLE_NAME'</span></span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> column_id))</span><br><span class="line"><span class="keyword">WHERE</span> <span class="keyword">level</span> = cnt</span><br><span class="line"><span class="keyword">START</span> <span class="keyword">WITH</span> rn = <span class="number">1</span></span><br><span class="line"><span class="keyword">CONNECT</span> <span class="keyword">BY</span> <span class="keyword">PRIOR</span> cnt = cnt <span class="keyword">AND</span> <span class="keyword">PRIOR</span> rn = rn - <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="생성한-쿼리로-데이터-추출"><a href="#생성한-쿼리로-데이터-추출" class="headerlink" title="생성한 쿼리로 데이터 추출"></a>생성한 쿼리로 데이터 추출</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SQL&gt; set line 200</span><br><span class="line">SQL&gt; set pagesize 0</span><br><span class="line">SQL&gt; spool treserve.txt</span><br><span class="line">SQL&gt; select column_a||'|'||column_b||'|'||column_c||'|'||...</span><br><span class="line">from table_name;</span><br></pre></td></tr></table></figure>
+
+<h4 id="추출된-데이터-전송"><a href="#추출된-데이터-전송" class="headerlink" title="추출된 데이터 전송"></a>추출된 데이터 전송</h4><p>scp를 통해서 전송했었다.<br>참고로 나는 IDC경로가 달라서 로컬에 받은 후 이관하려는 서버로 scp전송했다.</p>
+<h1 id="mysql에서의-작업"><a href="#mysql에서의-작업" class="headerlink" title="mysql에서의 작업"></a>mysql에서의 작업</h1><p>위 oracle 에서의 작업에서 table 생성 스크립트로 mysql에 table 생성이 되어있어야한다.</p>
+<h4 id="Character-Set-변경"><a href="#Character-Set-변경" class="headerlink" title="Character Set 변경"></a>Character Set 변경</h4><p>테스트 해보니 한글이 깨지는 경우가 있어서 변경 해줘야 하는 것 같다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iconv -c -f euc-kr -t utf-8 test.txt &gt; <span class="built_in">test</span>-utf8.txt</span><br></pre></td></tr></table></figure>
+
+<h4 id="데이터-import"><a href="#데이터-import" class="headerlink" title="데이터 import"></a>데이터 import</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;use theater;</span><br><span class="line"></span><br><span class="line">mysql&gt; LOAD DATA LOCAL INFILE '/oradata/migration/test_utf8.txt' </span><br><span class="line">INTO TABLE table_name</span><br><span class="line">FIELDS TERMINATED BY '|'</span><br><span class="line">IGNORE 1 LINES;</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/10/oracle%20%3E%20mysql%20migration(load%20data)/" data-id="ckrdkv81g00149d2ag0e75pgo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-GitLab설치 (Docker)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/28/GitLab%EC%84%A4%EC%B9%98%20(Docker)/" class="article-date">
+  <time datetime="2019-11-28T05:05:30.384Z" itemprop="datePublished">2019-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/28/GitLab%EC%84%A4%EC%B9%98%20(Docker)/">GitLab설치 (Docker)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>이전 포스팅에서는 GCP에 gitlab-ce를 설치해봤는데.<br>왜 docker를 사용하지 않았을까? 라는 생각을 해서<br>한번 시도해봤다.</p>
+<p>이번 설치는 사내의 dev서버에서 진행했으며<br>설치된 gitlab-ce는 팀내 저장소 및 issue tracking으로 사용할 예정이다</p>
+<h1 id="docker-설치-docker-compose-설치"><a href="#docker-설치-docker-compose-설치" class="headerlink" title="docker 설치 (docker-compose 설치)"></a>docker 설치 (docker-compose 설치)</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yum package update</span></span><br><span class="line">sudo apt-get update</span><br><span class="line"></span><br><span class="line"><span class="comment"># docker install</span></span><br><span class="line">curl -fsSl https://get.docker.com/ | sudo sh</span><br></pre></td></tr></table></figure>
+
+<h1 id="docker-compose-설치"><a href="#docker-compose-설치" class="headerlink" title="docker-compose 설치"></a>docker-compose 설치</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -L <span class="string">"https://github.com/docker/compose/releases/download/1.25.0/docker-compose-<span class="variable">$(uname -s)</span>-<span class="variable">$(uname -m)</span>"</span> -o /usr/<span class="built_in">local</span>/bin/docker-compose</span><br><span class="line"></span><br><span class="line">sudo chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span><br><span class="line">sudo ln -s /usr/<span class="built_in">local</span>/bin/docker-compose /usr/bin/docker-compose</span><br></pre></td></tr></table></figure>
+
+<h1 id="docker-compose-yml-파일-생성"><a href="#docker-compose-yml-파일-생성" class="headerlink" title="docker-compose.yml 파일 생성"></a>docker-compose.yml 파일 생성</h1><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">web:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">'gitlab/gitlab-ce:lastest'</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">hostname:</span> <span class="string">'gitlab.example.com'</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">        <span class="attr">GITLAB_OMNIBUS_CONFIG:</span></span><br><span class="line">            <span class="string">external_url</span> <span class="string">'http://gitlab.example.com:8929'</span></span><br><span class="line">            <span class="string">gitlab_rails['gitlab_shell_ssh_port']</span> <span class="string">=</span> <span class="number">2224</span></span><br><span class="line">            <span class="comment"># smtp 설정 gmail</span></span><br><span class="line">            <span class="string">gitlab_rails['smtp_enable']</span> <span class="string">=</span> <span class="literal">true</span></span><br><span class="line">            <span class="string">gitlab_rails['smtp_address']</span> <span class="string">=</span> <span class="string">'smtp.gmail.com'</span></span><br><span class="line">            <span class="string">gitlab_rails['smtp_port']</span> <span class="string">=</span> <span class="number">587</span></span><br><span class="line">            <span class="string">gitlab_rails['smtp_user_name']</span> <span class="string">=</span> <span class="string">'thinkub0219@gmail.com'</span></span><br><span class="line">            <span class="string">gitlab_rails['smtp_password']</span> <span class="string">=</span> <span class="string">'이메일 비밀번호'</span></span><br><span class="line">            <span class="string">gitlab_rails['smtp_domain']</span> <span class="string">=</span> <span class="string">'smtp.gmail.com'</span></span><br><span class="line">            <span class="string">gitlab_rails['smtp_authentication']</span> <span class="string">=</span> <span class="string">'login'</span></span><br><span class="line">            <span class="string">gitlab_rails['smtp_enable_starttls_auto']</span> <span class="string">=</span> <span class="literal">true</span></span><br><span class="line">            <span class="string">gitlab_rails['smtp_tls']</span> <span class="string">=</span> <span class="literal">false</span></span><br><span class="line">            <span class="string">gitlab_rails['smtp_openssl_verify_mode']</span> <span class="string">=</span> <span class="string">'peer'</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">'2224:22'</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">'80:80'</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">'443:443'</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">'/home/gitlab/config:/etc/gitlab'</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">'/home/gitlab/logs:/var/log/gitlab'</span></span><br><span class="line">        <span class="bullet">-</span> <span class="string">'/home/gitlab/data:/var/opt/gitlab'</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>image : docker image 설정</li>
+<li>restart : server restart시 해당 docker container 실행 여부</li>
+<li>hostname : 사용하려는 hostname</li>
+<li>enviroment : 설치되는 image의 설정<ul>
+<li>해당 설정은 /etc/gitlab.gitlab.rb 에 들어갈 설정들에 대한 정의임</li>
+</ul>
+</li>
+<li>ports : OSPort:dockerPort<ul>
+<li>위 설정에서 보면 2224 포트는 Os port이고 해당 포트로 접근시 docker의 22번 port와 통신</li>
+<li>컨테이너가 한번 실행 된 이후 포트추가는 불가하기때문에 잘 고려해야 함.</li>
+</ul>
+</li>
+<li>volumes : docker container 내부 volume과 OS간 연결 경로 <ul>
+<li>앞이 OS 경로, 뒤가 Docker container경로</li>
+</ul>
+</li>
+</ul>
+<h1 id="docker-compose로-설치"><a href="#docker-compose로-설치" class="headerlink" title="docker-compose로 설치"></a>docker-compose로 설치</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker-compose up -d</span><br></pre></td></tr></table></figure>
+
+<p>간혹 아래와 같은 오류를 만날 수 있다</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ERROR: Couldn<span class="string">'t connect to Docker daemon at http+docker://localhost - is it running?</span></span><br><span class="line"><span class="string">....</span></span><br></pre></td></tr></table></figure>
+<p>도커 데몬이 안돌고 있다 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">systemctl status docker</span><br><span class="line"></span><br><span class="line">● docker.service - Docker Application Container Engine</span><br><span class="line">   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)</span><br><span class="line">   Active: inactive (dead)</span><br><span class="line">     Docs: https://docs.docker.com</span><br></pre></td></tr></table></figure>
+<p>dead 상태이니 running 상태로 바꿔보자</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<h1 id="접속-확인"><a href="#접속-확인" class="headerlink" title="접속 확인"></a>접속 확인</h1><p>위 설정 한 External URL : port 정보로 접속을 해보면 접속이 잘된다.<br>로그인 계정은 <a href="mailto:admin@example.com" target="_blank" rel="noopener">admin@example.com</a> 으로 최초 로그인시 password를 입력하면 된다.</p>
+<h1 id="문제점"><a href="#문제점" class="headerlink" title="문제점"></a>문제점</h1><p>Email이 발송되지 않는 문제가 있다.<br>흠 이래저래 해보는데 되지 않아서 이부분은 좀더 확인 후에 포스팅 할 예정이다.</p>
+<h1 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h1><blockquote>
+<p>docs.gitlab.com/omnibus/docker<br>docs.gitlab.com/omnibus/docker/#install-gitlab-using-docker-compose<br>docs.docker.com/compose/install</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/28/GitLab%EC%84%A4%EC%B9%98%20(Docker)/" data-id="ckrdkv80s000i9d2a5zvg9fp2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-SonarQube를 이용한 코드리뷰 해보기" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/27/SonarQube%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%9C%20%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0%20%ED%95%B4%EB%B3%B4%EA%B8%B0/" class="article-date">
+  <time datetime="2019-11-27T03:35:40.230Z" itemprop="datePublished">2019-11-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/27/SonarQube%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%9C%20%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0%20%ED%95%B4%EB%B3%B4%EA%B8%B0/">SonarQube를 이용한 코드리뷰 해보기</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>이전 회사에서 적용했던 sonaqube에 대해 정리한 내용이 있어서<br>블로그에 옮긴다.</p>
+<h1 id="SonarQube"><a href="#SonarQube" class="headerlink" title="SonarQube?"></a>SonarQube?</h1><p>SonarQube는 Java, C #, JavaScript, TypeScript, C / C ++, COBOL 등 20 개 이상의 프로그래밍 언어에서 버그, 코드 냄새? (code smells) 및 보안 취약성을 탐지하기 위해 코드의 정적 분석을 통해 자동 검토를 수행하는 오픈 소스 플랫폼입니다.<br>프로그램의 실제 실행 없이 코드를 분석하는 것</p>
+<h1 id="Why"><a href="#Why" class="headerlink" title="Why"></a>Why</h1><p>돌아가기만 하면 되는 코드’는 개발자에게도, 프로젝트에도 전혀 도움이 되지 않습니다. 잘못된 코드는 또다른 잘못된 코드를 양상하고, 떨어지는 가독성과 높아지는 복잡도 덕분에 프로젝트 코드는 시간이 지남에 따라 점점 이해하기 힘든 모습이 되어갑니다. 개발자는 더 많은 노력과 시간이 필요해 지고, 프로젝트는 언제 터질지 모르는 폭탄을 품고 살아가게 됩니다.</p>
+<p>때문에 프로그래밍에서도 잘못된 자세를 지적해 주고 제대로 개발 할 수 있도록 이끌어줄 방법들이 필요합니다. 개발자의 필수 도서라 불리는 책들은 몇번을 읽어도 손해 볼게 없습니다.</p>
+<p>애자일 진영에서 강조하는 페어 프로그래밍, 몹 프로그래밍이나 코드 인스펙션 활동들 역시 좋은 대안이 될 수 있습니다. 이러한 문화를 이끌어 줄 수 있는 멘토가 있다면 빠른 시간내 코드의 품질이 좋아질 수 있습니다.<br>문제는 ‘사람 == 시간 == 돈’ 이기 때문에 제대로 된 개발을 위해서는 그만큼 많은 비용이 필요할 수 밖에 없습니다.</p>
+<p>결국, 이러한 부분에 대한 고민 끝에, 비용이 추가로 들지 않으면서 코드의 품질을 검토하고 잘못된 부분을 옳은 방향으로 고칠 수 있도록 멘토링하는 다양한 도구들이 만들어졌습니다.</p>
+<h1 id="SonarQube-1"><a href="#SonarQube-1" class="headerlink" title="SonarQube"></a>SonarQube</h1><p>SonarQube 플랫폼은 4개의 컴포넌트로 구성</p>
+<ul>
+<li>SonarQube Server</li>
+<li>SonarQube Database</li>
+<li>SonarQube Plugin</li>
+<li>SonarQube Scanner<br><img src="/img/2019/11/27/20191127_01.png" alt="image01"></li>
+</ul>
+<h3 id="SonarQube-Server"><a href="#SonarQube-Server" class="headerlink" title="SonarQube Server"></a>SonarQube Server</h3><p>3가지의 메인 프로세스를 구동</p>
+<ul>
+<li>Web Server : 사용자들에게 분석 결과를 보여주고, SonarQube 설정 페이지를 제공합니다.</li>
+<li>Search Server : Elasticsearch 서버를 사용하며, 사용자에게 검색기능을 제공합니다.</li>
+<li>Compute Engine Server : 정적 분석 결과를 생성하고 이를 SonarQube Database를 통해 저장합니다.</li>
+</ul>
+<h3 id="SonarQube-Database"><a href="#SonarQube-Database" class="headerlink" title="SonarQube Database"></a>SonarQube Database</h3><p>SonarQube의 기본 설정들(보안, Plugin 정보 등)과 프로젝트 분석 스냅샷들을 저장합니다. 설치시, 기본으로 H2 DB를 포함하며, 설정을 통해 다양한 DB 사용이 가능합니다</p>
+<h3 id="SonarQube-Plugin"><a href="#SonarQube-Plugin" class="headerlink" title="SonarQube Plugin"></a>SonarQube Plugin</h3><p>내부에서 사용하는 다양한 기능(분석 프로그램언어, 권한, 관리, SCM등)을 플러그인 형태로 설치 가능합니다.</p>
+<h3 id="SonarQube-Scanner"><a href="#SonarQube-Scanner" class="headerlink" title="SonarQube Scanner"></a>SonarQube Scanner</h3><p>프로젝트 정적 분석을 수행하는 툴로 다양한 형식으로 제공되며 CI Server와 연계하여 사용이 가능합니다.</p>
+<h1 id="SonarQube-Integration"><a href="#SonarQube-Integration" class="headerlink" title="SonarQube Integration"></a>SonarQube Integration</h1><p><img src="/img/2019/11/27/20191127_02.png" alt="image02"></p>
+<ol>
+<li>개발자는 IDE에서 코드를 작성하고, Sonar Lint등을 통해 로컬에서 코드 분석을 실행합니다.</li>
+<li>개발자는 분석을 통해 수정된 완성코드를 SCM으로 Push 합니다.</li>
+<li>CI 서버에서 트리거된 빌드 수행시 SonarQube Scanner를 실행합니다.</li>
+<li>SonarQube Scanner는 생성한 분석 리포트의 처리를 위해 SonarQube로 전송합니다.</li>
+<li>SonarQube Server는 분석 리포트 결과를 처리하여 DB에 저장하고 결과를 웹서버를 통해 제공합니다.</li>
+<li>개발자는 웹페이지에서 분석결과를 확인하여 코드를 개선합니다.<br>관리자는 결과 보고서를 받습니다.</li>
+<li>SonarQube에서 데이터를 추출하기위해 API를 활용하거나 SonarQube Server 모니터링을 위해 JMX를 사용할 수 있습니다</li>
+</ol>
+<h1 id="설치"><a href="#설치" class="headerlink" title="설치"></a>설치</h1><h3 id="Maven-설치"><a href="#Maven-설치" class="headerlink" title="Maven 설치"></a>Maven 설치</h3><p>기본적으로 Maven의 H2DB를 사용 &gt; SonarQube를 설치하기 전에 Maven부터 설치 해줘야 한다</p>
+<h3 id="SonarQube-설치"><a href="#SonarQube-설치" class="headerlink" title="SonarQube 설치"></a>SonarQube 설치</h3><p>파일을 받아서 압축을 해제하면 끝</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mkdir sonar-qube</span><br><span class="line"><span class="built_in">cd</span> sonar-qube</span><br><span class="line">wget https://sonarsource.bintray.com/Distribution/sonarqube/sonarqube-6.7.5.zip</span><br><span class="line"></span><br><span class="line">unzip sonarqube-6.7.5.zip</span><br></pre></td></tr></table></figure>
+
+<h3 id="SonarQube-Start"><a href="#SonarQube-Start" class="headerlink" title="SonarQube Start"></a>SonarQube Start</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> sonarqube-6.7.5/bin/linux-x86-64</span><br><span class="line">./sonar.sh start</span><br></pre></td></tr></table></figure>
+<p>기본적으로 9000포트를 사용하고 있으니 다른 포트를 사용하려면 sonar.properties 수정하면된다.</p>
+<h3 id="SonarQube-Scanner-설치"><a href="#SonarQube-Scanner-설치" class="headerlink" title="SonarQube Scanner 설치"></a>SonarQube Scanner 설치</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://sonarsource.bintray.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-3.0.3.778-linux.zip</span><br><span class="line"></span><br><span class="line">unzip sonar-scanner-cli-3.0.3.778-linux.zip</span><br></pre></td></tr></table></figure>
+
+<h3 id="Jenkins-연동"><a href="#Jenkins-연동" class="headerlink" title="Jenkins 연동"></a>Jenkins 연동</h3><p>Jenkins 설치는 Skip</p>
+<h3 id="Jenkins-Pluggin-설치"><a href="#Jenkins-Pluggin-설치" class="headerlink" title="Jenkins Pluggin 설치"></a>Jenkins Pluggin 설치</h3><ul>
+<li>Python Plugin</li>
+<li>GitHub Pull Request Builder</li>
+<li>GitHub plugin</li>
+<li>SonarQube Scanner for Jenkins</li>
+</ul>
+<p>SonarQube Scanner for Jenks 의 경우 Jenkins 버전체크를 해줘야 한다.<br><img src="/img/2019/11/27/20191127_03.png" alt="image03"></p>
+<p>플러그인 설치가능 목록에 안나오는 경우가 있으니 이런 경우 아래 url 에서 Archives 를 받아서 올려도됨<br><a href="https://plugins.jenkins.io/sonar" target="_blank" rel="noopener">https://plugins.jenkins.io/sonar</a><br><img src="/img/2019/11/27/20191127_04.png" alt="image04"></p>
+<h3 id="Jenkins-SonarQube-server-정보-등록"><a href="#Jenkins-SonarQube-server-정보-등록" class="headerlink" title="Jenkins SonarQube server 정보 등록"></a>Jenkins SonarQube server 정보 등록</h3><p>server url 정보에 sonarQube 서버 url 을 넣는다<br><img src="/img/2019/11/27/20191127_05.png" alt="image05"></p>
+<h3 id="Server-authentication-token"><a href="#Server-authentication-token" class="headerlink" title="Server authentication token"></a>Server authentication token</h3><p>Server authentication token 은 sonarQube를 접속해서 admin (password : admin) 으로 접속하면 아래 화면처럼 생성 할 수 있다.<br><img src="/img/2019/11/27/20191127_06.png" alt="image06"></p>
+<h3 id="Jenkins-SonarQube-scanner-정보-등록"><a href="#Jenkins-SonarQube-scanner-정보-등록" class="headerlink" title="Jenkins SonarQube scanner 정보 등록"></a>Jenkins SonarQube scanner 정보 등록</h3><p>jenkins &gt; configure tools<br><img src="/img/2019/11/27/20191127_07.png" alt="image07"></p>
+<h3 id="Github과-Jenkins-연동"><a href="#Github과-Jenkins-연동" class="headerlink" title="Github과 Jenkins 연동"></a>Github과 Jenkins 연동</h3><p>SKIP</p>
+<h3 id="어떻게-써볼까요"><a href="#어떻게-써볼까요" class="headerlink" title="어떻게 써볼까요?"></a>어떻게 써볼까요?</h3><ul>
+<li>Jenkins Build 할때?</li>
+<li>Pull Request 할때?</li>
+<li>Local 에서?</li>
+</ul>
+<h3 id="Jenkins-Build-with-SonarQube"><a href="#Jenkins-Build-with-SonarQube" class="headerlink" title="Jenkins Build (with SonarQube)"></a>Jenkins Build (with SonarQube)</h3><p>Jenkins Sonar-scanner<br>Jenkins 에서 build 시 Sonar-scanner 설정법<br><img src="/img/2019/11/27/20191127_08.png" alt="image08"></p>
+<h3 id="Pull-Request-with-SonarQube"><a href="#Pull-Request-with-SonarQube" class="headerlink" title="Pull Request (with SonarQube)"></a>Pull Request (with SonarQube)</h3><p><img src="/img/2019/11/27/20191127_09.png" alt="image09"><br>해당 구조를 사용하기 위해선 GitHub WebHook사용과 Jenkins에 2개의 Job이 필요하다</p>
+<ul>
+<li>Jenkins Job<ul>
+<li>1번 job : pullrequest_receiver : github으로부터 web-hook을 통해 pullRequest정보를 받는 job</li>
+<li>2번 job : sonaqube-job : 1번 job으로 부터 정보를 받아 SonarQube를 이용해 정적분석후 해당 pullRequest에 댓글로 리포팅 하는 Job</li>
+</ul>
+</li>
+<li>GitHub WebHook<ul>
+<li>Github에서 Jenkins Job을 호출하기 위해서는 Jenkins가 외부에 공개되어 있어야 한다</li>
+</ul>
+</li>
+</ul>
+<h3 id="SonarLint-IntelliJ"><a href="#SonarLint-IntelliJ" class="headerlink" title="SonarLint (IntelliJ)"></a>SonarLint (IntelliJ)</h3><p>위와 같은 방법으로 SonarQube를 사용한다면…<br>코드를 작성하고 commit / push 이후에나 정적분석 피드백을 받을 수 있다.</p>
+<h4 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h4><p>Setting &gt; plugins &gt; Search in repositories<br>SonarLint 검색<br><img src="/img/2019/11/27/20191127_10.png" alt="image10"></p>
+<h4 id="SonarQube-서버-연동"><a href="#SonarQube-서버-연동" class="headerlink" title="SonarQube 서버 연동"></a>SonarQube 서버 연동</h4><p>기본적인 설정만으로도 충분히 사용할 수 있으며 sonarqube 서버가 없어도 사용에 문제가 없습니다.<br>setting &gt; Other Settings &gt; SonarLing General Settings<br><img src="/img/2019/11/27/20191127_11.png" alt="image11"></p>
+<p>참고</p>
+<blockquote>
+<p><a href="https://www.sonarqube.org/about/" target="_blank" rel="noopener">https://www.sonarqube.org/about/</a><br><a href="http://lazyrodi.github.io/2017/02/06/2017-02-06-etc-install-sonarqube/" target="_blank" rel="noopener">http://lazyrodi.github.io/2017/02/06/2017-02-06-etc-install-sonarqube/</a><br><a href="https://medium.com/@cgpink/소스-정적-분석도구-sonarqube-리서칭-9d48fc62b01f" target="_blank" rel="noopener">https://medium.com/@cgpink/소스-정적-분석도구-sonarqube-리서칭-9d48fc62b01f</a><br><a href="https://www.popit.kr/내코드를-자동으로-리뷰해준다면-by-sonarqube/" target="_blank" rel="noopener">https://www.popit.kr/내코드를-자동으로-리뷰해준다면-by-sonarqube/</a></p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/27/SonarQube%EB%A5%BC%20%EC%9D%B4%EC%9A%A9%ED%95%9C%20%EC%BD%94%EB%93%9C%EB%A6%AC%EB%B7%B0%20%ED%95%B4%EB%B3%B4%EA%B8%B0/" data-id="ckrdkv815000v9d2ah87d8pko" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-GitLab설치 (GCP)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/26/GitLab%EC%84%A4%EC%B9%98%20(GCP)/" class="article-date">
+  <time datetime="2019-11-26T04:18:30.667Z" itemprop="datePublished">2019-11-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/26/GitLab%EC%84%A4%EC%B9%98%20(GCP)/">GitLab설치 (GCP)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>최근 이직을 했는데.<br>이전 회사는 웹서비스를 하는 회사였고, 이직한 회사는 AI 하는 회사였다<br>물론 내가 담당한 업무는 웹개발이라서 업무가 달라지진 않았지만 환경이 달랐다</p>
+<p>이전 회사는 모기업의 영향을 받아 Issue관리는 자체개발 솔루션을 사용했고<br>SCM은 git enterprise를 사용하는 등 나름 괜찮은 환경이었다.</p>
+<p>이직한 회사는 svn을 사용하고 Issue관리는 그냥 메일로 하고,<br>IntelliJ 도 개인라이선스를 구매하는 등. 좀 열악한 편이었다.</p>
+<p>그 중 제일 불편한게 Issue관리!!<br>메일로 주고 받다 보니 이런 저런 메일이 오면서 History추적이 어려웠다.</p>
+<h1 id="Gitlab"><a href="#Gitlab" class="headerlink" title="Gitlab"></a>Gitlab</h1><p>예전 N사와 API 연동 작업을 한적이 있는데.<br>이때 Gitlab을 이용해서 Issue관리를 했었다.<br>상당히 괜찮았던 기억이 있어서 Gitlab을 설치해보기로 했다.</p>
+<h3 id="어디에-설치하지"><a href="#어디에-설치하지" class="headerlink" title="어디에 설치하지?!"></a>어디에 설치하지?!</h3><p>아직 회사에다가 내가 Gitlab을 설치하고 싶으니 서버를 주세요.<br>라고 말하기가 어려운 상태다 (아직 이직 1달이 되지 않았다 ㅠ)<br>aws가 1년간 무료이니 거기에 설치해 보려했으나….<br>aws프리티어 인스턴스를 만들다 보면 지원되는 CPU와 메모리가 1core 에 1GB이다.<br>gitlab의 경우 최소 2core CPU와 4GB의 RAM을 권장한다.<br>혹시나 하는 마음에 aws에 설치해 봤으나 아래와 같은 문구를 만나게 되었다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cannot allocate memory - fork(2)</span><br></pre></td></tr></table></figure>
+
+<p>그래서 선택한건 구글 클라우드.<br>구글 클라우드의 경우 무료 크레딧($300)을 준 다음.<br>해당 크레딧을 사용하는 한도에서는 어떤 스펙의 장비를 써도 된다.</p>
+<h1 id="GCP-Compute-Engine"><a href="#GCP-Compute-Engine" class="headerlink" title="GCP Compute Engine"></a>GCP Compute Engine</h1><ol>
+<li><p>google cloud platform 사이트에 로그인 후 Compute Engine선택<br><img src="/img/2019/11/26/20191126_01.png" alt="image01"></p>
+</li>
+<li><p>VM 인스턴스 만들기<br><img src="/img/2019/11/26/20191126_02.png" alt="image02"></p>
+</li>
+<li><p>옵션 선택 (옵션 선택에 따른 비용이 달라진다 오른쪽에 표시)</p>
+<ul>
+<li>이름 : 사용하고자 하는 서버명을 적는다 나는 gitlab을 적었다.</li>
+<li>리전 : 리전에 따라 사용비용이 다르다. 이건 개인 취향으로.</li>
+<li>영역 : 그냥 Defalut로</li>
+<li>시리즈 : N1 선택 이것도 선택에 따라 비용이 달라진다.<br>(N2의 경우 최소사양이 CPU 2, 8GB메모리라 N1을 선택했다.)</li>
+<li>머신유형 : 최소사양으로 해보았다. CPU 2개, 7.5GB</li>
+<li>그외 : 기본을 사용하고 HTTP, HTTPS 트래픽 허용<br><img src="/img/2019/11/26/20191126_03.png" alt="image03"></li>
+</ul>
+</li>
+<li><p>만들기를 누르기전 OS이미지를 선택하자</p>
+<ul>
+<li>옵션 중 부팅디스크의 변경 선택</li>
+<li>Ubuntu 16.04 LTS를 선택한다.</li>
+<li>SSD 영구디스크를 선택하고 크기는 40GB정도로 잡는다.<br><img src="/img/2019/11/26/20191126_04.png" alt="image04"></li>
+</ul>
+</li>
+</ol>
+<h1 id="Gitlab-설치"><a href="#Gitlab-설치" class="headerlink" title="Gitlab 설치"></a>Gitlab 설치</h1><p>방금 생성한 Instance에 Gitlab을 설치해보자<br><img src="/img/2019/11/26/20191126_05.png" alt="image05"></p>
+<ol>
+<li>ssh버튼을 누르면 콘솔창이 열린다.<br><img src="/img/2019/11/26/20191126_06.png" alt="image06"></li>
+</ol>
+<ol start="2">
+<li><p>필요한 Dependency를 설치 및 Update</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y curl openssh-server ca-certificates</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Gitlab 패키지 Repository 추가 및 패키지 설치</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>저장소 목록 업데이트</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Gitlab CE설치</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gitlab-ce</span><br></pre></td></tr></table></figure>
+<ul>
+<li>설치가 완료되면 아래와 같은 로고가 보인다.<br><img src="/img/2019/11/26/20191126_07.png" alt="image07"></li>
+</ul>
+</li>
+</ol>
+<ol start="6">
+<li>Gitlab 초기설정<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo gitlab-ctl reconfigure</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h1 id="Gitlab-설정"><a href="#Gitlab-설정" class="headerlink" title="Gitlab 설정"></a>Gitlab 설정</h1><p>Gitlab 관련 설정파일은 /etc/gitlab.gitlab.rb 파일에서 할 수 있다.<br>external_url 만 바꿔 보겠다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/gitlab/gitlab.rb</span><br></pre></td></tr></table></figure>
+
+<p>설정 완료후 설정 적용 및 재시작을 해야 한다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo gitlab-ctl reconfigure</span><br><span class="line">sudo gitlab-ctl restart</span><br></pre></td></tr></table></figure>
+
+<h1 id="접속테스트"><a href="#접속테스트" class="headerlink" title="접속테스트"></a>접속테스트</h1><p><img src="/img/2019/11/26/20191126_08.png" alt="image08"></p>
+<h1 id="참고-Site"><a href="#참고-Site" class="headerlink" title="참고 Site"></a>참고 Site</h1><blockquote>
+<p>docs.gitlab.com/ce/install/google_cloud_platform<br>docs.gitlab.com/ce/README.html</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/26/GitLab%EC%84%A4%EC%B9%98%20(GCP)/" data-id="ckrdkv80u000k9d2a0a29d95s" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-mongo DB설치하기 (Feat. Docker)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/25/mongo%20DB%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0%20(Feat.%20Docker)/" class="article-date">
+  <time datetime="2019-11-25T04:05:04.135Z" itemprop="datePublished">2019-11-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/25/mongo%20DB%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0%20(Feat.%20Docker)/">mongo DB설치하기 (Feat. Docker)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>일전에 프로젝트 하나를 진행하게 되었는데.<br>DB의 로우데이터를 특정 조건에 맞게 집계를 해야했다.<br>프로젝트 규모나 사용성을 봤을때는<br>rdbms로 작업해도 크게 무리가 되지 않는 스펙이었다<br>근데 주변 동료들이 no-sql로 하는건 어떠냐고 해서 한번 해보기로 했다.</p>
+<h1 id="DB-선택하기"><a href="#DB-선택하기" class="headerlink" title="DB 선택하기"></a>DB 선택하기</h1><p>먼저 어떤 db engine이 가장 많이 사용되는지 검색해 봤다<br><a href="https://db-engines.com/en/ranking" target="_blank" rel="noopener">여기</a> 에서 확인 해보니 Document 기반으로는 MongoDB 순위가 높았다<br>통계 Data 특성상 스키마간 RelationShip이 크게 필요하지 않을 것이라 생각해서 MongoDB로 해보기로 했다<br><img src="/img/docker-mongo1.png" width="700px" ></img></p>
+<h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB ?"></a>MongoDB ?</h1><blockquote>
+<p>MongoDB는 필요한 쿼리 및 인덱싱을 통해 원하는 확장성과 유연성을 갖춘 문서 데이터베이스입니다.</p>
+</blockquote>
+<ul>
+<li>MongoDB는 데이터를 유연한 JSON 형식의 문서로 저장합니다. 즉, 필드마다 문서마다 다를 수 있으며 시간이 지남에 따라 데이터 구조가 변경 될 수 있습니다.</li>
+<li>문서 모델은 응용 프로그램 코드의 개체에 매핑되므로 데이터를 쉽게 사용할 수 있습니다.</li>
+<li>임시 질의, 인덱싱 및 실시간 집계는 데이터 액세스 및 분석을위한 강력한 방법을 제공합니다.</li>
+<li>MongoDB는 핵심적인 분산 데이터베이스이므로 고 가용성, 수평 확장 및 지리적 분포가 내장되어 사용하기 쉽습니다.</li>
+<li>MongoDB는 무료이며 오픈 소스이며, GNU Affero General Public License</li>
+</ul>
+<h3 id="특징"><a href="#특징" class="headerlink" title="특징"></a>특징</h3><ol>
+<li>Document-oriented storage : MongoDB는 database &gt; collections &gt; documents 구조로 document는 key-value형태의 BSON(Binary JSON)으로 되어있다</li>
+<li>Full Index Support : 다양한 인덱싱을 제공한다.<ol>
+<li>Single Field Indexes : 기본적인 인덱스 타입</li>
+<li>Compound Indexes : RDBMS의 복합인덱스 같은 거</li>
+<li>Multikey Indexes : Array에 매칭되는 값이 하나라도 있으면 인덱스에 추가하는 멀티키 인덱스</li>
+<li>Geospatial Indexes and Queries : 위치기반 인덱스와 쿼리</li>
+<li>Text Indexes : String에도 인덱싱이 가능</li>
+<li>Hashed Index : Btree 인덱스가 아닌 Hash 타입의 인덱스도 사용 가능</li>
+</ol>
+</li>
+<li>Replication&amp; High Availability : 간단한 설정만으로도 데이터 복제를 지원. 가용성 향상</li>
+<li>Auto-Sharding : MongoDB는 처음부터 자동으로 데이터를 분산하여 저장하며, 하나의 컬렉션처럼 사용할 수 있게 해준다. 수평적 확장 가능</li>
+<li>Querying(documented-based query) : 다양한 종류의 쿼리문 지원. (필터링, 수집, 정렬, 정규표현식 등)</li>
+<li>Fast In-Pace Updates : 고성능의 atomic operation을 지원</li>
+<li>Map/Reduce : 맵리듀스를 지원.(map과 reduce 함수의 조합을 통해 분산/병렬 시스템 운용 지원, 하둡처럼 MR전용시스템에 비해서는 성능이 떨어진다)</li>
+<li>GridFS : 분산파일 저장을 MongoDB가 자동으로 해준다. 실제 파일이 어디에 저장되어 있는지 신경 쓸 필요가 없고 복구도 자동이다.</li>
+<li>Commercial Support : 10gen에서 관리하는 오픈소스</li>
+</ol>
+<h3 id="장점"><a href="#장점" class="headerlink" title="장점"></a>장점</h3><ol>
+<li>Flexibility : Schema-less라서 어떤 형태의 데이터라도 저장할 수 있다.</li>
+<li>Performance : Read &amp; Write 성능이 뛰어나다. 캐싱이나 많은 트래픽을 감당할 때 써도 좋다.</li>
+<li>Scalability : 애초부터 스케일아웃 구조를 채택해서 쉽게 운용가능하다. Auto sharding 지원</li>
+<li>Deep Query ability : 문서지향적 Query Language 를 사용하여 SQL 만큼 강력한 Query 성능을 제공한다.</li>
+<li>Conversion / Mapping : JSON형태로 저장이 가능해서 직관적이고 개발이 편리하다.</li>
+</ol>
+<h3 id="단점"><a href="#단점" class="headerlink" title="단점"></a>단점</h3><ol>
+<li>정합성이 떨어지므로 트랜잭션이 필요한 경우에는 부적합하다. (ex. 금융, 결제, 회원정보 등)</li>
+<li>JOIN이 없다. join이 필요없도록 데이터 구조화 필요</li>
+<li>memory mapped file으로 파일 엔진 DB이다. 메모리 관리를 OS에게 위임한다. 메모리에 의존적, 메모리 크기가 성능을 좌우한다. 2-4를 참고하자.</li>
+<li>SQL을 완전히 이전할 수는 없다.</li>
+<li>B트리 인덱스를 사용하여 인덱스를 생성하는데, B트리는 크기가 커질수록 새로운 데이터를 입력하거나 삭제할 때 성능이 저하된다. 이런 B트리의 특성 때문에 데이터를 넣어두면 변하지않고 정보를 조회하는 데에 적합하다.</li>
+</ol>
+<h1 id="MongoDB-설치-Feat-Docker"><a href="#MongoDB-설치-Feat-Docker" class="headerlink" title="MongoDB 설치 (Feat. Docker)"></a>MongoDB 설치 (Feat. Docker)</h1><p>사전 설치 서버에 Docker설치를 해야한다.<br>이전 회사 특성상 root권한이 없었기에 관리자에게 설치 요청</p>
+<h3 id="Image-Download"><a href="#Image-Download" class="headerlink" title="Image Download"></a>Image Download</h3><p>필요한 Image는 <a href="https://hub.docker.com/" target="_blank" rel="noopener">Docker Hub</a> 에서 검색이 가능하다</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mongo</span><br></pre></td></tr></table></figure>
+<p>Download 된 이미지 확인</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<h3 id="Image-생성"><a href="#Image-생성" class="headerlink" title="Image 생성"></a>Image 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t mongo:tl_mongo .</span><br></pre></td></tr></table></figure>
+
+<h3 id="Container-생성"><a href="#Container-생성" class="headerlink" title="Container 생성"></a>Container 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -dit -p 27017:27017 -v /home1/irteam/mongo/data:/data/db --name ubuntu --net=host -e MONGO_INITDB_ROOT_USERNAME=id입력부분 -e MONGO_INITDB_ROOT_PASSWORD=<span class="built_in">pwd</span>입력부분 mongo --auth--auth</span><br></pre></td></tr></table></figure>
+
+<h3 id="인증모드로-mongo접속"><a href="#인증모드로-mongo접속" class="headerlink" title="인증모드로 mongo접속"></a>인증모드로 mongo접속</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it &#123;containerId&#125; mongo -u id입력부분 -p <span class="built_in">pwd</span>입력부분 -authenticationDatabase admin</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>admin 계정 생성후 사용계정 별도 생성</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">use 생성DB명</span><br><span class="line"></span><br><span class="line">db.createUser(</span><br><span class="line">    &#123;</span><br><span class="line">        user: mongoDB유저ID,</span><br><span class="line">        <span class="built_in">pwd</span>: mongoDB유저PWD,</span><br><span class="line">        roles: [</span><br><span class="line">            &#123;</span><br><span class="line">                role: <span class="string">"readWrite"</span>,</span><br><span class="line">                db: 생성DB명</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>생성된 계정으로 접속</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it 컨테이너ID mongo -u mongoDB유저ID -p mongoDB유저PWD -authenticationDatabase 생성DB명</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="MongoDB-Compass"><a href="#MongoDB-Compass" class="headerlink" title="MongoDB Compass"></a>MongoDB Compass</h3><p>워크벤치나 토드같은 client 도구이다<br><a href="https://www.mongodb.com/download-center/compass" target="_blank" rel="noopener">https://www.mongodb.com/download-center/compass</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/25/mongo%20DB%EC%84%A4%EC%B9%98%ED%95%98%EA%B8%B0%20(Feat.%20Docker)/" data-id="ckrdkv81900119d2a43t61gea" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Spring-boot War 배포" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/22/Spring-boot%20War%20%EB%B0%B0%ED%8F%AC/" class="article-date">
+  <time datetime="2019-11-22T06:24:58.395Z" itemprop="datePublished">2019-11-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/22/Spring-boot%20War%20%EB%B0%B0%ED%8F%AC/">Spring-boot War 배포</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>아주 간단한 프로젝트 진행요청이 왔다.<br>간단히 spring-boot로 프로젝트를 생성해서 진행을 했다<br>결과물을 전달하려고 하는데 war파일로 달라는거다</p>
+<h1 id="pom-xml-설정"><a href="#pom-xml-설정" class="headerlink" title="pom.xml 설정"></a>pom.xml 설정</h1><h3 id="packaging-설정"><a href="#packaging-설정" class="headerlink" title="packaging 설정"></a>packaging 설정</h3><p>보통 spring-boot 로 프로젝트를 만들면 </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">packaging</span>&gt;</span>jar<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>로 되어있거나 해당 설정 부분이 없는 경우도 있다 <br><br>이 부분을 아래와 같이 수정해준다.</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">packaging</span>&gt;</span>war<span class="tag">&lt;/<span class="name">packaging</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="톰켓-배포용-라이브러리-dependency-추가"><a href="#톰켓-배포용-라이브러리-dependency-추가" class="headerlink" title="톰켓 배포용 라이브러리 dependency 추가"></a>톰켓 배포용 라이브러리 dependency 추가</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-tomcat<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>provided<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="SpringBootServletInitialLizer-작성"><a href="#SpringBootServletInitialLizer-작성" class="headerlink" title="SpringBootServletInitialLizer 작성"></a>SpringBootServletInitialLizer 작성</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ServletInitiallizer</span> <span class="keyword">extends</span> <span class="title">SpringBootServletInitializer</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> SpringApplicationBuilder <span class="title">configure</span><span class="params">(SpringApplicationBuilder applicationBuilder)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> applicationBuilder.sources(DocHelperApplication<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">    &#125;</span></span><br><span class="line"><span class="class">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>끗</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/11/22/Spring-boot%20War%20%EB%B0%B0%ED%8F%AC/" data-id="ckrdkv816000w9d2a7obc85bv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/3/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">Next &amp;raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/07/21/%EC%97%98%EB%A0%88%EA%B0%95%ED%8A%B8%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%201-1/">엘레강트 오브젝트 1-1</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/24/Spring%20Rest%20Doc/">Spring Rest Doc</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/14/JPA%20Cascade/">JPA Cascade</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/08/JPA%20Entity%20LifeCycle/">JPA Entity LifeCycle</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/07/Java14%20Releases%20notes/">Java14 Releases notes</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Ming<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

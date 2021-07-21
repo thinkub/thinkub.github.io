@@ -1,5 +1,94 @@
-<!DOCTYPE html><html lang="kr" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>Kafka · 개인 저장소</title><meta name="description" content=""><meta name="og:title" content="Kafka"><meta name="og:type" content="website"><meta name="og:url" content="http://yoursite.com/2019/12/11/Kafka/"><meta name="og:image" content="http://image.toast.com/aaaaahq/hola_cover.JPG"><meta name="og:description" content=""><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><meta name="fb:app_id" content="1258629384258634"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="개인 저장소"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
-</head><body class="post"><div id="fb-root"></div><div class="wrap"><header><nav class="navi-post"><a class="navi-post-back" href="javascript:history.back()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="navi-post-home" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></nav></header><main class="post"><div class="post"><article class="post-block"><h1 class="post-title">Kafka</h1><div class="post-info"><div class="post-info-profile"><a href="https://github.com/thinkub" target="_blank"><img src="/image/profile.jpg"></a></div><div class="post-info-details"><div class="post-categories"></div><div class="post-date">Dec 11, 2019</div></div></div><div class="post-share"><div class="fb-like" data-href="http://yoursite.com/2019/12/11/Kafka/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">                 </div><div class="fb-share-button" data-href="http://yoursite.com/2019/12/11/Kafka/" data-layout="button" data-size="small" data-mobile-iframe="true"></div><div class="fb-follow" data-href="https://www.facebook.com/holaxprogramming/" data-layout="button_count" data-size="small" data-show-faces="true"></div></div><div class="post-content"><p>회사에 <a href="https://aladin.co.kr/shop/wproduct.aspx?ItemId=142100738" target="_blank" rel="noopener">카프카, 데이터 플랫폼의 최강자</a> 책의 저자인 고승범 님이 오셔서<br>Kafka에 대해 발표를 한적이 있는데 그 때 적었던 내용.<br>막 적다 보니까 뭘 쓴건 지도 모르겠다;;;<br>일단 기록 저장용으로 옮겨본다</p>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Kafka | 개인 저장소</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="회사에 카프카, 데이터 플랫폼의 최강자 책의 저자인 고승범 님이 오셔서Kafka에 대해 발표를 한적이 있는데 그 때 적었던 내용.막 적다 보니까 뭘 쓴건 지도 모르겠다;;;일단 기록 저장용으로 옮겨본다 Kafka란?Kafka®는 실시간 데이터 파이프 라인 및 스트리밍 앱을 구축하는 데 사용됩니다. 수평 확장 성, 내결함성, 빠른 속도를 자랑하며 수천 개의">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kafka">
+<meta property="og:url" content="http://yoursite.com/2019/12/11/Kafka/index.html">
+<meta property="og:site_name" content="개인 저장소">
+<meta property="og:description" content="회사에 카프카, 데이터 플랫폼의 최강자 책의 저자인 고승범 님이 오셔서Kafka에 대해 발표를 한적이 있는데 그 때 적었던 내용.막 적다 보니까 뭘 쓴건 지도 모르겠다;;;일단 기록 저장용으로 옮겨본다 Kafka란?Kafka®는 실시간 데이터 파이프 라인 및 스트리밍 앱을 구축하는 데 사용됩니다. 수평 확장 성, 내결함성, 빠른 속도를 자랑하며 수천 개의">
+<meta property="og:locale">
+<meta property="article:published_time" content="2019-12-11T01:08:47.229Z">
+<meta property="article:modified_time" content="2019-12-13T05:42:48.510Z">
+<meta property="article:author" content="Ming">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">개인 저장소</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Kafka" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/11/Kafka/" class="article-date">
+  <time datetime="2019-12-11T01:08:47.229Z" itemprop="datePublished">2019-12-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Kafka
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>회사에 <a href="https://aladin.co.kr/shop/wproduct.aspx?ItemId=142100738" target="_blank" rel="noopener">카프카, 데이터 플랫폼의 최강자</a> 책의 저자인 고승범 님이 오셔서<br>Kafka에 대해 발표를 한적이 있는데 그 때 적었던 내용.<br>막 적다 보니까 뭘 쓴건 지도 모르겠다;;;<br>일단 기록 저장용으로 옮겨본다</p>
 <h4 id="Kafka란"><a href="#Kafka란" class="headerlink" title="Kafka란?"></a>Kafka란?</h4><p>Kafka®는 실시간 데이터 파이프 라인 및 스트리밍 앱을 구축하는 데 사용됩니다. 수평 확장 성, 내결함성, 빠른 속도를 자랑하며 수천 개의 회사에서 생산됩니다.</p>
 <ul>
 <li>메세지 브로커</li>
@@ -75,4 +164,131 @@
 <h4 id="Operational-Tips"><a href="#Operational-Tips" class="headerlink" title="Operational Tips"></a>Operational Tips</h4><h5 id="파티션-수-늘려주세요"><a href="#파티션-수-늘려주세요" class="headerlink" title="파티션 수 늘려주세요 ??"></a>파티션 수 늘려주세요 ??</h5><p>파티션은 늘리면 줄일 수가 없어요…. 잘생각해서 늘려야함<br>lag이 밀린다면 partition을 늘려주는게 좋다. (파티션을 늘리면서 컨슈머를 늘려줘야함)</p>
 <h5 id="디스크-공간이-부족해요"><a href="#디스크-공간이-부족해요" class="headerlink" title="디스크 공간이 부족해요??"></a>디스크 공간이 부족해요??</h5><p>retention.hours 168 (7일) - global<br>카프카 메세지 기본 보관값이 7일이에요<br>카카오는 3일로 줄여놨다고 합니다.<br>그중에 메세지 사이즈가 큰거는 별도로 줄이고 있다고 합니다.<br>retention.ms = 86400000 (1일)<br>토픽마다 보관 주기를 할 수 있어요</p>
 <h5 id="scale-out"><a href="#scale-out" class="headerlink" title="scale out??"></a>scale out??</h5><p>기존 카프카를 복사하고 브로커 아이디만 유니크하게 바꿔서 올리면 되요?<br>새로운 추가 작업은 쉽지만<br>기존 운영중에 사용량이 많은 브로커에 대해 대안을 위한 스케일 아웃시에는<br>조금 복잡하다고 합니다 먼소린지 모르겠음</p>
-</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2019/12/10/oracle%20%3E%20mysql%20migration(load%20data)/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="next" href="/2019/12/11/JUnit5/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><ins class="adsbygoogle adsense-bottom" style="display:block" data-ad-client="ca-pub-6188640546219653" data-ad-slot="6129396565" data-ad-format="auto"></ins><div class="fb-comments-area"><div class="fb-comments" data-href="http://yoursite.com/2019/12/11/Kafka/" data-width="700" data-numposts="5"></div></div><div class="copyright"><p>© 2019 - 2021 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/11/Kafka/" data-id="ckrdkv810000r9d2a5pkx8b7a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/12/11/JUnit5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          JUnit5
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/12/10/oracle%20%3E%20mysql%20migration(load%20data)/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">oracle &gt; mysql migration(load data)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/07/">July 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">September 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/07/21/%EC%97%98%EB%A0%88%EA%B0%95%ED%8A%B8%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%201-1/">엘레강트 오브젝트 1-1</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/24/Spring%20Rest%20Doc/">Spring Rest Doc</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/14/JPA%20Cascade/">JPA Cascade</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/08/JPA%20Entity%20LifeCycle/">JPA Entity LifeCycle</a>
+          </li>
+        
+          <li>
+            <a href="/2020/09/07/Java14%20Releases%20notes/">Java14 Releases notes</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Ming<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
