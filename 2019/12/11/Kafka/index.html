@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="kr" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>Kafka · 개인 저장소</title><meta name="description" content=""><meta name="og:title" content="Kafka"><meta name="og:type" content="website"><meta name="og:url" content="http://yoursite.com/2019/12/11/Kafka/"><meta name="og:image" content="http://image.toast.com/aaaaahq/hola_cover.JPG"><meta name="og:description" content=""><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><meta name="fb:app_id" content="1258629384258634"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="개인 저장소"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
+</head><body class="post"><div id="fb-root"></div><div class="wrap"><header><nav class="navi-post"><a class="navi-post-back" href="javascript:history.back()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="navi-post-home" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></nav></header><main class="post"><div class="post"><article class="post-block"><h1 class="post-title">Kafka</h1><div class="post-info"><div class="post-info-profile"><a href="https://github.com/thinkub" target="_blank"><img src="/image/profile.jpg"></a></div><div class="post-info-details"><div class="post-categories"></div><div class="post-date">Dec 11, 2019</div></div></div><div class="post-share"><div class="fb-like" data-href="http://yoursite.com/2019/12/11/Kafka/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">                 </div><div class="fb-share-button" data-href="http://yoursite.com/2019/12/11/Kafka/" data-layout="button" data-size="small" data-mobile-iframe="true"></div><div class="fb-follow" data-href="https://www.facebook.com/holaxprogramming/" data-layout="button_count" data-size="small" data-show-faces="true"></div></div><div class="post-content"><p>회사에 <a href="https://aladin.co.kr/shop/wproduct.aspx?ItemId=142100738" target="_blank" rel="noopener">카프카, 데이터 플랫폼의 최강자</a> 책의 저자인 고승범 님이 오셔서<br>Kafka에 대해 발표를 한적이 있는데 그 때 적었던 내용.<br>막 적다 보니까 뭘 쓴건 지도 모르겠다;;;<br>일단 기록 저장용으로 옮겨본다</p>
+<h4 id="Kafka란"><a href="#Kafka란" class="headerlink" title="Kafka란?"></a>Kafka란?</h4><p>Kafka®는 실시간 데이터 파이프 라인 및 스트리밍 앱을 구축하는 데 사용됩니다. 수평 확장 성, 내결함성, 빠른 속도를 자랑하며 수천 개의 회사에서 생산됩니다.</p>
+<ul>
+<li>메세지 브로커</li>
+<li>High Throughtput</li>
+<li>실시간 로그 통합</li>
+<li>무중단(장비의 장애)</li>
+<li>이기종과의 호환성</li>
+<li>간단한 스케일 아웃</li>
+<li>프로듀서와 컨슈머 역할 분리</li>
+</ul>
+<h4 id="성능-테스트시"><a href="#성능-테스트시" class="headerlink" title="성능 테스트시"></a>성능 테스트시</h4><ul>
+<li>kafka (초당 300만) vs rabbitMQ (초당 100만)</li>
+<li>kafka와 rabbitMQ의 가장 큰차이는 zookeeper가 있다는건가?</li>
+<li>kafka에서는 producer와 consumer간에 topic으로만 메세지 처리</li>
+<li>rabbitMQ는 ….. 복잡하데요</li>
+</ul>
+<h4 id="kafka의-성능"><a href="#kafka의-성능" class="headerlink" title="kafka의 성능"></a>kafka의 성능</h4><ul>
+<li>message크기가 작을수록 성능이 좋다</li>
+<li>broker가 많을수록 성능이 좋다</li>
+<li>replica는 작을수록 성능이 좋다 - message가 중요하면 3으로 설정 * 손실되도 좋다라고 하면 1이나 2로 설정하는게 좋다</li>
+<li>partition은 클수록 성능이 좋다 : 파티션 수는 늘리면 줄일수가 없다.</li>
+</ul>
+<h5 id="kakao-하루에-kafka가-얼마나-쓰이고있는지"><a href="#kakao-하루에-kafka가-얼마나-쓰이고있는지" class="headerlink" title="kakao - 하루에 kafka가 얼마나 쓰이고있는지?"></a>kakao - 하루에 kafka가 얼마나 쓰이고있는지?</h5><ul>
+<li>(메세지처리량) 1800억건</li>
+<li>205TB / day in</li>
+<li>350 TB / day out</li>
+<li>들어오는거보다 나가는양이많다?</li>
+<li>단일토픽하나로 가장 처리량이 높았던건 초당 80만</li>
+<li>2년 운영하면서 큰장애는 2건.</li>
+</ul>
+<h4 id="kakao-kafka사용시-장애-이슈"><a href="#kakao-kafka사용시-장애-이슈" class="headerlink" title="kakao kafka사용시 장애 이슈"></a>kakao kafka사용시 장애 이슈</h4><ul>
+<li>ISR (In-Synk Replicas) 축소<ul>
+<li>현재 복제되고있는구성원</li>
+<li>리더만 읽고 쓰기</li>
+<li>팔로워들은 리더를 주기적으로 동기화</li>
+<li>ISR의 구성원만이 리더의 자격을 갖는다</li>
+<li>isr축소 버그가 있음 (0.10.1.0)</li>
+</ul>
+</li>
+<li>Rack Power<ul>
+<li>broker는 idc랙별로 분산해서 놓는게 좋습니다.</li>
+<li>장애또는 이슈로 인한 리더가 변경되는경우…..<ul>
+<li>여러개의 broker가 있는 경우 장애로 리더가 자주 변경되게 되면 broker간의 sync 가 안맞게 된다 이경우 sync가 맞지 않은 broker가 장애로 인해 리더가 된다면……<br>기존 리더로 부터 메세지 복제가 이루어 져야 한다. 그런데 기존 리더가 올라오지 않는다면?????<br>기다려야 할지 아니면 먼저 올라온 broker가 리더로서의 역할을 해야 할지..</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Use-Case-KaKao"><a href="#Use-Case-KaKao" class="headerlink" title="Use Case (KaKao)"></a>Use Case (KaKao)</h4><p>로그를 통합하고 싶어요<br>CS때문에 각 서버에서 Grep하고 있어요….</p>
+<ul>
+<li>MSA<br>단점?? 카프카를 쓰면 다 해결된데요 ㅋㅋㅋㅋ</li>
+<li>RabbitMQ Log System<br>kibana</li>
+</ul>
+<h4 id="Producer"><a href="#Producer" class="headerlink" title="Producer"></a>Producer</h4><p>손실없이 kafka로 보내는것</p>
+<h5 id="Producer-ACKS"><a href="#Producer-ACKS" class="headerlink" title="Producer ACKS"></a>Producer ACKS</h5><ul>
+<li>ACKS 는 크게 3가지 타입으로 나누어져있음 ( 0, 1, ALL)</li>
+<li>0 : Message를 매우 빠르게 전송할수 있지만 리더가 받았는지 알수 없음</li>
+<li>1 : Message전송도 빠른 편이고 파티션의 리더가 받았는지 확인 (가장많이 사용)</li>
+<li>ALL : Message 전송은 느리지만 손실없는 전송 가능</li>
+<li>1는 손실가능성이 있음….</li>
+</ul>
+<h5 id="ACK1은-안전한가"><a href="#ACK1은-안전한가" class="headerlink" title="ACK1은 안전한가?"></a>ACK1은 안전한가?</h5><p>리더가 메세지를 받고 저장후 producer에게 잘받았다고 전달을 하고<br>바로 리더가 down되는경우 (sync가 안맞는 경우)는… 손실이 일어날 수 있다.</p>
+<h5 id="파티션…"><a href="#파티션…" class="headerlink" title="파티션…?"></a>파티션…?</h5><p>특정 파티션만 메세지를 못가져오고있어요<br>특정 파티션의 사이즈가 이상해요<br>Producer가 message를 보낼때 key value방식으로 보내는데<br>key를 안보낼 수 있다…<br>전송 방식은 RB<br>key를 주게 되는경우 특정 파티션으로 전달이 되는데<br>key가 중복이 되는경우…. ?</p>
+<h5 id="컨슈머가-자꾸-죽는경우…"><a href="#컨슈머가-자꾸-죽는경우…" class="headerlink" title="컨슈머가 자꾸 죽는경우…"></a>컨슈머가 자꾸 죽는경우…</h5><p>ack 설정값을 잘봐요… 메세지 손실때문에 그런건가?</p>
+<h4 id="Consumer"><a href="#Consumer" class="headerlink" title="Consumer"></a>Consumer</h4><p>브로커의 리더 파티션에서 message 를 가져오는역활</p>
+<p>파티션이 하나일때 :<br>파티션의 오프셋 순서대로 가져 옵니다</p>
+<p>파티션이 0개 이상일때 : 파티션별로 오프셋 순서대로 가져온다<br>한가지 보장할수 없는건 파티션 번호의 순서대로 가져오지 않는다.<br>파티션별루 오프셋 번호는 동일 (오프셋 0, 오프셋 1, 오프셋 2 …)</p>
+<p>파티션이 늘어나면 성능이 좋은 장점은 있지만<br>message가 꼬일수 있다. (해결방법은 timestamp를 이용)</p>
+<p>하나의 파티션에는 하나의 컨슈머만 가능?</p>
+<p>컨슈머 그룹을 이용한 멀티 컨슈머</p>
+<h5 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h5><p>컨슈머는 파티션의 몇번째 오프셋까지 가져왓는지 표시<br>이러한 행동을 commit 한다고 합<br>rebalancing이나 컨슈머 재시작시 commit된 위치부터 시작<br>auto commit / manual commit이 있다지만 auto commit을 사용<br>auto commit을 사용할 때 중복에 대한 예외처리를 해주면 좋다..</p>
+<h5 id="LAG"><a href="#LAG" class="headerlink" title="LAG"></a>LAG</h5><p>Burrow : lag 체크 할수 있는 툴</p>
+<h4 id="Operational-Tips"><a href="#Operational-Tips" class="headerlink" title="Operational Tips"></a>Operational Tips</h4><h5 id="파티션-수-늘려주세요"><a href="#파티션-수-늘려주세요" class="headerlink" title="파티션 수 늘려주세요 ??"></a>파티션 수 늘려주세요 ??</h5><p>파티션은 늘리면 줄일 수가 없어요…. 잘생각해서 늘려야함<br>lag이 밀린다면 partition을 늘려주는게 좋다. (파티션을 늘리면서 컨슈머를 늘려줘야함)</p>
+<h5 id="디스크-공간이-부족해요"><a href="#디스크-공간이-부족해요" class="headerlink" title="디스크 공간이 부족해요??"></a>디스크 공간이 부족해요??</h5><p>retention.hours 168 (7일) - global<br>카프카 메세지 기본 보관값이 7일이에요<br>카카오는 3일로 줄여놨다고 합니다.<br>그중에 메세지 사이즈가 큰거는 별도로 줄이고 있다고 합니다.<br>retention.ms = 86400000 (1일)<br>토픽마다 보관 주기를 할 수 있어요</p>
+<h5 id="scale-out"><a href="#scale-out" class="headerlink" title="scale out??"></a>scale out??</h5><p>기존 카프카를 복사하고 브로커 아이디만 유니크하게 바꿔서 올리면 되요?<br>새로운 추가 작업은 쉽지만<br>기존 운영중에 사용량이 많은 브로커에 대해 대안을 위한 스케일 아웃시에는<br>조금 복잡하다고 합니다 먼소린지 모르겠음</p>
+</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2019/12/10/oracle%20%3E%20mysql%20migration(load%20data)/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="next" href="/2019/12/11/JUnit5/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><ins class="adsbygoogle adsense-bottom" style="display:block" data-ad-client="ca-pub-6188640546219653" data-ad-slot="6129396565" data-ad-format="auto"></ins><div class="fb-comments-area"><div class="fb-comments" data-href="http://yoursite.com/2019/12/11/Kafka/" data-width="700" data-numposts="5"></div></div><div class="copyright"><p>© 2019 - 2021 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>

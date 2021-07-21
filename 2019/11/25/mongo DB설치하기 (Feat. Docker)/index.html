@@ -1,0 +1,69 @@
+<!DOCTYPE html><html lang="kr" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>mongo DB설치하기 (Feat. Docker) · 개인 저장소</title><meta name="description" content=""><meta name="og:title" content="mongo DB설치하기 (Feat. Docker)"><meta name="og:type" content="website"><meta name="og:url" content="http://yoursite.com/2019/11/25/mongo DB설치하기 (Feat. Docker)/"><meta name="og:image" content="http://image.toast.com/aaaaahq/hola_cover.JPG"><meta name="og:description" content=""><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><meta name="fb:app_id" content="1258629384258634"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="개인 저장소"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
+</head><body class="post"><div id="fb-root"></div><div class="wrap"><header><nav class="navi-post"><a class="navi-post-back" href="javascript:history.back()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="navi-post-home" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></nav></header><main class="post"><div class="post"><article class="post-block"><h1 class="post-title">mongo DB설치하기 (Feat. Docker)</h1><div class="post-info"><div class="post-info-profile"><a href="https://github.com/thinkub" target="_blank"><img src="/image/profile.jpg"></a></div><div class="post-info-details"><div class="post-categories"></div><div class="post-date">Nov 25, 2019</div></div></div><div class="post-share"><div class="fb-like" data-href="http://yoursite.com/2019/11/25/mongo DB설치하기 (Feat. Docker)/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">                 </div><div class="fb-share-button" data-href="http://yoursite.com/2019/11/25/mongo DB설치하기 (Feat. Docker)/" data-layout="button" data-size="small" data-mobile-iframe="true"></div><div class="fb-follow" data-href="https://www.facebook.com/holaxprogramming/" data-layout="button_count" data-size="small" data-show-faces="true"></div></div><div class="post-content"><p>일전에 프로젝트 하나를 진행하게 되었는데.<br>DB의 로우데이터를 특정 조건에 맞게 집계를 해야했다.<br>프로젝트 규모나 사용성을 봤을때는<br>rdbms로 작업해도 크게 무리가 되지 않는 스펙이었다<br>근데 주변 동료들이 no-sql로 하는건 어떠냐고 해서 한번 해보기로 했다.</p>
+<h1 id="DB-선택하기"><a href="#DB-선택하기" class="headerlink" title="DB 선택하기"></a>DB 선택하기</h1><p>먼저 어떤 db engine이 가장 많이 사용되는지 검색해 봤다<br><a href="https://db-engines.com/en/ranking" target="_blank" rel="noopener">여기</a> 에서 확인 해보니 Document 기반으로는 MongoDB 순위가 높았다<br>통계 Data 특성상 스키마간 RelationShip이 크게 필요하지 않을 것이라 생각해서 MongoDB로 해보기로 했다<br><img src="/img/docker-mongo1.png" width="700px" ></img></p>
+<h1 id="MongoDB"><a href="#MongoDB" class="headerlink" title="MongoDB ?"></a>MongoDB ?</h1><blockquote>
+<p>MongoDB는 필요한 쿼리 및 인덱싱을 통해 원하는 확장성과 유연성을 갖춘 문서 데이터베이스입니다.</p>
+</blockquote>
+<ul>
+<li>MongoDB는 데이터를 유연한 JSON 형식의 문서로 저장합니다. 즉, 필드마다 문서마다 다를 수 있으며 시간이 지남에 따라 데이터 구조가 변경 될 수 있습니다.</li>
+<li>문서 모델은 응용 프로그램 코드의 개체에 매핑되므로 데이터를 쉽게 사용할 수 있습니다.</li>
+<li>임시 질의, 인덱싱 및 실시간 집계는 데이터 액세스 및 분석을위한 강력한 방법을 제공합니다.</li>
+<li>MongoDB는 핵심적인 분산 데이터베이스이므로 고 가용성, 수평 확장 및 지리적 분포가 내장되어 사용하기 쉽습니다.</li>
+<li>MongoDB는 무료이며 오픈 소스이며, GNU Affero General Public License</li>
+</ul>
+<h3 id="특징"><a href="#특징" class="headerlink" title="특징"></a>특징</h3><ol>
+<li>Document-oriented storage : MongoDB는 database &gt; collections &gt; documents 구조로 document는 key-value형태의 BSON(Binary JSON)으로 되어있다</li>
+<li>Full Index Support : 다양한 인덱싱을 제공한다.<ol>
+<li>Single Field Indexes : 기본적인 인덱스 타입</li>
+<li>Compound Indexes : RDBMS의 복합인덱스 같은 거</li>
+<li>Multikey Indexes : Array에 매칭되는 값이 하나라도 있으면 인덱스에 추가하는 멀티키 인덱스</li>
+<li>Geospatial Indexes and Queries : 위치기반 인덱스와 쿼리</li>
+<li>Text Indexes : String에도 인덱싱이 가능</li>
+<li>Hashed Index : Btree 인덱스가 아닌 Hash 타입의 인덱스도 사용 가능</li>
+</ol>
+</li>
+<li>Replication&amp; High Availability : 간단한 설정만으로도 데이터 복제를 지원. 가용성 향상</li>
+<li>Auto-Sharding : MongoDB는 처음부터 자동으로 데이터를 분산하여 저장하며, 하나의 컬렉션처럼 사용할 수 있게 해준다. 수평적 확장 가능</li>
+<li>Querying(documented-based query) : 다양한 종류의 쿼리문 지원. (필터링, 수집, 정렬, 정규표현식 등)</li>
+<li>Fast In-Pace Updates : 고성능의 atomic operation을 지원</li>
+<li>Map/Reduce : 맵리듀스를 지원.(map과 reduce 함수의 조합을 통해 분산/병렬 시스템 운용 지원, 하둡처럼 MR전용시스템에 비해서는 성능이 떨어진다)</li>
+<li>GridFS : 분산파일 저장을 MongoDB가 자동으로 해준다. 실제 파일이 어디에 저장되어 있는지 신경 쓸 필요가 없고 복구도 자동이다.</li>
+<li>Commercial Support : 10gen에서 관리하는 오픈소스</li>
+</ol>
+<h3 id="장점"><a href="#장점" class="headerlink" title="장점"></a>장점</h3><ol>
+<li>Flexibility : Schema-less라서 어떤 형태의 데이터라도 저장할 수 있다.</li>
+<li>Performance : Read &amp; Write 성능이 뛰어나다. 캐싱이나 많은 트래픽을 감당할 때 써도 좋다.</li>
+<li>Scalability : 애초부터 스케일아웃 구조를 채택해서 쉽게 운용가능하다. Auto sharding 지원</li>
+<li>Deep Query ability : 문서지향적 Query Language 를 사용하여 SQL 만큼 강력한 Query 성능을 제공한다.</li>
+<li>Conversion / Mapping : JSON형태로 저장이 가능해서 직관적이고 개발이 편리하다.</li>
+</ol>
+<h3 id="단점"><a href="#단점" class="headerlink" title="단점"></a>단점</h3><ol>
+<li>정합성이 떨어지므로 트랜잭션이 필요한 경우에는 부적합하다. (ex. 금융, 결제, 회원정보 등)</li>
+<li>JOIN이 없다. join이 필요없도록 데이터 구조화 필요</li>
+<li>memory mapped file으로 파일 엔진 DB이다. 메모리 관리를 OS에게 위임한다. 메모리에 의존적, 메모리 크기가 성능을 좌우한다. 2-4를 참고하자.</li>
+<li>SQL을 완전히 이전할 수는 없다.</li>
+<li>B트리 인덱스를 사용하여 인덱스를 생성하는데, B트리는 크기가 커질수록 새로운 데이터를 입력하거나 삭제할 때 성능이 저하된다. 이런 B트리의 특성 때문에 데이터를 넣어두면 변하지않고 정보를 조회하는 데에 적합하다.</li>
+</ol>
+<h1 id="MongoDB-설치-Feat-Docker"><a href="#MongoDB-설치-Feat-Docker" class="headerlink" title="MongoDB 설치 (Feat. Docker)"></a>MongoDB 설치 (Feat. Docker)</h1><p>사전 설치 서버에 Docker설치를 해야한다.<br>이전 회사 특성상 root권한이 없었기에 관리자에게 설치 요청</p>
+<h3 id="Image-Download"><a href="#Image-Download" class="headerlink" title="Image Download"></a>Image Download</h3><p>필요한 Image는 <a href="https://hub.docker.com/" target="_blank" rel="noopener">Docker Hub</a> 에서 검색이 가능하다</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull mongo</span><br></pre></td></tr></table></figure>
+<p>Download 된 이미지 확인</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<h3 id="Image-생성"><a href="#Image-생성" class="headerlink" title="Image 생성"></a>Image 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t mongo:tl_mongo .</span><br></pre></td></tr></table></figure>
+
+<h3 id="Container-생성"><a href="#Container-생성" class="headerlink" title="Container 생성"></a>Container 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -dit -p 27017:27017 -v /home1/irteam/mongo/data:/data/db --name ubuntu --net=host -e MONGO_INITDB_ROOT_USERNAME=id입력부분 -e MONGO_INITDB_ROOT_PASSWORD=<span class="built_in">pwd</span>입력부분 mongo --auth--auth</span><br></pre></td></tr></table></figure>
+
+<h3 id="인증모드로-mongo접속"><a href="#인증모드로-mongo접속" class="headerlink" title="인증모드로 mongo접속"></a>인증모드로 mongo접속</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it &#123;containerId&#125; mongo -u id입력부분 -p <span class="built_in">pwd</span>입력부분 -authenticationDatabase admin</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>admin 계정 생성후 사용계정 별도 생성</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">use 생성DB명</span><br><span class="line"></span><br><span class="line">db.createUser(</span><br><span class="line">    &#123;</span><br><span class="line">        user: mongoDB유저ID,</span><br><span class="line">        <span class="built_in">pwd</span>: mongoDB유저PWD,</span><br><span class="line">        roles: [</span><br><span class="line">            &#123;</span><br><span class="line">                role: <span class="string">"readWrite"</span>,</span><br><span class="line">                db: 생성DB명</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>생성된 계정으로 접속</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it 컨테이너ID mongo -u mongoDB유저ID -p mongoDB유저PWD -authenticationDatabase 생성DB명</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="MongoDB-Compass"><a href="#MongoDB-Compass" class="headerlink" title="MongoDB Compass"></a>MongoDB Compass</h3><p>워크벤치나 토드같은 client 도구이다<br><a href="https://www.mongodb.com/download-center/compass" target="_blank" rel="noopener">https://www.mongodb.com/download-center/compass</a></p>
+</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2019/11/22/Spring-boot%20War%20%EB%B0%B0%ED%8F%AC/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="next" href="/2019/11/26/GitLab%EC%84%A4%EC%B9%98%20(GCP)/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><ins class="adsbygoogle adsense-bottom" style="display:block" data-ad-client="ca-pub-6188640546219653" data-ad-slot="6129396565" data-ad-format="auto"></ins><div class="fb-comments-area"><div class="fb-comments" data-href="http://yoursite.com/2019/11/25/mongo DB설치하기 (Feat. Docker)/" data-width="700" data-numposts="5"></div></div><div class="copyright"><p>© 2019 - 2021 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>

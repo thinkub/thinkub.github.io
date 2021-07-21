@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="kr" prefix="og: http://ogp.me/ns#"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>Provisioning - 3. Ansible을 이용해 kubernetes cluster 생성하기 · 개인 저장소</title><meta name="description" content=""><meta name="og:title" content="Provisioning - 3. Ansible을 이용해 kubernetes cluster 생성하기"><meta name="og:type" content="website"><meta name="og:url" content="http://yoursite.com/2020/02/28/Provisioning - 3. Ansible을 이용해 kubernetes cluster 생성하기/"><meta name="og:image" content="http://image.toast.com/aaaaahq/hola_cover.JPG"><meta name="og:description" content=""><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.ico"><link rel="stylesheet" href="/css/chiangmai.css"><meta name="steem:author" content="@stunstunstun"><meta name="fb:app_id" content="1258629384258634"><link rel="search" type="application/opensearchdescription+xml" href="http://yoursite.com/atom.xml" title="개인 저장소"><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="개인 저장소" type="application/atom+xml">
+</head><body class="post"><div id="fb-root"></div><div class="wrap"><header><nav class="navi-post"><a class="navi-post-back" href="javascript:history.back()"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="navi-post-home" href="/"><i class="fa fa-home" aria-hidden="true"></i></a></nav></header><main class="post"><div class="post"><article class="post-block"><h1 class="post-title">Provisioning - 3. Ansible을 이용해 kubernetes cluster 생성하기</h1><div class="post-info"><div class="post-info-profile"><a href="https://github.com/thinkub" target="_blank"><img src="/image/profile.jpg"></a></div><div class="post-info-details"><div class="post-categories"></div><div class="post-date">Feb 28, 2020</div></div></div><div class="post-share"><div class="fb-like" data-href="http://yoursite.com/2020/02/28/Provisioning - 3. Ansible을 이용해 kubernetes cluster 생성하기/" data-layout="button_count" data-action="like" data-size="small" data-show-faces="true" data-share="false">                 </div><div class="fb-share-button" data-href="http://yoursite.com/2020/02/28/Provisioning - 3. Ansible을 이용해 kubernetes cluster 생성하기/" data-layout="button" data-size="small" data-mobile-iframe="true"></div><div class="fb-follow" data-href="https://www.facebook.com/holaxprogramming/" data-layout="button_count" data-size="small" data-show-faces="true"></div></div><div class="post-content"><h1 id="Index"><a href="#Index" class="headerlink" title="Index"></a>Index</h1><hr>
+<ol>
+<li>Docker <ol>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%201.%20Docker의%20개념/" target="_blank" rel="noopener">Docker 개념</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%202.%20Docker%20Install/" target="_blank" rel="noopener">Docker Install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%203.%20Docker%20Command/" target="_blank" rel="noopener">Docker Command</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%204.%20Docker%20Example/" target="_blank" rel="noopener">Docker Example</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%205.%20Image%20만들기/" target="_blank" rel="noopener">Image 만들기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%206.%20Dockerfile/" target="_blank" rel="noopener">Dockerfile</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%207.%20Docker%20Compose/" target="_blank" rel="noopener">Docker Compose</a></li>
+<li><a href="https://thinkub.github.io/2020/02/25/Docker%20-%208.%20Image%20저장소/" target="_blank" rel="noopener">Image 저장소</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="2">
+<li>Container Orchestration <ol>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%201.%20Container%20Orchestration/" target="_blank" rel="noopener">Container Orchestration 이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(1)/" target="_blank" rel="noopener">kubernetes(1)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%202.%20kubernetes(2)/" target="_blank" rel="noopener">kubernetes(2)</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" target="_blank" rel="noopener">kubernetes install</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%205.%20kubernetes%20ui/" target="_blank" rel="noopener">kubernetes ui</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%206.%20kubenetes를%20이용해%20배포해보기/" target="_blank" rel="noopener">kubernetes를 이용해 배포해보기</a></li>
+<li><a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%207.%20kubectl%20CLI/" target="_blank" rel="noopener">kubectl CLI</a></li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol start="3">
+<li>Provisioning <ol>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%201.%20Provisioning/" target="_blank" rel="noopener">Provisioning이란</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%202.%20Ansible/" target="_blank" rel="noopener">Ansible</a></li>
+<li><a href="https://thinkub.github.io/2020/02/28/Provisioning%20-%203.%20Ansible을%20이용해%20kubernetes%20cluster%20생성하기/" target="_blank" rel="noopener">Ansible을 이용해 kubernetes cluster 생성하기</a></li>
+</ol>
+</li>
+</ol>
+<h1 id="목표"><a href="#목표" class="headerlink" title="목표"></a>목표</h1><p>Ansible을 이용해서 k8s cluster을 생성해보겠습니다.<br>cluster를 생성하는 방법은 <a href="https://thinkub.github.io/2020/02/26/Container%20Orchestration%20-%204.%20kubernetes%20install/" target="_blank" rel="noopener">Container Orchestration - 4. kubernetes Install</a>에 작성 한 것과 같이 <strong>master</strong> 1대와 <strong>node</strong> 2대를 셋팅해 보겠습니다.<br><strong>기존에 공유드린 것과 같이 master / node 클러스터 구성시 <code>방화벽작업</code>을 하고 <code>docker를 설치</code>하고 <code>k8s 관련 install</code> 작업을 했습니다. 이러한 작업을 ansible playbook 을 이용해 한번에 처리해보도록 하겠습니다.</strong></p>
+<h1 id="1-구성"><a href="#1-구성" class="headerlink" title="1. 구성"></a>1. 구성</h1><table>
+<thead>
+<tr>
+<th>host name</th>
+<th>역할</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ansible-manager</td>
+<td>Ansible 제어 노드 및 작업자용 노드</td>
+</tr>
+<tr>
+<td>ansible-master</td>
+<td>k8s Master</td>
+</tr>
+<tr>
+<td>ansible-node1</td>
+<td>k8s Node</td>
+</tr>
+<tr>
+<td>ansible-node2</td>
+<td>k9s Node</td>
+</tr>
+</tbody></table>
+<p><img src="/img/2020/02/28/2.png" alt=""></p>
+<h1 id="2-Ansible-설치"><a href="#2-Ansible-설치" class="headerlink" title="2. Ansible 설치"></a>2. Ansible 설치</h1><h3 id="2-1-ansible-manager-에-Ansible-설치"><a href="#2-1-ansible-manager-에-Ansible-설치" class="headerlink" title="2.1 ansible-manager 에 Ansible 설치"></a>2.1 ansible-manager 에 Ansible 설치</h3><p>ansible-manager 에 Ansible을 설치하겠습니다. Ansible 이 다른 IaC보다 편한점이 <strong>Pull 방식이 아닌 Push 방식으로 대상 서버에는 별도의 셋팅이 필요하지 않습니다.</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum install -y eple-release</span><br><span class="line">yum install -y ansible</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/28/3.png" alt=""></p>
+<h3 id="2-2-Password-없이-접속이-가능하도록-작업"><a href="#2-2-Password-없이-접속이-가능하도록-작업" class="headerlink" title="2.2 Password 없이 접속이 가능하도록 작업"></a>2.2 Password 없이 접속이 가능하도록 작업</h3><ul>
+<li><p>ROOT 로그인을 허용하도록 설정을 수정합니다. <code>ansible-master</code>, <code>ansible-node1</code>, <code>ansible-node2</code> 에서 작업</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PermitRootLogin yes</span><br><span class="line">PasswordAuthentication yes</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart sshd</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><strong>ansible-manager</strong> 에서 SSH키 생성을 합니다. <strong>password 는 별도로 작성하지 않습니다.</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/28/4.png" alt=""></p>
+</li>
+<li><p>생성한 key를 ansible-master, ansible-node1, ansible-node2 에 복사해줍니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-copy-id [serverIP]</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/28/5.png" alt=""></p>
+</li>
+<li><p>ssh 접속이 되는지 확인합니다</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh [server_host_name]</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/28/6.png" alt=""></p>
+</li>
+</ul>
+<h3 id="2-1-Inventory를-작성하여-Ping-Test"><a href="#2-1-Inventory를-작성하여-Ping-Test" class="headerlink" title="2.1 Inventory를 작성하여 Ping Test"></a>2.1 Inventory를 작성하여 Ping Test</h3><ul>
+<li><p>다음과 같이 host파일을 생성합니다.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">master ansible_host=10.128.0.40 ansible_user=root</span><br><span class="line"></span><br><span class="line">[nodes]</span><br><span class="line">node1 ansible_host=10.128.0.42 ansible_user=root</span><br><span class="line">node2 ansible_host=10.128.0.43 ansible_user=root</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>ping 명령어를 통해 연결상태를 확인합니다.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible -m ping all -i hosts</span><br></pre></td></tr></table></figure>
+<p><img src="/img/2020/02/28/7.png" alt=""></p>
+</li>
+</ul>
+<h1 id="3-Ansible을-이용해-k8s-클러스터-구성해보기"><a href="#3-Ansible을-이용해-k8s-클러스터-구성해보기" class="headerlink" title="3. Ansible을 이용해 k8s 클러스터 구성해보기"></a>3. Ansible을 이용해 k8s 클러스터 구성해보기</h1><h3 id="3-1-setup-yml-작성"><a href="#3-1-setup-yml-작성" class="headerlink" title="3.1 setup.yml 작성"></a>3.1 setup.yml 작성</h3><p><code>master</code> <code>nodes</code> 에 공통으로 설정할 내용과 k8s 설치용 playbook 파일을 작성합니다.<br><a href="https://raw.githubusercontent.com/thinkub/ansible-k8s-cluster/master/setup.yml" target="_blank" rel="noopener">https://raw.githubusercontent.com/thinkub/ansible-k8s-cluster/master/setup.yml</a></p>
+<h3 id="3-2-playbook-실행-shell-script-작성"><a href="#3-2-playbook-실행-shell-script-작성" class="headerlink" title="3.2 playbook 실행 shell script 작성"></a>3.2 playbook 실행 shell script 작성</h3><p>작성한 playbook 용 yaml 파일을 실행할 shell script 를 작성합니다.<br><a href="https://raw.githubusercontent.com/thinkub/ansible-k8s-cluster/master/build-cluster.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/thinkub/ansible-k8s-cluster/master/build-cluster.sh</a></p>
+<h3 id="3-3-실행"><a href="#3-3-실행" class="headerlink" title="3.3 실행"></a>3.3 실행</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./build-cluster.sh</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-4-결과"><a href="#3-4-결과" class="headerlink" title="3.4 결과"></a>3.4 결과</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">TASK [add Kubernetes YUM repository] ***************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line">changed: [node1]</span><br><span class="line">changed: [node2]</span><br><span class="line"></span><br><span class="line">TASK [install kubelet] ******************************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line">changed: [node1]</span><br><span class="line">changed: [node2]</span><br><span class="line"></span><br><span class="line">TASK [install kubeadm] ******************************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line">changed: [node1]</span><br><span class="line">changed: [node2]</span><br><span class="line"></span><br><span class="line">TASK [start kubelet] ********************************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line">changed: [node1]</span><br><span class="line">changed: [node2]</span><br><span class="line"></span><br><span class="line">TASK [install kubectl] ******************************************************************************************</span><br><span class="line">ok: [master]</span><br><span class="line">ok: [node1]</span><br><span class="line">ok: [node2]</span><br><span class="line"></span><br><span class="line">PLAY [master] ***************************************************************************************************</span><br><span class="line"></span><br><span class="line">TASK [Gathering Facts] ******************************************************************************************</span><br><span class="line">ok: [master]</span><br><span class="line"></span><br><span class="line">TASK [initialize the cluster] ***********************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line"></span><br><span class="line">TASK [create .kube directory] ***********************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line"></span><br><span class="line">TASK [copy admin.conf to user kube config] ********************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line"></span><br><span class="line">TASK [install Pod network] **************************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line"></span><br><span class="line">PLAY [master] ***************************************************************************************************</span><br><span class="line"></span><br><span class="line">TASK [get join <span class="built_in">command</span>] *****************************************************************************************</span><br><span class="line">changed: [master]</span><br><span class="line"></span><br><span class="line">TASK [<span class="built_in">set</span> join <span class="built_in">command</span>] *****************************************************************************************</span><br><span class="line">ok: [master]</span><br><span class="line"></span><br><span class="line">PLAY [nodes] ****************************************************************************************************</span><br><span class="line"></span><br><span class="line">TASK [Gathering Facts] ******************************************************************************************</span><br><span class="line">ok: [node1]</span><br><span class="line">ok: [node2]</span><br><span class="line"></span><br><span class="line">TASK [join cluster] *********************************************************************************************</span><br><span class="line">changed: [node1]</span><br><span class="line">changed: [node2]</span><br><span class="line"></span><br><span class="line">PLAY RECAP ******************************************************************************************************</span><br><span class="line">master                     : ok=21   changed=16   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   </span><br><span class="line">node1                      : ok=16   changed=12   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   </span><br><span class="line">node2                      : ok=16   changed=12   unreachable=0    failed=0    skipped=1    rescued=0    ignored=0</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>master 에서 cluster 확인하기<br><img src="/img/2020/02/28/8.png" alt=""></li>
+</ul>
+<h3 id="참고"><a href="#참고" class="headerlink" title="참고"></a>참고</h3><blockquote>
+<p><a href="https://zerobig-k8s.tistory.com/31" target="_blank" rel="noopener">https://zerobig-k8s.tistory.com/31</a><br><a href="https://github.com/zer0big/ansible-k8s-cluster" target="_blank" rel="noopener">https://github.com/zer0big/ansible-k8s-cluster</a></p>
+</blockquote>
+</div></article></div></main><footer><div class="paginator"><a class="prev" href="/2020/02/28/Provisioning%20-%202.%20Ansible/"><i class="fa fa-arrow-left" aria-hidden="true"></i></a><a class="next" href="/2020/03/03/VSCode%EB%A1%9C%20Spring%20Boot%20%EC%82%AC%EC%9A%A9%ED%95%B4%EB%B3%B4%EA%B8%B0/"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></div><ins class="adsbygoogle adsense-bottom" style="display:block" data-ad-client="ca-pub-6188640546219653" data-ad-slot="6129396565" data-ad-format="auto"></ins><div class="fb-comments-area"><div class="fb-comments" data-href="http://yoursite.com/2020/02/28/Provisioning - 3. Ansible을 이용해 kubernetes cluster 생성하기/" data-width="700" data-numposts="5"></div></div><div class="copyright"><p>© 2019 - 2021 <a href="https://github.com/stunstunstun" target="_blank">Minhyeok Jung</a>. Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/stunstunstun/hexo-theme-chiangmai" target="_blank">hexo-theme-chiangmai</a>.</p></div></footer></div><script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><script>(adsbygoogle = window.adsbygoogle || []).push({});</script><script>window.fbAsyncInit=function(){FB.init({appId:"1258629384258634",cookie:!0,xfbml:!0,version:"v2.8"}),FB.AppEvents.logPageView()},function(e,n,t){var o,c=e.getElementsByTagName(n)[0];e.getElementById(t)||((o=e.createElement(n)).id=t,o.src="//connect.facebook.net/en_US/sdk.js",c.parentNode.insertBefore(o,c))}(document,"script","facebook-jssdk");</script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-97419941-1','auto');ga('send','pageview');</script></body></html>
