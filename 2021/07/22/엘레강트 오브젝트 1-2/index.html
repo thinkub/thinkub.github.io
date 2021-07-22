@@ -13,8 +13,7 @@
     
 
     
-        <meta name="description" content="JPA를 이용해서 플젝을 진행하면서 구글링을 열심히 하면서 개발하다보니 뭔가 기초가 다져지지 않은 모래성 위에 집을 짓는 기분이랄까? 그런 생각이 들어서 JPA 서적을 하나 구입해서 기초부터 탄탄히 공부해보기로 했다.
-책은 자바 ORM 표준 JPA 프로그래밍 보면서 스"/>
+        <meta name="description" content="엘레강트 오브젝트새로운 관점에서 바라본 객체지향Yegor Bugayenko | 조영호 역1장 출생1.2 생성자 하나를 주 생성자로 만드세요생성자는 새로웅 객체에 대한 진입점.저자는 생성자의 수가 메서드의 수보다 더 많아지는 것을 추천저자는 객체에 23개의 메서드와 51"/>
     
 
     <!--Author-->
@@ -24,13 +23,12 @@
 
     <!--Open Graph Title-->
     
-        <meta property="og:title" content="JPA Entity LifeCycle"/>
+        <meta property="og:title" content="개인 저장소"/>
     
 
     <!--Open Graph Description-->
     
-        <meta property="og:description" content="JPA를 이용해서 플젝을 진행하면서 구글링을 열심히 하면서 개발하다보니 뭔가 기초가 다져지지 않은 모래성 위에 집을 짓는 기분이랄까? 그런 생각이 들어서 JPA 서적을 하나 구입해서 기초부터 탄탄히 공부해보기로 했다.
-책은 자바 ORM 표준 JPA 프로그래밍 보면서 스"/>
+        <meta property="og:description" content="엘레강트 오브젝트새로운 관점에서 바라본 객체지향Yegor Bugayenko | 조영호 역1장 출생1.2 생성자 하나를 주 생성자로 만드세요생성자는 새로웅 객체에 대한 진입점.저자는 생성자의 수가 메서드의 수보다 더 많아지는 것을 추천저자는 객체에 23개의 메서드와 51"/>
     
 
     <!--Open Graph Site Name-->
@@ -38,7 +36,7 @@
 
     <!--Type page-->
     
-        <meta property="og:type" content="article"/>
+        <meta property="og:type" content="website"/>
     
 
     <!--Page Cover-->
@@ -53,7 +51,7 @@
 
     <!-- Title -->
     
-    <title>JPA Entity LifeCycle - 개인 저장소</title>
+    <title>개인 저장소</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"/>
@@ -168,13 +166,13 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-heading">
-                    <h1>JPA Entity LifeCycle</h1>
+                    <h1>Untitled</h1>
                     
                     <span class="meta">
                         <!-- Date and Author -->
                         
                         
-                            2020-09-08
+                            2021-07-22
                         
                     </span>
                 </div>
@@ -196,27 +194,7 @@
 
             <!-- Post Main Content -->
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>JPA를 이용해서 플젝을 진행하면서 구글링을 열심히 하면서 개발하다보니 뭔가 기초가 다져지지 않은 모래성 위에 집을 짓는 기분이랄까? 그런 생각이 들어서 JPA 서적을 하나 구입해서 기초부터 탄탄히 공부해보기로 했다.</p>
-<p>책은 <a href="https://ridibooks.com/books/3984000009?_s=search&_q=jpa" target="_blank" rel="noopener">자바 ORM 표준 JPA 프로그래밍</a> 보면서 스터디를 진행했다.</p>
-<h1 id="엔티티-생명주기"><a href="#엔티티-생명주기" class="headerlink" title="엔티티 생명주기"></a>엔티티 생명주기</h1><p>엔티티는 4가지 상태가 존재한다.</p>
-<ul>
-<li>비영속(new/transient): 영속성 컨텍스트와 전혀 관계가 없는 상태</li>
-<li>영속(managed): 영속성 컨텍스트에 저장된 상태</li>
-<li>준영속(detached): 영속성 컨텍스트에 저장되었다가 분리된 상태</li>
-<li>삭제(removed): 삭제된 상태</li>
-</ul>
-<h1 id="비영속"><a href="#비영속" class="headerlink" title="비영속"></a>비영속</h1><p>엔티티 객체를 생성한 상태로 순수한 객체 상태이며 아직 저장하지 않았다. 따라서 영속성 컨텍스트나 데이터 베이스와 전혀 관련이 없는 상태</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Member member = <span class="keyword">new</span> Member();</span><br><span class="line">member.setId(<span class="string">"thinkub"</span>);</span><br><span class="line">member.setUserName(<span class="string">"Ming"</span>);</span><br></pre></td></tr></table></figure>
-
-<h1 id="영속"><a href="#영속" class="headerlink" title="영속"></a>영속</h1><p>엔티티 메니저를 통해 엔티티를 영속성 컨텍스트에 저장했다. 이렇게 영속성 컨텍스트가 관리하는 엔티티를 영속 상태라 한다. </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em.persist(member);</span><br></pre></td></tr></table></figure>
-
-<h1 id="준영속"><a href="#준영속" class="headerlink" title="준영속"></a>준영속</h1><p>영속성 컨텍스트가 관리하던 영속상태의 엔티티를 영속성 컨텍스트가 관리하지 않으면 준영속 상태가 된다. 특정 엔티티를 준영속 상태로 만들려면 <code>em.detach()</code>를 호출하면 된다. <code>em.close()</code>를 호출해서 영속성 컨텍스트를 닫거나 <code>em.clear()</code>를 호출해서 영속성 컨텍스트를 초기화해도 영속성 컨텍스트가 관리하던 영속상태의 엔티티는 준영속 상태가 된다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em.detach(member);</span><br></pre></td></tr></table></figure>
-
-<h1 id="삭제"><a href="#삭제" class="headerlink" title="삭제"></a>삭제</h1><p>엔티티를 영속성 컨텍스트와 데이터 베이스에서 삭제한다.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">em.remove(member);</span><br></pre></td></tr></table></figure>
-
+                <h1 id="엘레강트-오브젝트"><a href="#엘레강트-오브젝트" class="headerlink" title="엘레강트 오브젝트"></a>엘레강트 오브젝트</h1><h3 id="새로운-관점에서-바라본-객체지향"><a href="#새로운-관점에서-바라본-객체지향" class="headerlink" title="새로운 관점에서 바라본 객체지향"></a>새로운 관점에서 바라본 객체지향</h3><h4 id="Yegor-Bugayenko-조영호-역"><a href="#Yegor-Bugayenko-조영호-역" class="headerlink" title="Yegor Bugayenko | 조영호 역"></a>Yegor Bugayenko | 조영호 역</h4><h2 id="1장-출생"><a href="#1장-출생" class="headerlink" title="1장 출생"></a>1장 출생</h2><h3 id="1-2-생성자-하나를-주-생성자로-만드세요"><a href="#1-2-생성자-하나를-주-생성자로-만드세요" class="headerlink" title="1.2 생성자 하나를 주 생성자로 만드세요"></a>1.2 생성자 하나를 주 생성자로 만드세요</h3><p>생성자는 새로웅 객체에 대한 진입점.<br>저자는 생성자의 수가 메서드의 수보다 더 많아지는 것을 추천<br>저자는 객체에 2<del>3개의 메서드와 5</del>10개의 셍성자를 포함하는게 적당 하다고 함. (근거는 없으며 임의로 정했을 뿐….;;)<br><strong>핵심은 응집도가 높고 견고한 클레스에는 적은 수의 메서드와 상대적으로 더 많은 수의 생성자가 존재</strong></p>
 
 
                 
