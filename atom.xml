@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-07-22T14:22:07.872Z</updated>
+  <updated>2021-07-22T14:53:19.773Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title></title>
     <link href="http://yoursite.com/2021/07/22/%EC%97%98%EB%A0%88%EA%B0%95%ED%8A%B8%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%201-2/"/>
     <id>http://yoursite.com/2021/07/22/%EC%97%98%EB%A0%88%EA%B0%95%ED%8A%B8%20%EC%98%A4%EB%B8%8C%EC%A0%9D%ED%8A%B8%201-2/</id>
-    <published>2021-07-22T14:06:59.530Z</published>
-    <updated>2021-07-22T14:22:07.872Z</updated>
+    <published>2021-07-22T14:52:54.368Z</published>
+    <updated>2021-07-22T14:53:19.773Z</updated>
     
     <content type="html"><![CDATA[<h1 id="엘레강트-오브젝트"><a href="#엘레강트-오브젝트" class="headerlink" title="엘레강트 오브젝트"></a>엘레강트 오브젝트</h1><h3 id="새로운-관점에서-바라본-객체지향"><a href="#새로운-관점에서-바라본-객체지향" class="headerlink" title="새로운 관점에서 바라본 객체지향"></a>새로운 관점에서 바라본 객체지향</h3><h4 id="Yegor-Bugayenko-조영호-역"><a href="#Yegor-Bugayenko-조영호-역" class="headerlink" title="Yegor Bugayenko | 조영호 역"></a>Yegor Bugayenko | 조영호 역</h4><h2 id="1장-출생"><a href="#1장-출생" class="headerlink" title="1장 출생"></a>1장 출생</h2><h3 id="1-2-생성자-하나를-주-생성자로-만드세요"><a href="#1-2-생성자-하나를-주-생성자로-만드세요" class="headerlink" title="1.2 생성자 하나를 주 생성자로 만드세요"></a>1.2 생성자 하나를 주 생성자로 만드세요</h3><p>생성자는 새로웅 객체에 대한 진입점.<br>저자는 생성자의 수가 메서드의 수보다 더 많아지는 것을 추천<br>저자는 객체에 2~3개의 메서드와 5~10개의 셍성자를 포함하는게 적당 하다고 함. (근거는 없으며 임의로 정했을 뿐….;;)</p><blockquote><p>핵심은 응집도가 높고 견고한 클레스에는 적은 수의 메서드와 상대적으로 더 많은 수의 생성자가 존재</p></blockquote><p>생성자가 많아질수록 클래스는 더 유연하게 사용이 될 수 있다.<br>메서드가 많아질수록 클래스는 사용하기 어려워진다.<br>메서드가 많아지면 클레스의 초점이 흐려지고, SRP를 위반하게 됨.</p><p>생성자의 주된 작업은 제공된 인자를 사용해서 캡슐화하고 있는 프로퍼티를 초기화 하는일<br>초기화 로직을 단 하나의 생성자에만 위치시키고 주 생성자라고 부르기를 권장<br>다음 예제처럼 부 생성자라고 부르는 다른 생성자들이 주 생성자를 호출하도록 만들기를 권장</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cash</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> dollars;</span><br><span class="line">    Cash(<span class="keyword">float</span> dlr) &#123;</span><br><span class="line">        <span class="keyword">this</span>((<span class="keyword">int</span>) dlr);</span><br><span class="line">    &#125;</span><br><span class="line">    Cash(String dlr) &#123;</span><br><span class="line">        <span class="keyword">this</span>(Cash.parse(dlr));</span><br><span class="line">    &#125;</span><br><span class="line">    Cash(<span class="keyword">int</span> dlr) &#123;</span><br><span class="line">        <span class="keyword">this</span>.dollars = dlr;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><blockquote><p><a href="https://www.yegor256.com/2015/05/28/one-primary-constructor.html">https://www.yegor256.com/2015/05/28/one-primary-constructor.html</a></p></blockquote>]]></content>
     
